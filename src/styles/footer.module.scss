@@ -1,0 +1,78 @@
+@use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
+
+footer {
+	padding: 3rem $bodymargin 0;
+	background: #171717;
+
+	.main1 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 47px;
+		border-bottom: 1px solid #525252;
+	}
+
+	.main2 {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 3.125rem;
+
+		.main2__copyright {
+      width: 40%;
+
+			p {
+				@include sub-text;
+				color: #737373;
+			}
+
+			p:nth-child(1) {
+				margin-bottom: 5.75rem;
+			}
+		}
+
+		.main2__links {
+			display: flex;
+			gap: 2.75rem;
+
+			.links {
+				h3 {
+					font-family: interMedium;
+					font-size: 20px;
+					color: $primary;
+					margin-bottom: 24px;
+				}
+
+				ul li {
+					padding: 8px 0;
+					@include sub-text;
+					color: rgba(255, 255, 255, 0.4);
+					cursor: pointer;
+				}
+			}
+		}
+
+		.main2__contact {
+			.socials {
+				display: flex;
+				justify-content: end;
+				align-items: center;
+				margin-bottom: 0.9375rem;
+			}
+
+			.mail {
+				p {
+					display: flex;
+					justify-content: end;
+					align-items: center;
+					gap: 8px;
+					@include sub-text;
+				}
+			}
+		}
+	}
+
+  .footerlogo{
+		@include flex;
+  }
+}

@@ -1,0 +1,42 @@
+@use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
+
+.faq_item {
+	background: rgba(255, 255, 255, 0.04);
+	border-radius: 8px;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.faq_question {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 24px;
+	cursor: pointer;
+
+	h3 {
+		font-size: 1.125rem;
+		font-family: interMedium;
+		color: $primary;
+	}
+}
+
+.faq_answer {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, padding 0.3s ease;
+	background: rgba(255, 255, 255, 0.04);
+	// border: 1px solid rgba(255, 255, 255, 0.4);
+
+	p {
+		font-size: 1.125rem;
+		font-family: interMedium;
+		color: $primary;
+	}
+
+	&.open {
+		max-height: 600px;
+		padding: 44px 24px;
+	}
+}

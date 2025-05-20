@@ -1,0 +1,46 @@
+@use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
+
+
+.nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 62px 0;
+	padding: 0 $bodymargin;
+	position: fixed;
+	width: 100%;
+	z-index: 99;
+}
+.nav__container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.75rem 0.5rem;
+	border-radius: 1.25rem;
+	background: rgba(255, 255, 255, 0.1); 
+	backdrop-filter: blur(20px); 
+	-webkit-backdrop-filter: blur(10px);
+	font-family: interMedium;
+	font-size: 0.875rem;
+
+	.nav__links {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2.25rem;
+	}
+
+	.links {
+		padding: 0.5rem 1rem;
+		color: $primary;
+		text-transform: capitalize;
+	}
+
+	.nav__btns {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+	}
+}
