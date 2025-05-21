@@ -120,6 +120,7 @@ const Home = () => {
 					<img className={styles.banner_img} src={banner} alt="" />
 				</div>
 			</header>
+			
 			<main className={styles.main}>
 				<section className={styles.main1}>
 					<div className={styles.heading}>

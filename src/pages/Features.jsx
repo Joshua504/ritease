@@ -44,7 +44,7 @@ const Features = () => {
 					</h2>
 				</div>
 
-				<sectionc className={styles.feature__container__1}>
+				<section className={styles.feature__container__1}>
 					<section className={styles.feature1}>
 						<div className={styles.feature1__title}>
 							<h2>Note Editor</h2>
@@ -179,7 +179,7 @@ const Features = () => {
 							/>
 						</div>
 					</section>
-				</sectionc>
+				</section>
 			</section>
 
 			<section className={styles.main2}>
