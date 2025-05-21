@@ -2,6 +2,7 @@ import styles from '../styles/pricing.module.scss';
 
 import SVG23 from '../assets/SVG(23).svg';
 import SVG24 from '../assets/SVG(24).svg';
+import WaitList from '../components/WaitList';
 
 const Pricing = () => {
 	return (
@@ -225,17 +226,134 @@ const Pricing = () => {
 						</div>
 					</section>
 
-				  <section className={styles.Table}>
-						<section>
-							<div className={styles.Table__title}>
+					<section className={styles.container}>
+						<div className={styles.planTiers}>
+							<div className={styles.planTier}>
 								<h2>Comparing The Plans</h2>
 							</div>
-							<div className={styles.Table__content__title}>
-								<h2>Free</h2>
-								<button>Get Started</button>
+							<div className={styles.planTier}>
+								<h3>Free</h3>
+								<button className={styles.getStartedBtn}>Get Started</button>
 							</div>
-						</section>
+							<div className={styles.planTier}>
+								<h3>Pro Plan</h3>
+								<button className={styles.getStartedBtn}>Get Started</button>
+							</div>
+							<div className={styles.planTier}>
+								<h3>Business Plan</h3>
+								<button className={styles.getStartedBtn}>Get Started</button>
+							</div>
+						</div>
+
+						<div className={styles.featuresTable}>
+							<div className={styles.featureRow}>
+								<div className={styles.featureName}>Number Of users</div>
+								<div className={styles.featureValue}>Single User</div>
+								<div className={styles.featureValue}>Up to 3 Users</div>
+								<div className={styles.featureValue}>Up to 11 Users</div>
+							</div>
+							<div className={styles.featureRow}>
+								<div className={styles.featureName}>
+									Intelligent Document Creation
+								</div>
+								<div className={styles.featureValue}>3 documents per month</div>
+								<div className={styles.featureValue}>
+									15 documents per month
+								</div>
+								<div className={styles.featureValue}>
+									100 documents per month
+								</div>
+							</div>
+							<div className={styles.featureRow}>
+								<div className={styles.featureName}>
+									Intelligent Document Review
+								</div>
+								<div className={styles.featureValue}>
+									Up to 3 queries per user per month
+								</div>
+								<div className={styles.featureValue}>
+									Up to 30 queries per user per month
+								</div>
+								<div className={styles.featureValue}>
+									Up to 180 queries per user per month
+								</div>
+							</div>
+							<div className={styles.featureRow}>
+								<div className={styles.featureName}>Digital Signatures</div>
+								<div className={styles.featureValue}>Unlimited</div>
+								<div className={styles.featureValue}>Unlimited</div>
+								<div className={styles.featureValue}>Unlimited</div>
+							</div>
+							<div className={styles.featureRow}>
+								<div className={styles.featureName}>Scan-To-Text</div>
+								<div className={styles.featureValue}>
+									Extract only one page per document
+								</div>
+								<div className={styles.featureValue}>Unlimited</div>
+								<div className={styles.featureValue}>Unlimited</div>
+							</div>
+							<div className={styles.featureRow}>
+								<div className={styles.featureName}>Document Hosting</div>
+								<div className={styles.featureValue}>Limited by storage</div>
+								<div className={styles.featureValue}>Limited by storage</div>
+								<div className={styles.featureValue}>Limited by storage</div>
+							</div>
+							<div className={styles.featureRow}>
+								<div className={styles.featureName}>Boards</div>
+								<div className={styles.featureValue}>
+									<p>Unlimited publications at 25% platform fee for premium</p>
+								</div>
+								<div className={styles.featureValue}>
+									<p>Unlimited publications at 10% platform fee for premium</p>
+								</div>
+								<div className={styles.featureValue}>
+									<p>Unlimited publications at 10% platform fee for premium</p>
+								</div>
+							</div>
+							<div className={styles.featureRow}>
+								<div className={styles.featureName}>Document Templates</div>
+								<div className={styles.featureValue}>
+									Limited set of basic templates
+								</div>
+								<div className={styles.featureValue}>
+									Unlimited set of basic templates
+								</div>
+								<div className={styles.featureValue}>
+									Unlimited set of basic templates
+								</div>
+							</div>
+							<div className={styles.featureRow}>
+								<div className={styles.featureName}>Ribetoms</div>
+								<div className={styles.featureValue}>
+									2 forms per user per month
+								</div>
+								<div className={styles.featureValue}>
+									10 forms per user per month
+								</div>
+								<div className={styles.featureValue}>
+									50 forms per user per month
+								</div>
+							</div>
+							<div className={styles.featureRow}>
+								<div className={styles.featureName}>Storage</div>
+								<div className={styles.featureValue}>1GB cloud storage</div>
+								<div className={styles.featureValue}>5GB cloud storage</div>
+								<div className={styles.featureValue}>50GB cloud storage</div>
+							</div>
+							<div className={styles.featureRow}>
+								<div className={styles.featureName}>
+									Creating multiple teams
+								</div>
+								<div className={styles.featureValue}>No</div>
+								<div className={styles.featureValue}>No</div>
+								<div className={styles.featureValue}>Yes</div>
+							</div>
+						</div>
 					</section>
+				</section>
+
+				<section className={styles.main4}>
+					<WaitList />
 				</section>
 			</main>
 		</>

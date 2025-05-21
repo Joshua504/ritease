@@ -69,8 +69,6 @@ const Home = () => {
 	];
 
 	const btnText = 'Get Early Access Now!';
-	const animeText =
-		'Great for Individuals. Perfect for Teams. Essential for Businesses.';
 
 	return (
 		<>
@@ -166,9 +164,13 @@ const Home = () => {
 
 				<section className={styles.main2}>
 					<div className={styles.heading1}>
-						<AnimatedText animeText={animeText} />
+						<AnimatedText
+							animeText={
+								'Great for Individuals. Perfect for Teams. Essential for Businesses.'
+							}
+						/>
 						<Button
-							btnText={btnText}
+							btnText={'Get Early Access Now!'}
 							fontSize="1.5rem"
 							className={styles.homeButton}
 						/>

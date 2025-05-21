@@ -3,4 +3,6 @@
 
 .anime__title {
 	@include anime-text;
+	transition: 1s ease;
+
 }

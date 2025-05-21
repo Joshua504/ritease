@@ -26,25 +26,52 @@
 	line-height: 48px;
 	color: $primary;
 }
+
 @mixin sub-text {
 	font-family: interRegular;
 	font-size: 1rem;
 	color: rgba(255, 255, 255, 0.6);
 }
+
 @mixin anime-text {
 	font-family: interExtraBold;
 	font-size: 6.25rem;
 	line-height: 7.75rem;
 	letter-spacing: -2.4px;
 	text-align: center;
+	transition: background 0.5s ease;
 	background: linear-gradient(
 		to bottom,
 		rgba(255, 255, 255, 0.5) 0%,
 		rgba(255, 255, 255, 0) 100%
 	);
-
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
 	-webkit-text-fill-color: transparent;
+
+	&:hover {
+		background: linear-gradient(
+			to top,
+			rgba(255, 255, 255, 0.5) 0%,
+			rgba(255, 255, 255, 0) 100%
+		);
+		background-clip: text;
+		color: transparent;
+	}
+}
+
+@mixin flex-item__h3 {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-family: interRegular;
+	font-size: 1rem;
+	color: $primary;
+	margin-bottom: 8px;
+}
+@mixin flex-item__p {
+	font-family: interRegular;
+	font-size: 1rem;
+	color: rgba(255, 255, 255, 0.60);
 }

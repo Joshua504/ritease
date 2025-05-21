@@ -166,4 +166,79 @@ main {
 			}
 		}
 	}
+
+	.container {
+    margin-top: 6.25rem;
+
+		.planTiers {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 33px;
+
+			.planTier {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+				color: #86efac;
+				flex: 1;
+
+				h2 {
+					font-family: interBold;
+					font-size: 4rem;
+					color: #d4d4d4;
+				}
+
+				h3 {
+					font-family: interSemiBold;
+					font-size: 1.875rem;
+					margin-bottom: 48px;
+					text-align: center;
+				}
+
+				.getStartedBtn {
+					@include btn;
+					background: transparent;
+					color: rgba(255, 255, 255, 0.84);
+					border: 1px solid rgba(255, 255, 255, 0.15);
+					margin: 0 auto;
+				}
+			}
+		}
+
+    .featuresTable {
+      display: flex;
+      flex-direction: column;
+  
+      .featureRow {
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+        padding: 35px 0;
+  
+        .featureName {
+          font-weight: bold;
+          font-family: interRegular;
+          font-size: 1rem;
+          color: $primary;
+          width: 340px;
+        }
+  
+        .featureValue {
+          flex: 1;
+          text-align: center;
+          font-family: interRegular;
+          font-size: 14px;
+          color: $primary;
+
+          p{
+            width: 80%;
+						margin: 0 auto;
+          }
+        }
+      }
+    }
+	}
+
+  .main4{
+    margin: 114px 0 91px;
+  }
 }

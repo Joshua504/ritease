@@ -3,9 +3,6 @@ import styles from '../styles/nav.module.scss';
 import Button from './Button';
 
 const Nav = ({ Logo }) => {
-	const btnText = 'Early Access';
-
-	
 
 	return (
 		<>
@@ -34,7 +31,7 @@ const Nav = ({ Logo }) => {
 						<Link className={styles.links} to="/login">
 							login
 						</Link>
-						<Button btnText={btnText} />
+						<Button btnText='Early Access' borderRadius="24px" />
 					</div>
 				</section>
 			</nav>
