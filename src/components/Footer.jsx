@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from '../styles/footer.module.scss';
 import Button from './Button';
 import Logo from '../assets/LOGO.svg';
@@ -49,8 +50,12 @@ const Footer = () => {
 					<div className={styles.links}>
 						<h3>Legal</h3>
 						<ul>
-							<li>Privacy Policy</li>
-							<li>Terms of Use</li>
+							<Link to="/privacy">
+								<li>Privacy Policy</li>
+							</Link>
+							<Link to="/terms">
+								<li>Terms of Use</li>
+							</Link>
 						</ul>
 					</div>
 					<div className={styles.links}>
@@ -87,7 +92,9 @@ const Footer = () => {
 					</div>
 				</div>
 			</section>
-      <section className={styles.footerlogo}><img src={FOOTERLOGO} alt="" /></section>
+			<section className={styles.footerlogo}>
+				<img src={FOOTERLOGO} alt="" />
+			</section>
 		</footer>
 	);
 };

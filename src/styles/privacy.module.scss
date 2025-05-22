@@ -1,0 +1,62 @@
+@use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
+
+header {
+	padding: 15.75rem $bodymargin 6.25rem;
+
+	p {
+		@include sub-text;
+		width: 72%;
+		margin: 0 auto;
+		padding: 19px 0;
+	}
+
+	h3 {
+		@include sub-text;
+		padding: 16px;
+		background: rgba(255, 255, 255, 0.12);
+		width: fit-content;
+		margin: 0 auto;
+	}
+}
+
+main {
+	@include terms;
+
+	.term__mod {
+		padding-bottom: 24px;
+		border-bottom: 1px solid transparent;
+		border-image: linear-gradient(
+				to right,
+				rgba(255, 255, 255, 0) 0%,
+				rgba(255, 255, 255, 0.1) 50%,
+				rgba(255, 255, 255, 0) 100%
+			)
+			1;
+
+		ul {
+			margin-bottom: 15px;
+		}
+
+		p {
+			padding: 0;
+			border: none;
+		}
+	}
+
+	.last {
+		border: none;
+
+		h3, h4 {
+			@include sub-text;
+		}
+
+    h4{
+			margin-bottom: 16px;
+    }
+
+		.last1 {
+			padding: 0;
+		}
+	}
+}

@@ -8,6 +8,8 @@ import Pricing from './pages/Pricing';
 import Riteboards from './pages/Riteboards';
 import Login from './pages/Login';
 import Footer from './components/Footer';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 function App() {
 	return (
@@ -19,6 +21,8 @@ function App() {
 				<Route path="/pricing" element={<Pricing />} />
 				<Route path="/riteboards" element={<Riteboards />} />
 				<Route path="/login" element={<Login />} />
+				<Route path="/privacy" element={<Privacy />} />
+				<Route path="/terms" element={<Terms /> } />
 			</Routes>
 			<Footer />
 		</Router>
