@@ -7,7 +7,7 @@ const Terms = () => {
 			<header>
 				<AnimatedText animeText="Terms Of Use" />
 			</header>
-			<main>
+			<main className={styles.wrapper}>
 				<section className={styles.sidebar}>
 					<ul>
 						<a href="#1">

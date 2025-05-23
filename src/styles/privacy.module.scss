@@ -20,7 +20,7 @@ header {
 	}
 }
 
-main {
+.wrapper {
 	@include terms;
 
 	.term__mod {

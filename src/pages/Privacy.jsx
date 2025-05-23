@@ -16,7 +16,7 @@ const Privacy = () => {
 				<h3>Effective Date: 01 Jan, 2025</h3>
 			</header>
 
-			<main>
+			<main className={styles.wrapper}>
 				<section className={styles.sidebar}>
 					<ul>
 						<a href="#1">
