@@ -4,7 +4,7 @@ import styles from '../styles/privacy.module.scss';
 const Privacy = () => {
 	return (
 		<>
-			<header>
+			<header className={styles.head}>
 				<AnimatedText animeText="Privacy Policy" />
 				<p>
 					Welcome to Ritease! Your privacy is very important to us. This Privacy

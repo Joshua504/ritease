@@ -1,0 +1,19 @@
+@use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
+
+.header {
+	padding: 15.75rem 240px 0rem;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+  padding:0 $bodymargin 212px;
+
+	.content {
+		width: 896px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}

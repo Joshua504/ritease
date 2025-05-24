@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import Footer from './components/Footer';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import Reads from './pages/Reads';
 
 function App() {
 	return (
@@ -23,6 +24,7 @@ function App() {
 				<Route path="/login" element={<Login />} />
 				<Route path="/privacy" element={<Privacy />} />
 				<Route path="/terms" element={<Terms /> } />
+				<Route path="/reads" element={<Reads /> } />
 			</Routes>
 			<Footer />
 		</Router>

@@ -1,7 +1,7 @@
 @use '/src/styles/variables' as *;
 @use '/src/styles/mixins' as *;
 
-header {
+.head {
 	padding: 15.75rem $bodymargin 6.25rem;
 
 	p {

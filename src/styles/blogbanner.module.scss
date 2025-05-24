@@ -1,0 +1,93 @@
+@use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
+
+.banner {
+	padding: 72px $bodymargin;
+
+	.banner__container {
+		background-image: url('../assets/SVG\(31\).svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		height: 27.125rem;
+		border-radius: 16px;
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		overflow: hidden;
+
+		.txt__area {
+			padding: 16px;
+			background: rgba(27, 27, 27, 0.84);
+			display: flex;
+			justify-content: space-between;
+
+			.banner__text {
+				h2 {
+					@include sub-title;
+					margin-bottom: 8px;
+				}
+
+				p {
+					@include sub-text;
+					margin-bottom: 24px;
+				}
+
+				.text__flex {
+					display: flex;
+					gap: 8px;
+
+					h4 {
+						@include sub-text;
+						font-size: 16px;
+						font-family: interSemiBold;
+					}
+
+					p {
+						@include sub-text;
+						font-size: 0.875rem;
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.banner__links {
+				display: flex;
+				gap: 16px;
+			}
+		}
+	}
+
+	.search {
+		@include flex;
+		justify-content: space-between;
+		margin-top: 26px;
+	
+		.input {
+			input {
+				font-family: interSemiBold;
+				font-size: 14px;
+				color: $primary;
+				width: 724px;
+				padding: 16px 20px;
+				border-radius: 24px;
+				border: 1px solid #404040;
+				outline: transparent;
+				background: transparent;
+	
+				&::placeholder {
+					color: #404040;
+				}
+			}
+		}
+	
+		.search__links {
+			display: flex;
+			gap: 8px;
+	
+			.links {
+				@include sub-text;
+				padding: 16px;
+			}
+		}
+	}
+}

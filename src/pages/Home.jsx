@@ -68,8 +68,6 @@ const Home = () => {
 		},
 	];
 
-	const btnText = 'Get Early Access Now!';
-
 	return (
 		<>
 			<header className={styles.header}>
