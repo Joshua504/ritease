@@ -2,7 +2,7 @@ import styles from '../styles/animatedtext.module.scss';
 
 const AnimatedText = ({ animeText, fontSize }) => {
 	const Textstyle = {
-		fontSize: fontSize || '6.25rem', // Default to 1rem if no fontSize is provided /
+		fontSize: fontSize || '100px', // Default to 1rem if no fontSize is provided /
 
 	};
 

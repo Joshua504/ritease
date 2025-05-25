@@ -11,6 +11,8 @@ import Footer from './components/Footer';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Reads from './pages/Reads';
+import BlogPage from './pages/BlogPage';
+import PaidBlog from './pages/PaidBlog';
 
 function App() {
 	return (
@@ -25,6 +27,8 @@ function App() {
 				<Route path="/privacy" element={<Privacy />} />
 				<Route path="/terms" element={<Terms /> } />
 				<Route path="/reads" element={<Reads /> } />
+				<Route path="/blog" element={<BlogPage /> } />
+				<Route path="/paid" element={<PaidBlog /> } />
 			</Routes>
 			<Footer />
 		</Router>

@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import styles from '../styles/home.module.scss';
+
 /* -------------------------------------------------------------------------- */
 /*                                 components                                 */
 /* -------------------------------------------------------------------------- */
@@ -10,6 +12,20 @@ import Faq from '../components/Faq';
 /* -------------------------------------------------------------------------- */
 import PlayBtn from '../assets/bx-play.svg';
 import banner from '../assets/Banner.svg';
+import banner2 from '../assets/Banner2.svg';
+import banner3 from '../assets/Banner3.png';
+import banner4 from '../assets/Banner4.png';
+import banner5 from '../assets/Banner5.png';
+import banner6 from '../assets/Banner6.png';
+import Riteaseai from '../assets/Riteaseai.svg';
+import Riteaseboard from '../assets/Riteaseboard.svg';
+import Riteaseform from '../assets/Riteaseform.svg';
+import Riteasescan from '../assets/Riteasescan.svg';
+import Riteasepdf from '../assets/Riteasepdf.svg';
+import Riteasedoc from '../assets/Riteasedoc.svg';
+import Smart from '../assets/Smart.svg';
+import Blockchain from '../assets/Blockchain.svg';
+import Publish from '../assets/Publish.svg';
 import SVG1 from '../assets/SVG.svg';
 import SVG2 from '../assets/SVG(1).svg';
 import SVG3 from '../assets/SVG(2).svg';
@@ -29,6 +45,10 @@ import SVG16 from '../assets/SVG(16).svg';
 import Button from '../components/Button';
 
 const Home = () => {
+	const [activeListItem, setActiveListItem] = useState(0);
+	const [activeNextGenItem, setActiveNextGenItem] = useState(0);
+	const [activeFeatures, setActiveFeatures] = useState(0);
+
 	const faqData = [
 		{
 			question: 'What is Ritease?',
@@ -68,6 +88,88 @@ const Home = () => {
 		},
 	];
 
+	const listItems = [
+		{ icon: SVG1, text: 'Create Notes and Docs', bannerImage: banner },
+		{ icon: SVG2, text: 'Generate with AI', bannerImage: banner2 },
+		{ icon: SVG3, text: 'Sign Documents', bannerImage: banner3 },
+		{ icon: SVG4, text: 'Forms for Business', bannerImage: banner4 },
+		{ icon: SVG5, text: 'Scan-To-Text', bannerImage: banner5 },
+		{ icon: SVG6, text: 'Publish and Earn', bannerImage: banner6 },
+	];
+
+	const nextGenFeatures = [
+		{
+			name: 'Riteditor',
+			image: SVG8,
+		},
+		{
+			name: 'Ritease AI',
+			image: Riteaseai,
+		},
+		{
+			name: 'Boards',
+			image: Riteaseboard,
+		},
+		{
+			name: 'Ritease Forms',
+			image: Riteaseform,
+		},
+		{
+			name: 'Scan-To-Text',
+			image: Riteasescan,
+		},
+		{
+			name: 'PDF Tools',
+			image: Riteasepdf,
+		},
+		{
+			name: 'Document Hosting',
+			image: Riteasedoc,
+		},
+		{
+			name: 'Rite SDK/API',
+			image: Riteasescan,
+		},
+	];
+
+	const keyFeatures = [
+		{
+			name: 'Instant Document Creation',
+			description:
+				'Use Ritease AI to create documents instantly using prompts, such as letterheads, invoices, magazines, business reports, and academic documents.',
+			image: SVG10,
+		},
+		{
+			name: 'Smart Content Creation',
+			description:
+				"Ritease AI's writing assist and image generation tools help you create tailored content 10x faster.",
+			image: Smart,
+		},
+		{
+			name: 'Blockchain-Grade Security',
+			description:
+				'Document signing and changes to documents are all tracked on the Base blockchain, providing top notch security and transparency for your teams.',
+			image: Blockchain,
+		},
+		{
+			name: 'Publish and Earn with Ease',
+			description:
+				"Ritease empowers creators to earn money by publishing their work and sharing the publication links. Whether it's an article, a novel, or a research piece, you set the price for your premium content, and get paid whenever readers pay to read your work.",
+			image: Publish,
+		},
+	];
+
+	const handleListItemClick = (index) => {
+		setActiveListItem(index);
+	};
+
+	const handleNextGenItemClick = (index) => {
+		setActiveNextGenItem(index);
+	};
+	const handleFeaturesClick = (index) => {
+		setActiveFeatures(index);
+	};
+
 	return (
 		<>
 			<header className={styles.header}>
@@ -90,35 +192,26 @@ const Home = () => {
 
 				<div className={styles.banner}>
 					<ul className={styles.list}>
-						<li className={styles.list__item}>
-							<img src={SVG1} alt="" />
-							<span>Create Notes and Docs</span>
-						</li>
-						<li className={styles.list__item}>
-							<img src={SVG2} alt="" />
-							<span>Generate with AI</span>
-						</li>
-						<li className={styles.list__item}>
-							<img src={SVG3} alt="" />
-							<span>Sign Documents</span>
-						</li>
-						<li className={styles.list__item}>
-							<img src={SVG4} alt="" />
-							<span>Forms for Business</span>
-						</li>
-						<li className={styles.list__item}>
-							<img src={SVG5} alt="" />
-							<span>Scan-To-Text</span>
-						</li>
-						<li className={styles.list__item}>
-							<img src={SVG6} alt="" />
-							<span>Publish and Earn</span>
-						</li>
+						{listItems.map((item, index) => (
+							<li
+								key={index}
+								className={`${styles.list__item} ${
+									activeListItem === index ? styles.list__item__active : ''
+								}`}
+								onClick={() => handleListItemClick(index)}>
+								<img src={item.icon} alt="" />
+								<span>{item.text}</span>
+							</li>
+						))}
 					</ul>
-					<img className={styles.banner_img} src={banner} alt="" />
+					<img
+						className={styles.banner_img}
+						src={listItems[activeListItem].bannerImage}
+						alt=""
+					/>
 				</div>
 			</header>
-			
+
 			<main className={styles.main}>
 				<section className={styles.main1}>
 					<div className={styles.heading}>
@@ -134,7 +227,7 @@ const Home = () => {
 						<div className={styles.cards}>
 							<div className={styles.overlay}></div>
 							<div className={styles.card_img}>
-								<img src={SVG7} alt="" />
+								<img className={styles.img} src={SVG7} alt="" />
 							</div>
 							<div className={styles.cards__text}>
 								<h3>Seamless Design</h3>
@@ -143,7 +236,7 @@ const Home = () => {
 						<div className={styles.cards}>
 							<div className={styles.overlay}></div>
 							<div className={styles.card_img}>
-								<img src={SVG7} alt="" />
+								<img className={styles.img} src={SVG7} alt="" />
 							</div>
 							<div className={styles.cards__text}>
 								<h3>All-in-One Document Solution</h3>
@@ -152,7 +245,7 @@ const Home = () => {
 						<div className={styles.cards}>
 							<div className={styles.overlay}></div>
 							<div className={styles.card_img}>
-								<img src={SVG7} alt="" />
+								<img className={styles.img} src={SVG7} alt="" />
 							</div>
 							<div className={styles.cards__text}>
 								<h3>Monetise with Ease</h3>
@@ -176,7 +269,11 @@ const Home = () => {
 					</div>
 					<section className={styles.main2__container}>
 						<div>
-							<img src={SVG8} alt="" />
+							<img
+								className={styles.nextgen}
+								src={nextGenFeatures[activeNextGenItem].image}
+								alt={nextGenFeatures[activeNextGenItem].name}
+							/>
 						</div>
 						<section className={styles.main2__wrapper}>
 							<div className={styles.main2__textcontainer}>
@@ -189,31 +286,21 @@ const Home = () => {
 									seamless platform for individuals, teams, and businesses.
 								</p>
 							</div>
+
 							<ul className={styles.main2__textcontainerlist}>
-								<li className={styles.main2__textcontainerlist__item}>
-									<div className={styles.indicator}></div>
-									<span>Riteditor</span>
-								</li>
-								<li className={styles.main2__textcontainerlist__item}>
-									<div className={styles.indicator}></div>
-									<span>Ritease AI</span>
-								</li>
-								<li className={styles.main2__textcontainerlist__item}>
-									<div className={styles.indicator}></div>
-									<span>Boards</span>
-								</li>
-								<li className={styles.main2__textcontainerlist__item}>
-									<div className={styles.indicator}></div>
-									<span>Ritease Forms</span>
-								</li>
-								<li className={styles.main2__textcontainerlist__item}>
-									<div className={styles.indicator}></div>
-									<span>Scan-To-Text</span>
-								</li>
-								<li className={styles.main2__textcontainerlist__item}>
-									<div className={styles.indicator}></div>
-									<span>PDF Tools</span>
-								</li>
+								{nextGenFeatures.map((feature, index) => (
+									<li
+										key={index}
+										className={`${styles.main2__textcontainerlist__item} ${
+											activeNextGenItem === index
+												? styles.main2__textcontainerlist__item__active
+												: ''
+										}`}
+										onClick={() => handleNextGenItemClick(index)}>
+										<div className={styles.indicator}></div>
+										<span>{feature.name}</span>
+									</li>
+								))}
 							</ul>
 						</section>
 					</section>
@@ -231,7 +318,7 @@ const Home = () => {
 							</div>
 						</div>
 						<div>
-							<img src={SVG9} alt="" />
+							<img className={styles.rite__img} src={SVG9} alt="" />
 						</div>
 					</section>
 				</section>
@@ -245,63 +332,30 @@ const Home = () => {
 					</div>
 					<section className={styles.main3__container}>
 						<div className={styles.main3__container__img}>
-							<img src={SVG10} alt="" />
+							<img src={keyFeatures[activeFeatures].image} alt="" />
 						</div>
 						<div className={styles.main3__container__text}>
 							<ul className={styles.main3__container__list}>
-								<li className={styles.main3__container__list__item}>
-									<div className={styles.indicator}></div>
-									<div className={styles.indicator__container}>
-										<span className={styles.list__item__l__txt}>
-											Instant Document Creation
-										</span>
-										<p className={styles.list__item__m__txt}>
-											Use Ritease AI to create documents instantly using
-											prompts, such as letterheads, invoices, business reports,
-											and academic documents.
-										</p>
-									</div>
-								</li>
-								<li className={styles.main3__container__list__item}>
-									<div className={styles.indicator}></div>
-									<div className={styles.indicator__container}>
-										<span className={styles.list__item__l__txt}>
-											Smart Content Creation
-										</span>
-										<p className={styles.list__item__m__txt}>
-											Ritease AI's writing assist and image generation tools
-											help you create tailored content 10x faster.
-										</p>
-									</div>
-								</li>
-								<li className={styles.main3__container__list__item}>
-									<div className={styles.indicator}></div>
-									<div className={styles.indicator__container}>
-										<span className={styles.list__item__l__txt}>
-											Blockchain-Grade Security
-										</span>
-										<p className={styles.list__item__m__txt}>
-											Document signing and changes to documents are all tracked
-											on the Base blockchain, providing top notch security and
-											transparency for your teams.
-										</p>
-									</div>
-								</li>
-								<li className={styles.main3__container__list__item}>
-									<div className={styles.indicator}></div>
-									<div className={styles.indicator__container}>
-										<span className={styles.list__item__l__txt}>
-											Publish and Earn with Ease
-										</span>
-										<p className={styles.list__item__m__txt}>
-											Ritease empowers creators to earn money by publishing
-											their work and sharing the publication links. Whether it's
-											an article, a novel, or a research piece, you set the
-											price for your premium content, and get paid whenever
-											readers pay to read your work.
-										</p>
-									</div>
-								</li>
+								{keyFeatures.map((feature, index) => (
+									<li
+										key={index}
+										className={`${styles.main3__container__list__item} ${
+											activeFeatures === index
+												? styles.main3__container__list__item__active
+												: ''
+										}`}
+										onClick={() => handleFeaturesClick(index)}>
+										<div className={styles.indicator}></div>
+										<div className={styles.indicator__container}>
+											<span className={styles.list__item__l__txt}>
+												{feature.name}
+											</span>
+											<p className={styles.list__item__m__txt}>
+												{feature.description}
+											</p>
+										</div>
+									</li>
+								))}
 							</ul>
 						</div>
 					</section>
@@ -359,7 +413,7 @@ const Home = () => {
 							</ul>
 						</div>
 						<div>
-							<img src={SVG11} alt="" />
+							<img className={styles.elevate__img} src={SVG11} alt="" />
 						</div>
 					</section>
 				</section>

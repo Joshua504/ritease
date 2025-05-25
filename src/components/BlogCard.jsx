@@ -1,8 +1,11 @@
 import styles from '../styles/blogcard.module.scss';
+import { Link } from 'react-router-dom';
+
 
 
 import SVG34 from '../assets/SVG(34).svg';
 import SVG35 from '../assets/SVG(35).svg';
+import SVG38 from '../assets/SVG(38).svg';
 
 const BlogCard = () => {
 	return (
@@ -13,13 +16,13 @@ const BlogCard = () => {
 				</div>
 				<div className={styles.blog__textarea}>
 					<p className={styles.pills}>Category</p>
-					<a className={styles.blog__title} href="#">
+					<Link to="/blog" className={styles.blog__title} href="#">
 						<h2>learning AI/ML as an Engineer in 2025</h2>
 						<p>
 							Ritease is committed to protecting your privacy and ensuring your
 							personal information is handled securely. This Privacy
 						</p>
-					</a>
+					</Link>
 					<section className={styles.blog__author}>
 						<div className={styles.author}>
 							<h3>Daniel Darlington</h3>
@@ -27,7 +30,7 @@ const BlogCard = () => {
 						</div>
 						<div className={styles.blog__activities}>
 							<p>
-								<img src="" alt="" />
+								<img src={SVG38} alt="" />
 								<span>107</span>
 							</p>
 							<a href="">

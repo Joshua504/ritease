@@ -47,23 +47,25 @@ const Footer = () => {
 							<li>Rite SDK/API</li>
 						</ul>
 					</div>
-					<div className={styles.links}>
-						<h3>Legal</h3>
-						<ul>
-							<Link to="/privacy">
-								<li>Privacy Policy</li>
-							</Link>
-							<Link to="/terms">
-								<li>Terms of Use</li>
-							</Link>
-						</ul>
-					</div>
-					<div className={styles.links}>
-						<h3>Company</h3>
-						<ul>
-							<li>Blog</li>
-						</ul>
-					</div>
+					<section className={styles.link__con}>
+						<div className={styles.links}>
+							<h3>Legal</h3>
+							<ul>
+								<Link to="/privacy">
+									<li>Privacy Policy</li>
+								</Link>
+								<Link to="/terms">
+									<li>Terms of Use</li>
+								</Link>
+							</ul>
+						</div>
+						<div className={styles.links}>
+							<h3>Company</h3>
+							<ul>
+								<li>Blog</li>
+							</ul>
+						</div>
+					</section>
 				</div>
 
 				<div className={styles.main2__contact}>
@@ -89,6 +91,7 @@ const Footer = () => {
 							<img src={SVG19} alt="" />
 							<span>hello@ritease.com</span>
 						</p>
+						<p className={styles.copy}>© Ritease, {year}</p>
 					</div>
 				</div>
 			</section>

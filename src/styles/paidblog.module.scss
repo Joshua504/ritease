@@ -1,0 +1,149 @@
+@use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
+
+.blog__banner {
+	padding: 15.75rem 240px 47px;
+	display: flex;
+	justify-content: center;
+
+	.banner {
+		height: 440px;
+		width: 1180px;
+		background-image: url('../assets/SVG\(31\).svg');
+		background-position: center;
+		background-repeat: no-repeat;
+		border-radius: 16px;
+	}
+}
+
+.blog__banner__mod {
+	padding: 0;
+	margin-bottom: 36px;
+	width: 100%;
+	position: relative;
+	position: relative;
+}
+
+.title {
+	padding: 0 $bodymargin 0 560px;
+	@include sub-title;
+	margin-bottom: 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.main {
+	padding: 0 560px;
+
+	.blog__titlecontainer {
+		p {
+			@include sub-text;
+			margin-bottom: 24px;
+		}
+
+		.author__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 23px;
+
+			h3 {
+				@include sub-text;
+				font-family: interSemiBold;
+			}
+
+			h4 {
+				@include sub-text;
+			}
+		}
+
+		.blog__titlelinks {
+			display: flex;
+			justify-content: end;
+			align-items: center;
+			gap: 24px;
+			margin-bottom: 41px;
+		}
+	}
+
+	.blog__content {
+		padding-bottom: 24px;
+		margin-bottom: 36px;
+
+		h3 {
+			@include sub-title;
+			margin-bottom: 24px;
+		}
+		p {
+			@include sub-text;
+			margin-bottom: 24px;
+		}
+	}
+
+	.blog__content__mod {
+		padding-bottom: 0;
+	}
+}
+
+.wrapper {
+	position: relative;
+}
+
+.blur {
+	position: absolute;
+	top: 0;
+	height: 440px;
+	width: 1180px;
+	border-radius: 16px;
+	background: linear-gradient(
+		to bottom,
+		rgba(255, 255, 255, 0.1) 0%,
+		rgba(255, 255, 255, 0.05) 100%
+	);
+	backdrop-filter: blur(5px);
+}
+
+.main__mod {
+	position: relative;
+
+	.blur__mod {
+		width: 800px;
+		height: 216px;
+		border-radius: 0;
+	}
+}
+
+.paid__blog__price {
+	padding: 27px $bodymargin 304px;
+	h2 {
+		@include sub-title;
+		text-align: center;
+		margin-bottom: 8px;
+	}
+	p {
+		@include sub-text;
+		text-align: center;
+		margin: 0 auto;
+		width: 65%;
+		margin-bottom: 28px;
+	}
+
+	.price {
+		@include flex;
+    flex-direction: column;
+    gap: 28px;
+		h2 {
+			@include sub-title;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 20px;
+      gap: 8px;
+
+      img{
+        width: 36px;
+        height: 36px;
+      }
+		}
+	}
+}

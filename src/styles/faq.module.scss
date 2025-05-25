@@ -15,10 +15,19 @@
 	padding: 30px 24px;
 	cursor: pointer;
 
+	@include mobile{
+		padding: 11px 9px;
+	}
+
 	h3 {
 		font-size: 1.125rem;
 		font-family: interMedium;
 		color: $primary;
+
+		@include mobile{
+			font-size: 12px;
+			line-height: 16px;
+		}
 	}
 }
 
@@ -27,16 +36,24 @@
 	overflow: hidden;
 	transition: max-height 0.3s ease, padding 0.3s ease;
 	background: rgba(255, 255, 255, 0.04);
-	// border: 1px solid rgba(255, 255, 255, 0.4);
 
 	p {
 		font-size: 1.125rem;
 		font-family: interMedium;
 		color: $primary;
+
+		@include mobile{
+			font-size: 12px;
+			line-height: 16px;
+		}
 	}
 
 	&.open {
 		max-height: 600px;
 		padding: 44px 24px;
+
+		@include mobile{
+			padding: 16px 9px;
+		}
 	}
 }

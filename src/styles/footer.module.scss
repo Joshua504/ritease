@@ -5,12 +5,20 @@ footer {
 	padding: 3rem $bodymargin 0;
 	background: #171717;
 
+	@include mobile {
+		padding: 42px 19.56px;
+	}
+
 	.main1 {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding-bottom: 47px;
 		border-bottom: 1px solid #525252;
+
+		@include mobile {
+			padding-bottom: 10px;
+		}
 	}
 
 	.main2 {
@@ -18,8 +26,17 @@ footer {
 		justify-content: space-between;
 		margin-top: 3.125rem;
 
+		@include mobile {
+			flex-direction: column;
+			align-items: center;
+		}
+
 		.main2__copyright {
-      width: 40%;
+			width: 40%;
+
+			@include mobile {
+				width: 100%;
+			}
 
 			p {
 				@include sub-text;
@@ -28,12 +45,27 @@ footer {
 
 			p:nth-child(1) {
 				margin-bottom: 5.75rem;
+
+				@include mobile {
+					margin-bottom: 43px;
+				}
+			}
+
+			p:nth-child(2) {
+				@include mobile {
+					display: none;
+				}
 			}
 		}
 
 		.main2__links {
 			display: flex;
 			gap: 2.75rem;
+			width: 100%;
+
+			@include mobile {
+				justify-content: space-between;
+			}
 
 			.links {
 				h3 {
@@ -50,6 +82,15 @@ footer {
 					cursor: pointer;
 				}
 			}
+
+			.link__con {
+				display: flex;
+				gap: 2.75rem;
+
+				@include mobile {
+					flex-direction: column;
+				}
+			}
 		}
 
 		.main2__contact {
@@ -58,6 +99,10 @@ footer {
 				justify-content: end;
 				align-items: center;
 				margin-bottom: 0.9375rem;
+
+				@include mobile {
+					justify-content: center;
+				}
 			}
 
 			.mail {
@@ -67,12 +112,30 @@ footer {
 					align-items: center;
 					gap: 8px;
 					@include sub-text;
+					margin-bottom: 16px;
+
+					@include mobile {
+						text-align: center;
+						justify-content: center;
+					}
+				}
+
+				.copy{
+					display: none;
+
+					@include mobile {
+						display: block;
+					}
 				}
 			}
 		}
 	}
 
-  .footerlogo{
+	.footerlogo {
 		@include flex;
-  }
+
+		@include mobile {
+			display: none;
+		}
+	}
 }

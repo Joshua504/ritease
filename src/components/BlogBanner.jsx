@@ -11,7 +11,7 @@ const BlogBanner = () => {
 				<div className={styles.banner__container}>
 					<section className={styles.txt__area}>
 						<div className={styles.banner__text}>
-							<h2>Personal Sovereignty: Be a Global Citizen</h2>
+							<Link to="/paid"><h2>Personal Sovereignty: Be a Global Citizen</h2></Link>
 							<p>
 								Ritease is committed to protecting your privacy and ensuring
 								your personal information is handle...
@@ -21,12 +21,12 @@ const BlogBanner = () => {
 							</div>
 						</div>
 						<div className={styles.banner__links}>
-							<a href="">
+							<a href="#">
 								<img src={SVG32} alt="" />
 							</a>
-							<a href="">
+							<Link to="/paid">
 								<img src={SVG33} alt="" />
-							</a>
+							</Link>
 						</div>
 					</section>
 				</div>

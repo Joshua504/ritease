@@ -1,8 +1,33 @@
 import { Link } from 'react-router-dom';
 import styles from '../styles/nav.module.scss';
 import Button from './Button';
+import { useState } from 'react';
 
 const Nav = ({ Logo }) => {
+	const [activeNav, setActiveNav] = useState(0);
+
+	const navLinks = [
+		{
+			name: 'home',
+			link: '/',
+		},
+		{
+			name: 'features',
+			link: '/features',
+		},
+		{
+			name: 'pricing',
+			link: '/pricing',
+		},
+		{
+			name: 'riteboards',
+			link: '/riteboards',
+		},
+	];
+
+	const handleNavClick = (index) => {
+		setActiveNav(index);
+	};
 
 	return (
 		<>
@@ -14,24 +39,23 @@ const Nav = ({ Logo }) => {
 						</Link>
 					</div>
 					<ul className={styles.nav__links}>
-						<Link className={styles.links} to="/">
-							home
-						</Link>
-						<Link className={styles.links} to="/features">
-							features
-						</Link>
-						<Link className={styles.links} to="/pricing">
-							pricing
-						</Link>
-						<Link className={styles.links} to="/riteboards">
-							riteboards
-						</Link>
+						{navLinks.map((link, index) => (
+							<Link
+								key={index}
+								className={`${styles.links} ${
+									activeNav === index ? styles.active__link : ''
+								}`}
+								onClick={() => handleNavClick(index)}
+								to={link.link}>
+								{link.name}
+							</Link>
+						))}
 					</ul>
 					<div className={styles.nav__btns}>
 						<Link className={styles.links} to="/login">
 							login
 						</Link>
-						<Button btnText='Early Access' borderRadius="24px" />
+						<Button btnText="Early Access" borderRadius="24px" />
 					</div>
 				</section>
 			</nav>

@@ -3,6 +3,8 @@
 
 .anime__title {
 	@include anime-text;
-	transition: 1s ease;
 
+	@include mobile {
+		font-size: 32px;
+	}
 }
