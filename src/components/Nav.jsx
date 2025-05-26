@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 const Nav = ({ Logo }) => {
 	const [activeNav, setActiveNav] = useState(0);
+	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 	const navLinks = [
 		{
@@ -27,7 +28,13 @@ const Nav = ({ Logo }) => {
 
 	const handleNavClick = (index) => {
 		setActiveNav(index);
+		setIsMobileMenuOpen(false);
 	};
+
+	const toggleMobileMenu = () => {
+		setIsMobileMenuOpen(prev => !prev);
+	};
+
 
 	return (
 		<>
@@ -35,10 +42,13 @@ const Nav = ({ Logo }) => {
 				<section className={styles.nav__container}>
 					<div>
 						<Link to="/">
-							<img src={Logo} alt="" />
+							<img className={styles.logo} src={Logo} alt="" />
 						</Link>
 					</div>
-					<ul className={styles.nav__links}>
+					<ul
+						className={`${styles.nav__links} ${
+							isMobileMenuOpen ? styles.nav__links__open : ''
+						}`}>
 						{navLinks.map((link, index) => (
 							<Link
 								key={index}
@@ -52,10 +62,21 @@ const Nav = ({ Logo }) => {
 						))}
 					</ul>
 					<div className={styles.nav__btns}>
-						<Link className={styles.links} to="/login">
+						<Link
+							className={`${styles.links} ${styles.links__mod}`}
+							to="/login">
 							login
 						</Link>
 						<Button btnText="Early Access" borderRadius="24px" />
+						<section
+							className={`${styles.harmburger} ${
+								isMobileMenuOpen ? styles.harmburger__open : ''
+							}`}
+							onClick={toggleMobileMenu}>
+							<div className={styles.bars}></div>
+							<div className={styles.bars}></div>
+							<div className={styles.bars}></div>
+						</section>
 					</div>
 				</section>
 			</nav>

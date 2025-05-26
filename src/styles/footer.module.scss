@@ -60,6 +60,7 @@ footer {
 
 		.main2__links {
 			display: flex;
+			justify-content: center;
 			gap: 2.75rem;
 			width: 100%;
 
@@ -76,10 +77,15 @@ footer {
 				}
 
 				ul li {
-					padding: 8px 0;
+					padding: 8px 5px;
 					@include sub-text;
 					color: rgba(255, 255, 255, 0.4);
 					cursor: pointer;
+					transition: 0.5s ease-in-out;
+
+					&:hover {
+						background: #525252;
+					}
 				}
 			}
 
@@ -120,7 +126,7 @@ footer {
 					}
 				}
 
-				.copy{
+				.copy {
 					display: none;
 
 					@include mobile {

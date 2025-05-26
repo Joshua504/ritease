@@ -1,9 +1,13 @@
 @use '/src/styles/variables' as *;
 @use '/src/styles/mixins' as *;
 
-header {
+.head {
 	padding: 15.75rem $bodymargin 3rem;
 	text-align: center;
+
+	@include mobile {
+		padding: 8rem 16px 16px;
+	}
 
 	h1 {
 		color: #d4d4d4;
@@ -12,18 +16,34 @@ header {
 		line-height: 4.175rem;
 		letter-spacing: -0.0762rem;
 		margin-bottom: 2.5rem;
+
+		@include mobile {
+			font-size: 36px;
+			line-height: 26px;
+			margin-bottom: 16px;
+		}
 	}
 
 	p {
 		color: #737373;
 		font-family: interRegular;
 		font-size: 1.25rem;
+
+		@include mobile {
+			font-size: 20px;
+			line-height: 24px;
+		}
 	}
 }
 
 main {
 	padding: 0 $bodymargin;
 	margin-top: 58px;
+
+	@include mobile {
+		padding: 0 16px;
+		margin-top: 53px;
+	}
 
 	.main1__mini1 {
 		display: flex;
@@ -36,6 +56,10 @@ main {
 			border-radius: 10px;
 			background: transparent;
 			color: #737373;
+
+			@include mobile {
+				font-size: 12px;
+			}
 		}
 
 		button:nth-child(1) {
@@ -48,6 +72,12 @@ main {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@include mobile {
+			flex-direction: column;
+			gap: 41px;
+		}
+
 		.pricing__cards {
 			padding: 30px 36px;
 			border: 0.5px solid #737373;
@@ -55,11 +85,23 @@ main {
 			width: 400px;
 			height: 820px;
 
+			@include mobile {
+				padding: 30px 16px;
+				width: 331px;
+				height: fit-content;
+			}
+
 			h2 {
 				color: #d4d4d4;
 				font-size: 1.5rem;
 				font-family: interRegular;
 				margin-bottom: 30px;
+
+				@include mobile {
+					text-align: center;
+					font-size: 20px;
+					margin-bottom: 10px;
+				}
 			}
 
 			.price {
@@ -67,6 +109,11 @@ main {
 				font-size: 30px;
 				font-family: interBold;
 				margin-bottom: 30px;
+
+				@include mobile {
+					text-align: center;
+					font-size: 20px;
+				}
 			}
 
 			.price__btn {
@@ -89,6 +136,10 @@ main {
 					font-size: 0.875rem;
 					color: #d4d4d4;
 					margin-bottom: 18px;
+
+					@include mobile {
+						font-size: 12px;
+					}
 				}
 			}
 		}
@@ -168,7 +219,11 @@ main {
 	}
 
 	.container {
-    margin-top: 6.25rem;
+		margin-top: 6.25rem;
+
+		@include mobile {
+			margin-top: 38px;
+		}
 
 		.planTiers {
 			display: flex;
@@ -176,9 +231,9 @@ main {
 			margin-bottom: 33px;
 
 			.planTier {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
 				color: #86efac;
 				flex: 1;
 
@@ -186,6 +241,10 @@ main {
 					font-family: interBold;
 					font-size: 4rem;
 					color: #d4d4d4;
+
+					@include mobile {
+						font-size: 20px;
+					}
 				}
 
 				h3 {
@@ -193,6 +252,11 @@ main {
 					font-size: 1.875rem;
 					margin-bottom: 48px;
 					text-align: center;
+
+					@include mobile {
+						font-size: 12px;
+						margin-bottom: 15px;
+					}
 				}
 
 				.getStartedBtn {
@@ -201,44 +265,61 @@ main {
 					color: rgba(255, 255, 255, 0.84);
 					border: 1px solid rgba(255, 255, 255, 0.15);
 					margin: 0 auto;
+
+					@include mobile {
+						font-size: 5px;
+					}
 				}
 			}
 		}
 
-    .featuresTable {
-      display: flex;
-      flex-direction: column;
-  
-      .featureRow {
-        display: flex;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.24);
-        padding: 35px 0;
-  
-        .featureName {
-          font-weight: bold;
-          font-family: interRegular;
-          font-size: 1rem;
-          color: $primary;
-          width: 340px;
-        }
-  
-        .featureValue {
-          flex: 1;
-          text-align: center;
-          font-family: interRegular;
-          font-size: 14px;
-          color: $primary;
+		.featuresTable {
+			display: flex;
+			flex-direction: column;
 
-          p{
-            width: 80%;
+			.featureRow {
+				display: flex;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+				padding: 35px 0;
+
+				@include mobile {
+					padding: 15px 0;
+				}
+
+				.featureName {
+					font-weight: bold;
+					font-family: interRegular;
+					font-size: 1rem;
+					color: $primary;
+					width: 340px;
+
+					@include mobile {
+						font-size: 8px;
+						width: 110px;
+					}
+				}
+
+				.featureValue {
+					flex: 1;
+					text-align: center;
+					font-family: interRegular;
+					font-size: 14px;
+					color: $primary;
+
+					@include mobile {
+						font-size: 8px;
+					}
+
+					p {
+						width: 80%;
 						margin: 0 auto;
-          }
-        }
-      }
-    }
+					}
+				}
+			}
+		}
 	}
 
-  .main4{
-    margin: 114px 0 91px;
-  }
+	.main4 {
+		margin: 114px 0 91px;
+	}
 }

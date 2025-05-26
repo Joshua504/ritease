@@ -6,6 +6,10 @@
 	display: flex;
 	justify-content: center;
 
+	@include mobile {
+		padding: 8rem 16px 16px;
+	}
+
 	.banner {
 		height: 440px;
 		width: 1180px;
@@ -13,21 +17,39 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		border-radius: 16px;
+
+		@include mobile {
+			width: 100%;
+		}
 	}
 }
 
 .blog__banner__mod {
 	padding: 0;
 	margin-bottom: 36px;
+
+	@include mobile {
+		margin: 0 16px;
+		margin-bottom: 36px;
+	}
 }
 
 .main {
 	padding: 0 560px;
 
+	@include mobile {
+		padding: 0 16px;
+	}
+
 	.blog__titlecontainer {
 		h2 {
 			@include sub-title;
 			margin-bottom: 8px;
+
+			@include mobile {
+				font-size: 25px;
+				line-height: 26px;
+			}
 		}
 
 		p {
@@ -85,10 +107,14 @@
 
 .blog__activity {
 	padding: 0 560px;
-  margin-bottom: 243px;
+	margin-bottom: 243px;
 	display: flex;
 	align-items: center;
 	gap: 8px;
+
+	@include mobile {
+		padding: 0 16px;
+	}
 
 	p {
 		@include sub-text;
@@ -98,18 +124,34 @@
 	}
 }
 
-.blog__by{
+.blog__by {
 	padding: 0 $bodymargin;
-  margin-bottom: 220px;
+	margin-bottom: 220px;
 
-  h2{
+	@include mobile {
+		padding: 0 16px;
+		display: none;
+	}
+
+	h2 {
 		@include sub-title;
-    margin-bottom: 24px;
-  }
+		margin-bottom: 24px;
+	}
 
-  .blog__by__cards{
-    display: flex;
+	.blog__by__cards {
+		display: flex;
 		justify-content: space-between;
-    gap: 56px;
-  }
+		gap: 56px;
+	}
+}
+
+.waitlist{
+	padding: 0 $bodymargin;
+	margin-bottom: 220px;
+	display: none;
+
+	@include mobile {
+		display: block;
+		padding: 0 16px;
+	}
 }

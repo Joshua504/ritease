@@ -2,6 +2,7 @@ import styles from '../styles/reads.module.scss';
 import AnimatedText from '../components/AnimatedText';
 import BlogBanner from '../components/BlogBanner';
 import BlogCard from '../components/BlogCard';
+import WaitList from '../components/WaitList';
 
 const Reads = () => {
 	return (
@@ -15,6 +16,10 @@ const Reads = () => {
 			<main className={styles.main}>
 				<section className={styles.content}>
 					<BlogCard />
+				</section>
+
+				<section className={styles.waitlist}>
+					<WaitList />
 				</section>
 			</main>
 		</>

@@ -1,10 +1,57 @@
 @use '/src/styles/variables' as *;
 @use '/src/styles/mixins' as *;
 
-header {
+.head {
 	padding: 15.75rem $bodymargin 6.25rem;
+
+	@include mobile {
+		padding: 8rem 16px 16px;
+	}
 }
 
 .wrapper {
 	@include terms;
+
+	@include mobile {
+		padding: 0 16px 16px;
+
+		.sidebar {
+			display: none;
+		}
+
+		.main {
+			width: 100%;
+
+			.term__details {
+				margin-bottom: 16px;
+
+				.number {
+					width: 38px;
+					height: 34px;
+					border-radius: 10px;
+					margin-bottom: 10px;
+
+					p {
+						font-size: 20px;
+					}
+				}
+
+				h2 {
+					font-size: 18px;
+					line-height: 20px;
+					margin-bottom: 10px;
+				}
+
+				p{
+					font-size: 10px;
+					line-height: 12px;
+				}
+
+				li{
+					font-size: 10px;
+					line-height: 12px;
+				}
+			}
+		}
+	}
 }

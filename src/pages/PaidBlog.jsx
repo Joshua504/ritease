@@ -6,6 +6,7 @@ import SVG36 from '../assets/SVG(36).svg';
 import SVG37 from '../assets/SVG(37).svg';
 import AnimatedText from '../components/AnimatedText';
 import Button from '../components/Button';
+import WaitList from '../components/WaitList';
 
 const PaidBlog = () => {
 	return (
@@ -134,6 +135,10 @@ const PaidBlog = () => {
           <h2><img src={SVG32} alt="" /><span>£100</span></h2>
           <Button btnText={'Purchase Article'}  />
         </div>
+			</div>
+
+			<div className={styles.wait}>
+				<WaitList />
 			</div>
 		</>
 	);

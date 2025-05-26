@@ -1,12 +1,14 @@
 import styles from '../styles/animatedtext.module.scss';
 
-const AnimatedText = ({ animeText, fontSize }) => {
-	const Textstyle = {
-		fontSize: fontSize || '100px', // Default to 1rem if no fontSize is provided /
+const AnimatedText = ({ animeText, fontSize, className }) => {
 
-	};
-
-	return <h2 className={styles.anime__title} style={Textstyle}>{animeText}</h2>;
+	return (
+		<h2
+			className={`${styles.anime__title} ${className || ''}`}
+			style={fontSize ? { fontSize } : {}}>
+			{animeText}
+		</h2>
+	);
 };
 
 export default AnimatedText;

@@ -4,14 +4,23 @@ import styles from '../styles/blogbanner.module.scss';
 import SVG32 from '../assets/SVG(32).svg';
 import SVG33 from '../assets/SVG(33).svg';
 
-const BlogBanner = () => {
+const BlogBanner = ({ onCategoriesClick }) => {
+
+	const handleCategoriesClick = () => {
+		if (onCategoriesClick) {
+			onCategoriesClick();
+		}
+	};
+
 	return (
 		<>
 			<section className={styles.banner}>
 				<div className={styles.banner__container}>
 					<section className={styles.txt__area}>
 						<div className={styles.banner__text}>
-							<Link to="/paid"><h2>Personal Sovereignty: Be a Global Citizen</h2></Link>
+							<Link to="/paid">
+								<h2>Personal Sovereignty: Be a Global Citizen</h2>
+							</Link>
 							<p>
 								Ritease is committed to protecting your privacy and ensuring
 								your personal information is handle...
@@ -36,7 +45,10 @@ const BlogBanner = () => {
 						<input placeholder="Explore" type="text" name="" id="" />
 					</div>
 					<div className={styles.search__links}>
-						<Link to="/reads" className={styles.links}>My Reads</Link>
+						<p className={`${styles.links} ${styles.open}`} onClick={handleCategoriesClick}>categories</p>
+						<Link to="/reads" className={styles.links}>
+							My Reads
+						</Link>
 						<Link className={styles.links}>Read Later</Link>
 					</div>
 				</ul>

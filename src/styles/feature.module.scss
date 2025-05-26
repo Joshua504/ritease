@@ -1,22 +1,44 @@
 @use '/src/styles/variables' as *;
 @use '/src/styles/mixins' as *;
 
-header {
+.head {
 	padding: 15.75rem $bodymargin 0rem;
+
+	@include mobile {
+		padding: 8rem 16px 16px;
+	}
 
 	.header {
 		margin: 85px 87px;
 		text-align: center;
 
+		@include mobile {
+			margin: 21px 16px;
+		}
+
 		h2 {
 			@include sub-title;
 			margin-bottom: 17px;
+
+			@include mobile {
+				font-size: 24px;
+				line-height: 28px;
+				text-align: center;
+				margin-bottom: 8px;
+			}
 		}
 
 		p {
 			@include sub-text;
 			width: 80%;
 			margin: 0 auto;
+
+			@include mobile {
+				font-size: 12px;
+				line-height: 16px;
+				text-align: center;
+				width: 100%;
+			}
 		}
 	}
 	.banner {
@@ -47,8 +69,16 @@ header {
 .main1 {
 	padding: 0 $bodymargin;
 
+	@include mobile {
+		padding: 0 16px;
+	}
+
 	.create {
 		margin: 160px 0 80px;
+
+		@include mobile {
+			margin: 42px 0 24px;
+		}
 
 		.title__head {
 			font-family: interSemiBold;
@@ -56,6 +86,12 @@ header {
 			line-height: 72px;
 			color: rgba(255, 255, 255, 0.24);
 			width: 70%;
+
+			@include mobile {
+				font-size: 24px;
+				line-height: 32px;
+				width: 100%;
+			}
 		}
 	}
 
@@ -63,12 +99,22 @@ header {
 		.feature1 {
 			margin: 1.5rem 0 17rem;
 
+			@include mobile {
+				margin: 1.5rem 0 4rem;
+			}
+
 			.feature1__title {
 				margin-bottom: 28px;
 
 				h2 {
 					@include sub-title;
 					margin-bottom: 24px;
+
+					@include mobile {
+						font-size: 24px;
+						line-height: 20px;
+						margin-bottom: 10px;
+					}
 				}
 
 				p {
@@ -83,6 +129,13 @@ header {
 							rgba(255, 255, 255, 0) 100%
 						)
 						1;
+
+					@include mobile {
+						font-size: 12px;
+						line-height: 16px;
+						padding-bottom: 10px;
+						width: 100%;
+					}
 				}
 			}
 
@@ -90,6 +143,21 @@ header {
 				display: flex;
 				justify-content: center;
 				margin-bottom: 28px;
+
+				@include mobile {
+					flex-direction: column;
+				}
+
+				.feature1__flex__img {
+					@include mobile {
+						width: 100%;
+
+						img {
+							width: 100%;
+							margin-bottom: 27px;
+						}
+					}
+				}
 
 				.feature1__flex__container {
 					display: flex;
@@ -100,12 +168,25 @@ header {
 						width: 348px;
 						border: 1px solid rgba(255, 255, 255, 0.07);
 
+						@include mobile {
+							padding: 27px 16px;
+							width: 180px;
+						}
+
 						h3 {
 							@include flex-item__h3;
+
+							@include mobile {
+								font-size: 12px;
+							}
 						}
 
 						p {
 							@include flex-item__p;
+
+							@include mobile {
+								font-size: 12px;
+							}
 						}
 					}
 				}
@@ -117,8 +198,18 @@ header {
 			}
 		}
 
-		.feature1:nth-child(2) {
+		.feature1__mod {
 			margin-bottom: 309px;
+
+			@include mobile {
+				margin-bottom: 220px;
+			}
+
+			.feature1__flex {
+				@include mobile {
+					flex-direction: column-reverse;
+				}
+			}
 		}
 	}
 }
@@ -126,11 +217,26 @@ header {
 .main3 {
 	padding: 16rem $bodymargin 0;
 
+	@include mobile {
+		padding: 1.5rem 16px 0rem;
+	}
+
 	.feature1 {
 		margin: 1.5rem 0 17rem;
 
+		@include mobile {
+			margin: 1.5rem 0 4rem;
+		}
+
 		.feature1__title {
 			margin-bottom: 28px;
+
+			@include mobile {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+			}
 
 			h2 {
 				font-family: interSemiBold;
@@ -139,6 +245,15 @@ header {
 				color: rgba(255, 255, 255, 0.24);
 				width: 90%;
 				margin-bottom: 84px;
+
+				@include mobile {
+					font-size: 24px;
+					line-height: 28px;
+					width: 100%;
+					text-align: center;
+					color: $primary;
+					margin-bottom: 16px;
+				}
 			}
 
 			p {
@@ -154,6 +269,14 @@ header {
 						rgba(255, 255, 255, 0) 100%
 					)
 					1;
+
+				@include mobile {
+					font-size: 12px;
+					line-height: 16px;
+					padding-bottom: 10px;
+					width: 100%;
+					text-align: center;
+				}
 			}
 		}
 
@@ -161,6 +284,21 @@ header {
 			display: flex;
 			justify-content: center;
 			margin-bottom: 28px;
+
+			@include mobile {
+				flex-direction: column;
+			}
+
+			.feature1__flex__img {
+				@include mobile {
+					width: 100%;
+
+					img {
+						width: 100%;
+						margin-bottom: 27px;
+					}
+				}
+			}
 
 			.feature1__flex__container {
 				display: flex;
@@ -170,6 +308,11 @@ header {
 					padding: 48px 64px;
 					width: 348px;
 					border: 1px solid rgba(255, 255, 255, 0.07);
+
+					@include mobile {
+						padding: 27px 16px;
+						width: 180px;
+					}
 
 					h3 {
 						@include flex-item__h3;
@@ -182,14 +325,31 @@ header {
 			}
 		}
 	}
+
+	.feature1__mod {
+
+		.feature1__flex {
+			@include mobile {
+				flex-direction: column-reverse;
+			}
+		}
+	}
 }
 
 .main2 {
 	background: #171717;
 	padding: 148px $bodymargin 172px;
 
+	@include mobile {
+		padding: 42px 16px 42px;
+	}
+
 	.h2__container {
 		margin-bottom: 4rem;
+
+		@include mobile {
+			margin-bottom: 16px;
+		}
 
 		h2 {
 			font-family: interSemiBold;
@@ -197,11 +357,21 @@ header {
 			line-height: 72px;
 			color: rgba(255, 255, 255, 0.24);
 			width: 90%;
+
+			@include mobile {
+				font-size: 24px;
+				line-height: 28px;
+				width: 100%;
+			}
 		}
 	}
 
 	.btn__container {
 		margin-bottom: 22px;
+
+		@include mobile {
+			margin-bottom: 8px;
+		}
 
 		p {
 			@include sub-text;
@@ -217,25 +387,51 @@ header {
 					rgba(255, 255, 255, 0) 100%
 				)
 				1;
+
+			@include mobile {
+				width: 100%;
+				font-size: 12px;
+			}
 		}
 	}
 
 	.main2__container1 {
 		margin-bottom: 200px;
+
+		@include mobile {
+			margin-bottom: 10px;
+		}
 	}
 
 	.main2__container1:nth-child(2) {
 		.h2__container {
 			h2 {
 				width: 60%;
+
+				@include mobile {
+					width: 100%;
+				}
 			}
 		}
 	}
+	.main2__container1:nth-child(3) {
+		.flex__content {
+			@include mobile {
+				height: 200px;
+				// background: red;
+			}
+		}
+	}
+
 	.main2__container1:nth-child(4) {
 		margin-bottom: 0;
 		.h2__container {
 			h2 {
 				width: 95%;
+
+				@include mobile {
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -252,12 +448,25 @@ header {
 			height: 306px;
 			border: 1px solid rgba(255, 255, 255, 0.07);
 
+			@include mobile {
+				width: 180px;
+				height: 174px;
+				padding: 27px 15px;
+			}
+
 			h3 {
 				@include flex-item__h3;
+
+				@include mobile {
+					font-size: 12px;
+				}
 			}
 
 			p {
 				@include flex-item__p;
+				@include mobile {
+					font-size: 12px;
+				}
 			}
 		}
 	}

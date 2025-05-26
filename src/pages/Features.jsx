@@ -15,7 +15,7 @@ import WaitList from '../components/WaitList';
 const Features = () => {
 	return (
 		<>
-			<header>
+			<header className={styles.head}>
 				<AnimatedText animeText={'Ritease Features'} />
 
 				<section className={styles.header}>
@@ -58,7 +58,7 @@ const Features = () => {
 							</p>
 						</div>
 						<section className={styles.feature1__flex}>
-							<div>
+							<div className={styles.feature1__flex__img}>
 								<img src={SVG8} alt="" />
 							</div>
 							<section className={styles.feature1__flex__container}>
@@ -111,7 +111,7 @@ const Features = () => {
 						/>
 					</section>
 
-					<section className={styles.feature1}>
+					<section className={`${styles.feature1} ${styles.feature1__mod}`}>
 						<div className={styles.feature1__title}>
 							<h2>Document Editor</h2>
 							<p>
@@ -167,7 +167,7 @@ const Features = () => {
 									</p>
 								</div>
 							</section>
-							<div>
+							<div className={styles.feature1__flex__img}>
 								<img src={SVG8} alt="" />
 							</div>
 						</section>
@@ -459,7 +459,7 @@ const Features = () => {
 					</div>
 
 					<section className={styles.feature1__flex}>
-						<div>
+						<div className={styles.feature1__flex}>
 							<img src={SVG8} alt="" />
 						</div>
 						<section className={styles.feature1__flex__container}>
@@ -514,7 +514,7 @@ const Features = () => {
 					</div>
 
 					<section className={styles.feature1__flex}>
-						<div>
+						<div className={styles.feature1__flex}>
 							<img src={SVG8} alt="" />
 						</div>
 						<section className={styles.feature1__flex__container}>
@@ -550,7 +550,7 @@ const Features = () => {
 					</section>
 				</section>
 
-				<section className={styles.feature1}>
+				<section className={`${styles.feature1} ${styles.feature1__mod}`}>
 					<div className={styles.feature1__title}>
 						<h2>Document Hosting: Your Files, Safe and Sound</h2>
 						<p>
@@ -599,7 +599,7 @@ const Features = () => {
 								<p>Data breaches don’t wait—secure your work today.</p>
 							</div>
 						</section>
-						<div>
+						<div className={styles.feature1__flex}>
 							<img src={SVG8} alt="" />
 						</div>
 					</section>
@@ -623,7 +623,7 @@ const Features = () => {
 					</div>
 
 					<section className={styles.feature1__flex}>
-						<div>
+						<div className={styles.feature1__flex}>
 							<img src={SVG8} alt="" />
 						</div>
 						<section className={styles.feature1__flex__container}>

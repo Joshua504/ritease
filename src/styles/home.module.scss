@@ -7,7 +7,7 @@
 	background-position: center;
 
 	@include mobile {
-		padding: 10rem 1rem 1rem;
+		padding: 8rem 1rem 1rem;
 	}
 
 	.container {
@@ -29,6 +29,7 @@
 
 			@include mobile {
 				font-size: 2.5rem;
+				line-height: 48px;
 				width: 85%;
 				margin-bottom: 1rem;
 			}
@@ -235,6 +236,7 @@
 			margin-bottom: 8.715rem;
 
 			@include mobile {
+				gap: 29px;
 			}
 		}
 

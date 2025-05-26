@@ -7,6 +7,7 @@ import SVG38 from '../assets/SVG(38).svg';
 import SVG39 from '../assets/SVG(39).svg';
 import SVG40 from '../assets/SVG(40).svg';
 import BlogCard from '../components/BlogCard';
+import WaitList from '../components/WaitList';
 
 const BlogPage = () => {
 	return (
@@ -262,13 +263,17 @@ const BlogPage = () => {
 				</section>
 			</>
 			<section className={styles.blog__by}>
-        <h2>View Articles Written by same Author</h2>
-        <div className={styles.blog__by__cards}>
+				<h2>View Articles Written by same Author</h2>
+				<div className={styles.blog__by__cards}>
 					<BlogCard />
 					<BlogCard />
 					<BlogCard />
-        </div>
-      </section>
+				</div>
+			</section>
+
+			<div className={styles.waitlist}> 
+				<WaitList />
+			</div>
 		</>
 	);
 };

@@ -7,7 +7,7 @@ import WaitList from '../components/WaitList';
 const Pricing = () => {
 	return (
 		<>
-			<header>
+			<header className={styles.head}>
 				<h1>Plans that work as hard as you do</h1>
 				<p>
 					Give your team the tools to move faster, work smarter, and deliver

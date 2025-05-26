@@ -4,6 +4,10 @@
 .banner {
 	padding: 72px $bodymargin;
 
+	@include mobile {
+		padding: 62px 16px 24px;
+	}
+
 	.banner__container {
 		background-image: url('../assets/SVG\(31\).svg');
 		background-position: center;
@@ -15,26 +19,49 @@
 		justify-content: end;
 		overflow: hidden;
 
+		@include mobile {
+			height: 560px;
+		}
+
 		.txt__area {
 			padding: 16px;
 			background: rgba(27, 27, 27, 0.84);
 			display: flex;
 			justify-content: space-between;
 
+			@include mobile {
+				flex-direction: column-reverse;
+				gap: 18px;
+			}
+
 			.banner__text {
 				h2 {
 					@include sub-title;
 					margin-bottom: 8px;
+
+					@include mobile {
+						font-size: 24px;
+						line-height: 24px;
+					}
 				}
 
 				p {
 					@include sub-text;
 					margin-bottom: 24px;
+
+					@include mobile {
+						font-size: 12px;
+						line-height: 16px;
+					}
 				}
 
 				.text__flex {
 					display: flex;
 					gap: 8px;
+
+					@include mobile {
+						justify-content: space-between;
+					}
 
 					h4 {
 						@include sub-text;
@@ -53,6 +80,11 @@
 			.banner__links {
 				display: flex;
 				gap: 16px;
+
+				img {
+					width: 24px;
+					height: 24px;
+				}
 			}
 		}
 	}
@@ -61,8 +93,18 @@
 		@include flex;
 		justify-content: space-between;
 		margin-top: 26px;
-	
+
+		@include mobile {
+			flex-direction: column-reverse;
+			justify-content: center;
+			align-items: center;
+			margin-top: 24px;
+		}
+
 		.input {
+			@include mobile {
+				@include flex;
+			}
 			input {
 				font-family: interSemiBold;
 				font-size: 14px;
@@ -73,20 +115,49 @@
 				border: 1px solid #404040;
 				outline: transparent;
 				background: transparent;
-	
+
 				&::placeholder {
 					color: #404040;
 				}
+
+				@include mobile {
+					width: 381px;
+					margin: 0 auto;
+				}
 			}
 		}
-	
+
 		.search__links {
 			display: flex;
 			gap: 8px;
-	
+
+			@include mobile {
+				margin-bottom: 24px;
+			}
+
 			.links {
 				@include sub-text;
 				padding: 16px;
+				cursor: pointer;
+				border: none;
+
+				@include mobile {
+					font-size: 12px;
+					line-height: 16px;
+					padding: 10px 16px;
+					color: $primary;
+					background: transparent;
+					border-radius: 50px;
+					border: 1px solid rgba(255, 255, 255, 0.24);
+				}
+			}
+
+			.links:nth-child(1) {
+				display: none;
+
+				@include mobile {
+					display: block;
+				}
 			}
 		}
 	}

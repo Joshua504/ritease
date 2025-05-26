@@ -9,10 +9,12 @@
 	padding: 0 $bodymargin;
 	position: fixed;
 	width: 100%;
-	z-index: 99;
+	z-index: 100;
 
 	@include mobile {
-		display: none;
+		padding: 16px;
+		margin: 0 0;
+		// display: none;
 	}
 }
 .nav__container {
@@ -28,17 +30,47 @@
 	font-family: interMedium;
 	font-size: 0.875rem;
 
+	@include mobile {
+		border-radius: 0;
+	}
+
+	.logo {
+		@include mobile {
+			width: 60%;
+		}
+	}
+
 	.nav__links {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 2.25rem;
+
+		@include mobile {
+			position: fixed;
+			top: 0px;
+			right: -200%;
+			width: 100%;
+			background: #000000d6;
+			flex-wrap: wrap;
+			padding: 66px 50px 33px;
+			transition: right 0.3s ease-in-out;
+			// z-index: 99;
+
+			&.nav__links__open {
+				right: 0;
+			}
+		}
 	}
 
 	.links {
 		padding: 0.5rem 1rem;
 		color: $primary;
 		text-transform: capitalize;
+
+		@include mobile {
+			padding: 10px 1rem;
+		}
 	}
 
 	.active__link {
@@ -50,5 +82,41 @@
 		display: flex;
 		gap: 0.5rem;
 		align-items: center;
+
+		.links__mod {
+			@include mobile {
+				display: none;
+			}
+		}
+
+		.harmburger {
+			cursor: pointer;
+			display: none;
+
+			@include mobile {
+				display: block;
+
+				&.harmburger__open {
+					.bars:nth-child(1) {
+						transform: rotate(45deg) translate(3px, 3px);
+					}
+
+					.bars:nth-child(2) {
+						opacity: 0;
+					}
+
+					.bars:nth-child(3) {
+						transform: rotate(-45deg) translate(6px, -6px);
+					}
+				}
+			}
+			.bars {
+				height: 2px;
+				width: 18px;
+				margin-bottom: 4px;
+				background-color: $primary;
+				border-radius: 20px;
+			}
+		}
 	}
 }

@@ -4,7 +4,7 @@ import styles from '../styles/terms.module.scss';
 const Terms = () => {
 	return (
 		<>
-			<header>
+			<header className={styles.head}>
 				<AnimatedText animeText="Terms Of Use" />
 			</header>
 			<main className={styles.wrapper}>
