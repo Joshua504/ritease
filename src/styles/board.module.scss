@@ -7,6 +7,10 @@
 	@include mobile {
 		padding: 8rem 16px 16px;
 	}
+
+	@include macbook {
+		padding: 15.75rem 5rem 0rem;
+	}
 }
 
 .main {
@@ -17,10 +21,18 @@
 		padding: 0 16px;
 	}
 
+	@include macbook {
+		padding: 0 5rem 212px;
+	}
+
 	.blog__section {
 		display: flex;
 		justify-content: space-between;
 		gap: 88px;
+
+		@include macbook {
+			gap: 20px;
+		}
 
 		.sidebar {
 			position: sticky;

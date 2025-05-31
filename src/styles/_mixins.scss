@@ -1,6 +1,5 @@
 @use '/src/styles/variables' as *;
 
-
 @mixin mobile {
 	@media (width <= 767px) {
 		@content;
@@ -14,6 +13,12 @@
 }
 @mixin macbook {
 	@media (1025px < width <= 1440px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (width >= 1200px) {
 		@content;
 	}
 }
@@ -73,8 +78,6 @@
 	background-clip: text;
 	color: transparent;
 	-webkit-text-fill-color: transparent;
-
-	
 
 	&:hover {
 		background: linear-gradient(
@@ -205,5 +208,3 @@
 		}
 	}
 }
-
-

@@ -3,8 +3,30 @@ import styles from '../styles/pricing.module.scss';
 import SVG23 from '../assets/SVG(23).svg';
 import SVG24 from '../assets/SVG(24).svg';
 import WaitList from '../components/WaitList';
+import { useState } from 'react';
 
 const Pricing = () => {
+	const [activeButton, setActiveButton] = useState(0);
+
+	const buttons = [
+		{
+			text: 'monthly',
+			billing: 'Billed Monthly',
+		},
+		{
+			text: 'Quarterly',
+			billing: 'Billed Quarterly',
+		},
+		{
+			text: 'yearly',
+			billing: 'Billed Yearly',
+		},
+	];
+
+	const handleButtonClick = (index) => {
+		setActiveButton(index);
+	};
+
 	return (
 		<>
 			<header className={styles.head}>
@@ -18,9 +40,14 @@ const Pricing = () => {
 			<main>
 				<section className={styles.main1}>
 					<div className={styles.main1__mini1}>
-						<button>Monthly</button>
-						<button>Quarterly</button>
-						<button>Yearly</button>
+						{buttons.map((btn, index) => (
+							<button
+								className={activeButton === index ? styles.active__btn : ''}
+								key={index}
+								onClick={() => handleButtonClick(index)}>
+								{btn.text}
+							</button>
+						))}
 					</div>
 
 					<section className={styles.main1__mini2}>
@@ -89,7 +116,7 @@ const Pricing = () => {
 							</div>
 							<div className={styles.price__container}>
 								<p className={styles.price}>£20</p>
-								<p>Billed Monthly</p>
+								<p>{buttons[activeButton].billing}</p>
 							</div>
 							<button className={styles.price__btn}>Get Early Access</button>
 
@@ -158,7 +185,7 @@ const Pricing = () => {
 							<h2>Business Plan</h2>
 							<div className={styles.price__container}>
 								<p className={styles.price}>£100</p>
-								<p>Billed Monthly</p>
+								<p>{buttons[activeButton].billing}</p>
 							</div>
 							<button className={styles.price__btn}>Get Early Access</button>
 

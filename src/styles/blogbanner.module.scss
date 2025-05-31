@@ -8,6 +8,10 @@
 		padding: 62px 16px 24px;
 	}
 
+	@include macbook {
+		padding: 75px 5rem;
+	}
+
 	.banner__container {
 		background-image: url('../assets/SVG\(31\).svg');
 		background-position: center;

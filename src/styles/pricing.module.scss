@@ -8,6 +8,9 @@
 	@include mobile {
 		padding: 8rem 16px 16px;
 	}
+	@include macbook {
+		padding: 15.75rem 5rem 3rem;
+	}
 
 	h1 {
 		color: #d4d4d4;
@@ -44,6 +47,9 @@ main {
 		padding: 0 16px;
 		margin-top: 53px;
 	}
+	@include macbook {
+		padding: 0 5rem;
+	}
 
 	.main1__mini1 {
 		display: flex;
@@ -62,7 +68,7 @@ main {
 			}
 		}
 
-		button:nth-child(1) {
+		.active__btn {
 			background: #86efac;
 			color: #1e1e1e;
 		}
@@ -89,6 +95,10 @@ main {
 				padding: 30px 16px;
 				width: 331px;
 				height: fit-content;
+			}
+			@include macbook {
+				padding: 30px 16px;
+				width: 360px;
 			}
 
 			h2 {

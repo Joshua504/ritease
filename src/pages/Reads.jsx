@@ -16,6 +16,8 @@ const Reads = () => {
 			<main className={styles.main}>
 				<section className={styles.content}>
 					<BlogCard />
+					<BlogCard />
+					<BlogCard />
 				</section>
 
 				<section className={styles.waitlist}>

@@ -42,16 +42,21 @@
 					margin-bottom: 10px;
 				}
 
-				p{
+				p {
 					font-size: 10px;
 					line-height: 12px;
 				}
 
-				li{
+				li {
 					font-size: 10px;
 					line-height: 12px;
 				}
 			}
 		}
+	}
+
+
+	@include macbook {
+		padding: 0 5rem 23.5rem;
 	}
 }

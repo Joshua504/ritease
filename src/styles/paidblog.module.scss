@@ -6,6 +6,10 @@
 	display: flex;
 	justify-content: center;
 
+	@include macbook {
+		padding: 15.75rem 5rem 47px;
+	}
+
 	@include mobile {
 		padding: 8rem 16px 47px;
 	}
@@ -41,6 +45,10 @@
 	justify-content: space-between;
 	align-items: center;
 
+	@include macbook {
+		padding: 0 5rem 0 5rem;
+	}
+
 	@include mobile {
 		padding: 0 16px;
 		font-size: 20px;
@@ -49,6 +57,10 @@
 }
 .main {
 	padding: 0 560px;
+
+	@include macbook {
+		padding: 0 5rem;
+	}
 
 	@include mobile {
 		padding: 0 16px;
@@ -134,6 +146,10 @@
 		height: 216px;
 		border-radius: 0;
 
+		@include macbook {
+			width: 1100px;
+		}
+
 		@include mobile {
 			width: 92%;
 			height: 100%;
@@ -185,7 +201,7 @@
 	}
 }
 
-.wait{
+.wait {
 	display: none;
 
 	@include mobile {

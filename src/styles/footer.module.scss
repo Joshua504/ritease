@@ -9,6 +9,10 @@ footer {
 		padding: 42px 19.56px;
 	}
 
+	@include macbook{
+		padding: 3rem 5rem 0;
+	}
+
 	.main1 {
 		display: flex;
 		justify-content: space-between;

@@ -306,22 +306,25 @@ const Home = () => {
 					</section>
 					<section className={styles.main2__container1}>
 						<div className={styles.main2__heading2}>
-							<h2 className={styles.l__txt}>Riteditor</h2>
+							<h2 className={styles.l__txt}>
+								The Only Document Tool You’ll Ever Need
+							</h2>
 							<p className={styles.m__txt}>
-								Capture ideas, take notes, and draft content in a flexible,
-								distraction-free space. Move away from rigid pages and let your
-								thoughts flow effortlessly.
+								Your all-in-one workspace for getting documents done. Smart
+								writing, secure signing, and seamless sharing—for people who
+								mean business. Built for founders, freelancers, and fast-moving
+								teams.
 							</p>
 							<div className={styles.btn__con}>
 								<button className={styles.btn}>learn more</button>
 								<button className={styles.btn}>join waitlist</button>
 							</div>
 						</div>
-						<div>
-							<img className={styles.rite__img} src={SVG9} alt="" />
-						</div>
 					</section>
 				</section>
+					<div className={styles.rite__img__con}>
+						<img className={styles.rite__img} src={SVG9} alt="" />
+					</div>
 
 				<section className={styles.main3}>
 					<div className={styles.main3__heading}>

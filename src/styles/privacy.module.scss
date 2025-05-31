@@ -8,6 +8,10 @@
 		padding: 8rem 16px 16px;
 	}
 
+	@include macbook {
+		padding: 15.75rem 5rem 6.25rem;
+	}
+
 	p {
 		@include sub-text;
 		width: 72%;
@@ -18,6 +22,12 @@
 			width: 100%;
 			font-size: 12px;
 			text-align: center;
+		}
+
+		@include macbook {
+			width: 90%;
+			margin: 0;
+			text-align: center
 		}
 	}
 
@@ -72,6 +82,16 @@
 					font-size: 10px;
 					line-height: 12px;
 				}
+			}
+		}
+	}
+
+	@include macbook {
+		padding: 0 5rem 23.5rem;
+
+		.head {
+			p {
+				margin: 0;
 			}
 		}
 	}

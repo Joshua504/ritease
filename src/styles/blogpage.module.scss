@@ -6,6 +6,9 @@
 	display: flex;
 	justify-content: center;
 
+	@include macbook {
+		padding: 15.75rem 5rem 47px;
+	}
 	@include mobile {
 		padding: 8rem 16px 16px;
 	}
@@ -35,8 +38,11 @@
 }
 
 .main {
-	padding: 0 560px;
+	padding: 0 35rem;
 
+	@include macbook {
+		padding: 0 5rem;
+	}
 	@include mobile {
 		padding: 0 16px;
 	}
@@ -109,9 +115,13 @@
 	padding: 0 560px;
 	margin-bottom: 243px;
 	display: flex;
+	justify-content: start;
 	align-items: center;
 	gap: 8px;
 
+	@include macbook {
+		padding: 0 5rem;
+	}
 	@include mobile {
 		padding: 0 16px;
 	}
@@ -127,6 +137,10 @@
 .blog__by {
 	padding: 0 $bodymargin;
 	margin-bottom: 220px;
+
+	@include macbook {
+		padding: 0 5rem;
+	}
 
 	@include mobile {
 		padding: 0 16px;
@@ -145,7 +159,7 @@
 	}
 }
 
-.waitlist{
+.waitlist {
 	padding: 0 $bodymargin;
 	margin-bottom: 220px;
 	display: none;

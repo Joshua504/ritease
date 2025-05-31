@@ -64,7 +64,7 @@ const Nav = ({ Logo }) => {
 					<div className={styles.nav__btns}>
 						<Link
 							className={`${styles.links} ${styles.links__mod}`}
-							to="/login">
+							to="/">
 							login
 						</Link>
 						<Button btnText="Early Access" borderRadius="24px" />

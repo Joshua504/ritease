@@ -7,6 +7,9 @@
 	@include mobile {
 		padding: 8rem 16px 16px;
 	}
+	@include macbook {
+		padding: 15.75rem 5rem 0rem;
+	}
 
 	.header {
 		margin: 85px 87px;
@@ -71,6 +74,9 @@
 
 	@include mobile {
 		padding: 0 16px;
+	}
+	@include macbook {
+		padding: 0 5rem;
 	}
 
 	.create {
@@ -172,6 +178,10 @@
 							padding: 27px 16px;
 							width: 180px;
 						}
+						@include macbook {
+							padding: 27px 30px;
+							width: 300px;
+						}
 
 						h3 {
 							@include flex-item__h3;
@@ -219,6 +229,9 @@
 
 	@include mobile {
 		padding: 1.5rem 16px 0rem;
+	}
+	@include macbook {
+		padding: 16rem 5rem 0rem;
 	}
 
 	.feature1 {
@@ -313,6 +326,10 @@
 						padding: 27px 16px;
 						width: 180px;
 					}
+					@include macbook {
+						padding: 27px 30px;
+						width: 300px;
+					}
 
 					h3 {
 						@include flex-item__h3;
@@ -327,7 +344,6 @@
 	}
 
 	.feature1__mod {
-
 		.feature1__flex {
 			@include mobile {
 				flex-direction: column-reverse;
@@ -342,6 +358,10 @@
 
 	@include mobile {
 		padding: 42px 16px 42px;
+	}
+
+	@include macbook {
+		padding: 9.25rem 5rem 10.75rem;
 	}
 
 	.h2__container {
@@ -411,6 +431,9 @@
 				@include mobile {
 					width: 100%;
 				}
+				@include macbook {
+					width: 70%;
+				}
 			}
 		}
 	}
@@ -418,7 +441,6 @@
 		.flex__content {
 			@include mobile {
 				height: 200px;
-				// background: red;
 			}
 		}
 	}
@@ -430,6 +452,9 @@
 				width: 95%;
 
 				@include mobile {
+					width: 100%;
+				}
+				@include macbook {
 					width: 100%;
 				}
 			}

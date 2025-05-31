@@ -14,7 +14,9 @@
 	@include mobile {
 		padding: 16px;
 		margin: 0 0;
-		// display: none;
+	}
+	@include macbook {
+		padding: 0 5rem;
 	}
 }
 .nav__container {
