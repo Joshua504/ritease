@@ -17,10 +17,16 @@
 	}
 }
 
-@mixin desktop {
-	@media (width >= 1200px) {
-		@content;
-	}
+@mixin macbookpro {
+  @media screen and (max-width: 1728px) {
+    @content;
+  }
+}
+
+@mixin largeDesktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
 }
 
 @mixin btn {

@@ -43,12 +43,15 @@ main {
 	padding: 0 $bodymargin;
 	margin-top: 58px;
 
-	@include mobile {
-		padding: 0 16px;
-		margin-top: 53px;
+	@include macbookpro {
+		padding: 0 17rem;
 	}
 	@include macbook {
 		padding: 0 5rem;
+	}
+	@include mobile {
+		padding: 0 16px;
+		margin-top: 53px;
 	}
 
 	.main1__mini1 {
@@ -91,14 +94,18 @@ main {
 			width: 400px;
 			height: 820px;
 
-			@include mobile {
+			@include macbookpro {
 				padding: 30px 16px;
-				width: 331px;
-				height: fit-content;
+				width: 380px;
 			}
 			@include macbook {
 				padding: 30px 16px;
 				width: 360px;
+			}
+			@include mobile {
+				padding: 30px 16px;
+				width: 331px;
+				height: fit-content;
 			}
 
 			h2 {

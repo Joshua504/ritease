@@ -55,7 +55,9 @@
 		}
 	}
 
-
+	@include macbookpro {
+		padding: 0 17rem 23.5rem;
+	}
 	@include macbook {
 		padding: 0 5rem 23.5rem;
 	}

@@ -2,7 +2,7 @@
 @use '/src/styles/mixins' as *;
 
 .header {
-	padding: 15.75rem 240px 0rem;
+	padding: 15.75rem 15rem 0rem;
 
 	@include mobile {
 		padding: 8rem 16px 16px;
@@ -17,12 +17,14 @@
 	padding: 0 $bodymargin 212px;
 	margin-top: 0;
 
-	@include mobile {
-		padding: 0 16px;
+	@include macbookpro {
+		padding: 0 17rem 212px;
 	}
-
 	@include macbook {
 		padding: 0 5rem 212px;
+	}
+	@include mobile {
+		padding: 0 16px;
 	}
 
 	.blog__section {

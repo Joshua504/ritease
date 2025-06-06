@@ -5,12 +5,16 @@ footer {
 	padding: 3rem $bodymargin 0;
 	background: #171717;
 
-	@include mobile {
-		padding: 42px 19.56px;
+	@include macbookpro {
+		padding: 3rem 17rem 0;
 	}
 
-	@include macbook{
+	@include macbook {
 		padding: 3rem 5rem 0;
+	}
+
+	@include mobile {
+		padding: 42px 19.56px;
 	}
 
 	.main1 {

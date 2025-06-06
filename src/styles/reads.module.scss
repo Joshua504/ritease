@@ -2,8 +2,11 @@
 @use '/src/styles/mixins' as *;
 
 .header {
-	padding: 15.75rem 240px 0rem;
+	padding: 15.75rem 15rem 0rem;
 
+	@include macbookpro {
+		padding: 15.75rem 14rem 0rem;
+	}
 	@include macbook {
 		padding: 15.75rem 5rem 0rem;
 	}
@@ -16,7 +19,7 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	
+
 	@include mobile {
 		padding: 0 16px 100px;
 		gap: 182px;
@@ -28,13 +31,15 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 
-		@include mobile {
-			width: 100%;
+		@include macbookpro {
+			margin: 0 auto;
 		}
-
 		@include macbook {
 			width: 1000px;
 			margin: 0 auto;
+		}
+		@include mobile {
+			width: 100%;
 		}
 	}
 

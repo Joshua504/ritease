@@ -4,11 +4,15 @@
 .head {
 	padding: 15.75rem $bodymargin 0rem;
 
-	@include mobile {
-		padding: 8rem 16px 16px;
+	@include macbookpro {
+		padding: 15.75rem 17rem 0rem;
 	}
+
 	@include macbook {
 		padding: 15.75rem 5rem 0rem;
+	}
+	@include mobile {
+		padding: 8rem 16px 16px;
 	}
 
 	.header {
@@ -72,11 +76,16 @@
 .main1 {
 	padding: 0 $bodymargin;
 
-	@include mobile {
-		padding: 0 16px;
+	@include macbookpro {
+		padding: 0 17rem;
 	}
+
 	@include macbook {
 		padding: 0 5rem;
+	}
+
+	@include mobile {
+		padding: 0 16px;
 	}
 
 	.create {
@@ -174,13 +183,17 @@
 						width: 348px;
 						border: 1px solid rgba(255, 255, 255, 0.07);
 
-						@include mobile {
-							padding: 27px 16px;
-							width: 180px;
+						@include macbookpro {
+							padding: 27px 30px;
+							width: 320px;
 						}
 						@include macbook {
 							padding: 27px 30px;
 							width: 300px;
+						}
+						@include mobile {
+							padding: 27px 16px;
+							width: 180px;
 						}
 
 						h3 {
@@ -227,11 +240,14 @@
 .main3 {
 	padding: 16rem $bodymargin 0;
 
-	@include mobile {
-		padding: 1.5rem 16px 0rem;
+	@include macbookpro {
+		padding: 16rem 17rem 0rem;
 	}
 	@include macbook {
 		padding: 16rem 5rem 0rem;
+	}
+	@include mobile {
+		padding: 1.5rem 16px 0rem;
 	}
 
 	.feature1 {
@@ -322,13 +338,17 @@
 					width: 348px;
 					border: 1px solid rgba(255, 255, 255, 0.07);
 
-					@include mobile {
-						padding: 27px 16px;
-						width: 180px;
+					@include macbookpro {
+						padding: 27px 30px;
+						width: 320px;
 					}
 					@include macbook {
 						padding: 27px 30px;
 						width: 300px;
+					}
+					@include mobile {
+						padding: 27px 16px;
+						width: 180px;
 					}
 
 					h3 {
@@ -356,12 +376,14 @@
 	background: #171717;
 	padding: 148px $bodymargin 172px;
 
-	@include mobile {
-		padding: 42px 16px 42px;
+	@include macbookpro {
+		padding: 9.25rem 17rem 10.75rem;
 	}
-
 	@include macbook {
 		padding: 9.25rem 5rem 10.75rem;
+	}
+	@include mobile {
+		padding: 42px 16px 42px;
 	}
 
 	.h2__container {

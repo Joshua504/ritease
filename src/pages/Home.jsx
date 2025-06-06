@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from '../styles/home.module.scss';
 
 /* -------------------------------------------------------------------------- */
@@ -42,12 +44,69 @@ import SVG13 from '../assets/SVG(13).svg';
 import SVG14 from '../assets/SVG(14).svg';
 import SVG15 from '../assets/SVG(15).svg';
 import SVG16 from '../assets/SVG(16).svg';
+import SVG41 from '../assets/SVG(41).svg';
+import SVG42 from '../assets/SVG(42).svg';
+import SVG43 from '../assets/SVG(43).svg';
 import Button from '../components/Button';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
 	const [activeListItem, setActiveListItem] = useState(0);
 	const [activeNextGenItem, setActiveNextGenItem] = useState(0);
 	const [activeFeatures, setActiveFeatures] = useState(0);
+
+	const main2ContainerRef = useRef(null);
+	const nextGenItemsRef = useRef([]);
+
+	useEffect(() => {
+		// Make sure the DOM element exists
+		if (main2ContainerRef.current && nextGenItemsRef.current.length) {
+			// Create the ScrollTrigger animation for pinning
+			const pinAnimation = ScrollTrigger.create({
+				trigger: main2ContainerRef.current,
+				start: 'top 200px', // Pin when 200px from the top
+				end: 'bottom top',
+				pin: true, // Enable pinning
+				pinSpacing: true, // Add space for the pinned element
+				markers: false, // Set to true during development to see the trigger points
+				scrub: 1, // Smooth scrubbing effect
+				onEnter: () => {
+					gsap.to(main2ContainerRef.current, {
+						opacity: 1,
+						duration: 0.5,
+						ease: 'power2.out',
+					});
+				},
+				onLeaveBack: () => {
+					gsap.to(main2ContainerRef.current, {
+						opacity: 0.8,
+						duration: 0.5,
+						ease: 'power2.in',
+					});
+				},
+			});
+
+			// Create scroll triggers for each item
+			nextGenItemsRef.current.forEach((item, index) => {
+				if (!item) return;
+
+				ScrollTrigger.create({
+					trigger: item,
+					start: 'top center',
+					end: 'bottom center',
+					onEnter: () => setActiveNextGenItem(index),
+					onEnterBack: () => setActiveNextGenItem(index),
+					markers: false,
+				});
+			});
+
+			// Clean up the animation when the component unmounts
+			return () => {
+				ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+			};
+		}
+	}, [nextGenItemsRef.current.length]);
 
 	const faqData = [
 		{
@@ -170,6 +229,12 @@ const Home = () => {
 		setActiveFeatures(index);
 	};
 
+	const addToNextGenItemsRef = (el, index) => {
+		if (el && !nextGenItemsRef.current.includes(el)) {
+			nextGenItemsRef.current[index] = el;
+		}
+	};
+
 	return (
 		<>
 			<header className={styles.header}>
@@ -227,7 +292,7 @@ const Home = () => {
 						<div className={styles.cards}>
 							<div className={styles.overlay}></div>
 							<div className={styles.card_img}>
-								<img className={styles.img} src={SVG7} alt="" />
+								<img className={styles.img} src={SVG41} alt="" />
 							</div>
 							<div className={styles.cards__text}>
 								<h3>Seamless Design</h3>
@@ -236,7 +301,7 @@ const Home = () => {
 						<div className={styles.cards}>
 							<div className={styles.overlay}></div>
 							<div className={styles.card_img}>
-								<img className={styles.img} src={SVG7} alt="" />
+								<img className={styles.img} src={SVG42} alt="" />
 							</div>
 							<div className={styles.cards__text}>
 								<h3>All-in-One Document Solution</h3>
@@ -245,7 +310,7 @@ const Home = () => {
 						<div className={styles.cards}>
 							<div className={styles.overlay}></div>
 							<div className={styles.card_img}>
-								<img className={styles.img} src={SVG7} alt="" />
+								<img className={styles.img} src={SVG43} alt="" />
 							</div>
 							<div className={styles.cards__text}>
 								<h3>Monetise with Ease</h3>
@@ -267,7 +332,7 @@ const Home = () => {
 							className={styles.homeButton}
 						/>
 					</div>
-					<section className={styles.main2__container}>
+					<section className={styles.main2__container} ref={main2ContainerRef}>
 						<div>
 							<img
 								className={styles.nextgen}
@@ -291,6 +356,7 @@ const Home = () => {
 								{nextGenFeatures.map((feature, index) => (
 									<li
 										key={index}
+										ref={(el) => addToNextGenItemsRef(el, index)}
 										className={`${styles.main2__textcontainerlist__item} ${
 											activeNextGenItem === index
 												? styles.main2__textcontainerlist__item__active
@@ -322,9 +388,9 @@ const Home = () => {
 						</div>
 					</section>
 				</section>
-					<div className={styles.rite__img__con}>
-						<img className={styles.rite__img} src={SVG9} alt="" />
-					</div>
+				<div className={styles.rite__img__con}>
+					<img className={styles.rite__img} src={SVG9} alt="" />
+				</div>
 
 				<section className={styles.main3}>
 					<div className={styles.main3__heading}>

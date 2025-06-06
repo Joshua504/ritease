@@ -40,6 +40,9 @@
 .main {
 	padding: 0 35rem;
 
+	@include macbookpro {
+		padding: 0 17rem;
+	}
 	@include macbook {
 		padding: 0 5rem;
 	}
@@ -119,6 +122,9 @@
 	align-items: center;
 	gap: 8px;
 
+	@include macbookpro {
+		padding: 0 17rem;
+	}
 	@include macbook {
 		padding: 0 5rem;
 	}
