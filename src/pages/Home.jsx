@@ -49,64 +49,10 @@ import SVG42 from '../assets/SVG(42).svg';
 import SVG43 from '../assets/SVG(43).svg';
 import Button from '../components/Button';
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Home = () => {
 	const [activeListItem, setActiveListItem] = useState(0);
 	const [activeNextGenItem, setActiveNextGenItem] = useState(0);
 	const [activeFeatures, setActiveFeatures] = useState(0);
-
-	const main2ContainerRef = useRef(null);
-	const nextGenItemsRef = useRef([]);
-
-	useEffect(() => {
-		// Make sure the DOM element exists
-		if (main2ContainerRef.current && nextGenItemsRef.current.length) {
-			// Create the ScrollTrigger animation for pinning
-			const pinAnimation = ScrollTrigger.create({
-				trigger: main2ContainerRef.current,
-				start: 'top 200px', // Pin when 200px from the top
-				end: 'bottom top',
-				pin: true, // Enable pinning
-				pinSpacing: true, // Add space for the pinned element
-				markers: false, // Set to true during development to see the trigger points
-				scrub: 1, // Smooth scrubbing effect
-				onEnter: () => {
-					gsap.to(main2ContainerRef.current, {
-						opacity: 1,
-						duration: 0.5,
-						ease: 'power2.out',
-					});
-				},
-				onLeaveBack: () => {
-					gsap.to(main2ContainerRef.current, {
-						opacity: 0.8,
-						duration: 0.5,
-						ease: 'power2.in',
-					});
-				},
-			});
-
-			// Create scroll triggers for each item
-			nextGenItemsRef.current.forEach((item, index) => {
-				if (!item) return;
-
-				ScrollTrigger.create({
-					trigger: item,
-					start: 'top center',
-					end: 'bottom center',
-					onEnter: () => setActiveNextGenItem(index),
-					onEnterBack: () => setActiveNextGenItem(index),
-					markers: false,
-				});
-			});
-
-			// Clean up the animation when the component unmounts
-			return () => {
-				ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-			};
-		}
-	}, [nextGenItemsRef.current.length]);
 
 	const faqData = [
 		{
@@ -195,19 +141,19 @@ const Home = () => {
 		{
 			name: 'Instant Document Creation',
 			description:
-				'Use Ritease AI to create documents instantly using prompts, such as letterheads, invoices, magazines, business reports, and academic documents.',
+				'Use Ritease AI to create documents instantly using prompts, such as letterheads, invoices, business reports, academic documents, and more.',
 			image: SVG10,
 		},
 		{
 			name: 'Smart Content Creation',
 			description:
-				"Ritease AI's writing assist and image generation tools help you create tailored content 10x faster.",
+				"Ritease AI's writing assist and image generation tools help you create and insert tailored content using prompts, 10x faster.",
 			image: Smart,
 		},
 		{
 			name: 'Blockchain-Grade Security',
 			description:
-				'Document signing and changes to documents are all tracked on the Base blockchain, providing top notch security and transparency for your teams.',
+				'Document signing and document metadata are all tracked on the Base blockchain, providing top notch security and transparency for your teams.',
 			image: Blockchain,
 		},
 		{
@@ -227,12 +173,6 @@ const Home = () => {
 	};
 	const handleFeaturesClick = (index) => {
 		setActiveFeatures(index);
-	};
-
-	const addToNextGenItemsRef = (el, index) => {
-		if (el && !nextGenItemsRef.current.includes(el)) {
-			nextGenItemsRef.current[index] = el;
-		}
 	};
 
 	return (
@@ -332,7 +272,7 @@ const Home = () => {
 							className={styles.homeButton}
 						/>
 					</div>
-					<section className={styles.main2__container} ref={main2ContainerRef}>
+					<section className={styles.main2__container}>
 						<div>
 							<img
 								className={styles.nextgen}
@@ -356,7 +296,6 @@ const Home = () => {
 								{nextGenFeatures.map((feature, index) => (
 									<li
 										key={index}
-										ref={(el) => addToNextGenItemsRef(el, index)}
 										className={`${styles.main2__textcontainerlist__item} ${
 											activeNextGenItem === index
 												? styles.main2__textcontainerlist__item__active
