@@ -3,8 +3,8 @@ import styles from '../styles/faq.module.scss';
 import SVG17 from '../assets/SVG(17).svg';
 import SVG18 from '../assets/SVG(18).svg';
 
-const Faq = ({ question, answer }) => {
-	const [isOpen, setIsOpen] = useState(false);
+const Faq = ({ question, answer, isFirst }) => {
+	const [isOpen, setIsOpen] = useState(isFirst || false);
 
 	return (
 		<div className={styles.faq_item}>

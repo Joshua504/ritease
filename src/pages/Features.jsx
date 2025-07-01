@@ -2,7 +2,7 @@ import styles from '../styles/feature.module.scss';
 
 import AnimatedText from '../components/AnimatedText';
 
-import SVG8 from '../assets/SVG(8).svg';
+import SVG8 from '../assets/Note editor.svg';
 import SVG25 from '../assets/SVG(25).svg';
 import SVG26 from '../assets/SVG(26).svg';
 import SVG27 from '../assets/SVG(27).svg';
@@ -52,9 +52,10 @@ const Features = () => {
 								Note Editor gives you a flexible, visual space to write, plan,
 								and create. Add images or generate content with AI, draft big
 								ideas—and publish to the web to start earning from your work.
-								Whether you're sharing travel tips, policy ideas, premium news
-								content, or creative stories, Note Editor helps you turn your
-								notes into valuable work.
+								Use the AI-editor to fine tune your work. Whether you're sharing
+								travel tips, policy ideas, premium news content, or creative
+								stories, Note Editor helps you turn your notes into valuable
+								work.
 							</p>
 						</div>
 						<section className={styles.feature1__flex}>
@@ -116,11 +117,12 @@ const Features = () => {
 							<h2>Document Editor</h2>
 							<p>
 								Draft stunning proposals, client-ready reports, or academic
-								assignments with zero clutter. Share with confidence, knowing
-								every document is traceable and tamper-proof, secured on the
-								Base Blockchain. Whether you're a freelancer, educator, or
-								student—authorship is clear, your work stays protected, and your
-								documents always look professional.
+								assignments with zero clutter. Use the AI-editor to fine tune
+								your work. Share with confidence, knowing every document is
+								traceable and tamper-proof, secured on the Base Blockchain.
+								Whether you're a freelancer, educator, or student—authorship is
+								clear, your work stays protected, and your documents look
+								professional.
 							</p>
 						</div>
 						<section className={styles.feature1__flex}>
@@ -248,13 +250,14 @@ const Features = () => {
 					<section>
 						<div className={styles.btn__container}>
 							<p>
-								Your ideas deserve an audience—and a payday. Boards turns your
-								notes into stunning showcases you can share for free or sell at
-								your set price. A chef can publish recipes and earn daily; a
-								consultant can offer premium strategy guides to clients; a
-								thought leader can publish their thoughts and share the link via
-								social media to earn from followers who read their work.
-								Blockchain locks in your ownership—your work, your rewards.
+								Your ideas deserve an audience—and a payday. Riteboards
+								publishes your notes and generates web links you can share. You
+								can make your publications free-to-read or premium. A chef can
+								publish recipes and earn daily; a consultant can offer premium
+								strategy guides to clients; a thought leader can publish their
+								thoughts and share the link via social media to earn from
+								followers who read their work. Blockchain locks in your
+								ownership—your work, your rewards.
 							</p>
 							<Button
 								fontSize="1.5rem"
@@ -310,14 +313,12 @@ const Features = () => {
 					<section>
 						<div className={styles.btn__container}>
 							<p>
-								No more printing, scanning, or chasing signatures. Ritesign’s
-								secure, instant signing locks deals with a click—powered by
-								blockchain-grade security for unshakable trust. Invite
-								colleagues, clients, or partners to sign the same document
-								securely, all in one place. A freelancer can sign a gig contract
-								on the train; an SME can close sales in hours; a multinational
-								can approve supplier terms across continents—faster, safer, and
-								smarter.
+								With Ritesign, you can prepare, send, sign and store documents
+								without ever leaving Ritease. No more downloading, uploading, or
+								jumping between apps—your files stay in one secure, intelligent
+								space from draft to signature to storage. It’s e-signing made
+								seamless, centralized, and built for how teams actually work
+								today.
 							</p>
 							<Button
 								fontSize="1.5rem"
@@ -382,12 +383,16 @@ const Features = () => {
 					<section>
 						<div className={styles.btn__container}>
 							<p>
-								Create custom, signable forms in minutes for registrations,
-								recruitment, feedback, or legal docs. Whether it's collecting
-								parent consents at a school, receiving job applications to
-								evaluate against a set criteria, or gathering employee surveys
-								at a corporate HQ, Riteforms delivers seamless branding and
-								top-tier security.
+								With Riteforms, create administrative and compliance-grade
+								forms—not just surveys. From onboarding to legal
+								acknowledgments, Riteforms supports signatures, uploads, and
+								secure record-keeping. With built-in auto-vetting, you can
+								instantly screen responses against preset requirements and save
+								hours of manual review. Whether it's collecting parental
+								consents at a school, receiving job applications to evaluate
+								against a set criteria, or gathering employee surveys at a
+								corporate HQ, Riteforms delivers with seamlessness and top-tier
+								security.
 							</p>
 							<Button
 								fontSize="1.5rem"
@@ -445,11 +450,11 @@ const Features = () => {
 					<div className={styles.feature1__title}>
 						<h2>Scan-To-Text: Convert Scanned Documents to Text in a Snap</h2>
 						<p>
-							Got letters, contracts, or scribbled notes piling up? Scan-To-Text
-							turns them into editable digital files with a snap. An artist can
-							digitise sketches for editing; a Houston retailer can convert
-							invoices to track spending; a legal firm can archive case files
-							without the clutter.
+							With Scan-to-Text in Ritease, you can instantly turn any scanned
+							document or image into editable, searchable text—right inside your
+							workspace. No manual retyping or switching apps needed; just
+							upload, scan, and start working smarter. It makes digitizing and
+							managing paper documents effortless and efficient.
 						</p>
 						<Button
 							fontSize="1.5rem"
@@ -552,14 +557,14 @@ const Features = () => {
 
 				<section className={`${styles.feature1} ${styles.feature1__mod}`}>
 					<div className={styles.feature1__title}>
-						<h2>Document Hosting: Your Files, Safe and Sound</h2>
+						<h2>Document Hosting: Store All Your Docs in One Secure Hub</h2>
 						<p>
-							Stop juggling drives and emails. Document Hosting keeps
-							everything—notes, forms, contracts—in one secure hub, with secure
-							audit trails backed by blockchain transparency and security. A
-							writer can store manuscripts; a Miami agency can share client
-							assets; a global firm can manage thousands of files with zero
-							risk.
+							Using Ritease for your document workflows means that you keep
+							everything—notes, docs, forms, contracts—in one secure and
+							collaborative hub, with audit trails backed by blockchain-grade
+							security. A writer can store manuscripts; a Miami agency can share
+							client assets; a global firm can store and manage thousands of
+							files with zero risk.
 						</p>
 						<Button
 							fontSize="1.5rem"

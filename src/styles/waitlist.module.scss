@@ -9,7 +9,7 @@
 		margin: 0 auto;
 		margin-bottom: 2.4375rem;
 
-		@include mobile{
+		@include mobile {
 			font-size: 20px;
 			line-height: 24px;
 			margin-bottom: 23px;
@@ -61,7 +61,7 @@
 			font-size: 1rem;
 			cursor: pointer;
 
-			@include mobile{
+			@include mobile {
 				font-size: 12px;
 			}
 		}
@@ -78,5 +78,25 @@
 			color: rgba(255, 255, 255, 0.6);
 			text-decoration: underline;
 		}
+	}
+
+	.downloads {
+		margin-top: 58px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 16px;
+
+		a{
+			img{
+				width: 100%;
+
+
+				@include mobile {
+					width: 90%;
+				}
+			}
+		}
+
 	}
 }

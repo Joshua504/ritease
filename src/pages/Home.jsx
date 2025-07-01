@@ -1,6 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useState, useEffect } from 'react';
 import styles from '../styles/home.module.scss';
 
 /* -------------------------------------------------------------------------- */
@@ -24,7 +22,9 @@ import Riteaseboard from '../assets/Riteaseboard.svg';
 import Riteaseform from '../assets/Riteaseform.svg';
 import Riteasescan from '../assets/Riteasescan.svg';
 import Riteasepdf from '../assets/Riteasepdf.svg';
-import Riteasedoc from '../assets/Riteasedoc.svg';
+import Riteasetemp from '../assets/Riteasetemp.svg';
+import Generateai from '../assets/Generateai.svg';
+import Scan from '../assets/Scan.svg';
 import Smart from '../assets/Smart.svg';
 import Blockchain from '../assets/Blockchain.svg';
 import Publish from '../assets/Publish.svg';
@@ -34,7 +34,6 @@ import SVG3 from '../assets/SVG(2).svg';
 import SVG4 from '../assets/SVG(3).svg';
 import SVG5 from '../assets/SVG(4).svg';
 import SVG6 from '../assets/SVG(5).svg';
-import SVG7 from '../assets/SVG(7).svg';
 import SVG8 from '../assets/SVG(8).svg';
 import SVG9 from '../assets/SVG(9).svg';
 import SVG10 from '../assets/SVG(10).svg';
@@ -95,44 +94,44 @@ const Home = () => {
 
 	const listItems = [
 		{ icon: SVG1, text: 'Create Notes and Docs', bannerImage: banner },
-		{ icon: SVG2, text: 'Generate with AI', bannerImage: banner2 },
-		{ icon: SVG3, text: 'Sign Documents', bannerImage: banner3 },
-		{ icon: SVG4, text: 'Forms for Business', bannerImage: banner4 },
+		{ icon: SVG2, text: 'Generate Docs', bannerImage: banner2 },
+		{ icon: SVG3, text: 'Sign Docs', bannerImage: banner3 },
+		{ icon: SVG4, text: 'Admin Forms', bannerImage: banner4 },
 		{ icon: SVG5, text: 'Scan-To-Text', bannerImage: banner5 },
 		{ icon: SVG6, text: 'Publish and Earn', bannerImage: banner6 },
 	];
 
 	const nextGenFeatures = [
 		{
-			name: 'Riteditor',
+			name: 'Note Editor',
 			image: SVG8,
 		},
 		{
-			name: 'Ritease AI',
+			name: 'Document Editor',
 			image: Riteaseai,
 		},
 		{
-			name: 'Boards',
+			name: 'Ritebox',
 			image: Riteaseboard,
 		},
 		{
-			name: 'Ritease Forms',
+			name: 'Templates',
+			image: Riteasetemp,
+		},
+		{
+			name: 'Generate with AI',
+			image: Generateai,
+		},
+		{
+			name: 'Scan',
+			image: Scan,
+		},
+		{
+			name: 'Signature',
 			image: Riteaseform,
 		},
 		{
-			name: 'Scan-To-Text',
-			image: Riteasescan,
-		},
-		{
-			name: 'PDF Tools',
-			image: Riteasepdf,
-		},
-		{
-			name: 'Document Hosting',
-			image: Riteasedoc,
-		},
-		{
-			name: 'Rite SDK/API',
+			name: 'Forms',
 			image: Riteasescan,
 		},
 	];
@@ -151,9 +150,9 @@ const Home = () => {
 			image: Smart,
 		},
 		{
-			name: 'Blockchain-Grade Security',
+			name: 'Auto-Vet Forms',
 			description:
-				'Document signing and document metadata are all tracked on the Base blockchain, providing top notch security and transparency for your teams.',
+				'Auto-vetting lets you set the answers you’re looking for, so when people fill your form, Ritease instantly shows you who meets the mark—no manual checking needed.',
 			image: Blockchain,
 		},
 		{
@@ -175,6 +174,14 @@ const Home = () => {
 		setActiveFeatures(index);
 	};
 
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setActiveListItem((prev) => (prev + 1) % listItems.length);
+		}, 5000);
+
+		return () => clearInterval(interval);
+	}, []);
+
 	return (
 		<>
 			<header className={styles.header}>
@@ -191,7 +198,6 @@ const Home = () => {
 						<button className={styles.btns}>
 							Watch demo <img src={PlayBtn} alt="" />
 						</button>
-						<button className={styles.btns}>Join waitlist</button>
 					</div>
 				</div>
 
@@ -440,7 +446,7 @@ const Home = () => {
 					</div>
 					<section className={styles.faq}>
 						{faqData.map((faq, index) => (
-							<Faq key={index} question={faq.question} answer={faq.answer} />
+							<Faq key={index} question={faq.question} answer={faq.answer} isFirst={index === 0} />
 						))}
 					</section>
 				</section>

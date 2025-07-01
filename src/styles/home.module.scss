@@ -68,7 +68,7 @@
 
 			.btns {
 				@include btn;
-				background: $primary;
+				background: #FFD12D;
 				color: #1b1b1b;
 
 				@include mobile {
@@ -83,15 +83,6 @@
 
 				&:hover {
 					background: rgba(255, 255, 255, 0.84);
-				}
-			}
-			.btns:nth-child(2) {
-				color: $primary;
-				background: transparent;
-				border: 1px solid rgba(255, 255, 255, 0.24);
-
-				&:hover {
-					border: 1px solid rgba(255, 255, 255, 1);
 				}
 			}
 		}

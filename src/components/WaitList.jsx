@@ -1,4 +1,6 @@
 import styles from '../styles/waitlist.module.scss';
+import Apple from '../assets/Apple Store.svg'
+import Play from '../assets/Playstore.svg'
 
 const WaitList = () => {
 	return (
@@ -18,6 +20,10 @@ const WaitList = () => {
 				By joining the waitlist, you agree to our
 				<a href="#">Privacy Policy</a>
 			</p>
+			<section className={styles.downloads}>
+				<div><a href="#"><img src={Apple} alt="" /></a></div>
+				<div><a href="#"><img src={Play} alt="" /></a></div>
+			</section>
 		</section>
 	);
 };

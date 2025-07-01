@@ -11,6 +11,7 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import Reads from './pages/Reads';
 import BlogPage from './pages/BlogPage';
+import Blog from './pages/Blog';
 import PaidBlog from './pages/PaidBlog';
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
 				<Route path="/terms" element={<Terms /> } />
 				<Route path="/reads" element={<Reads /> } />
 				<Route path="/blog" element={<BlogPage /> } />
+				<Route path="/blogs" element={<Blog /> } />
 				<Route path="/paid" element={<PaidBlog /> } />
 			</Routes>
 			<Footer />

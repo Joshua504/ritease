@@ -21,6 +21,10 @@ const Nav = ({ Logo }) => {
 			link: '/pricing',
 		},
 		{
+			name: 'blog',
+			link: '/blogs',
+		},
+		{
 			name: 'riteboards',
 			link: '/riteboards',
 		},
@@ -32,9 +36,8 @@ const Nav = ({ Logo }) => {
 	};
 
 	const toggleMobileMenu = () => {
-		setIsMobileMenuOpen(prev => !prev);
+		setIsMobileMenuOpen((prev) => !prev);
 	};
-
 
 	return (
 		<>
@@ -62,9 +65,7 @@ const Nav = ({ Logo }) => {
 						))}
 					</ul>
 					<div className={styles.nav__btns}>
-						<Link
-							className={`${styles.links} ${styles.links__mod}`}
-							to="/">
+						<Link className={`${styles.links} ${styles.links__mod}`} to="/">
 							login
 						</Link>
 						<Button btnText="Early Access" borderRadius="24px" />
