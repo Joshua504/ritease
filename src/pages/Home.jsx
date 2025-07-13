@@ -18,16 +18,15 @@ import banner4 from '../assets/Banner4.png';
 import banner5 from '../assets/Banner5.png';
 import banner6 from '../assets/Banner6.png';
 import Riteaseai from '../assets/Riteaseai.svg';
-import Riteaseboard from '../assets/Riteaseboard.svg';
-import Riteaseform from '../assets/Riteaseform.svg';
-import Riteasescan from '../assets/Riteasescan.svg';
-import Riteasepdf from '../assets/Riteasepdf.svg';
+import Riteasesign from '../assets/Signature.svg';
+import Riteaseform from '../assets/Form.svg';
+import Ritebox from '../assets/Ritebox.svg';
 import Riteasetemp from '../assets/Riteasetemp.svg';
 import Generateai from '../assets/Generateai.svg';
 import Scan from '../assets/Scan.svg';
 import Smart from '../assets/Smart.svg';
 import Blockchain from '../assets/Blockchain.svg';
-import Publish from '../assets/Publish.svg';
+import Publish from '../assets/Publish1.svg';
 import SVG1 from '../assets/SVG.svg';
 import SVG2 from '../assets/SVG(1).svg';
 import SVG3 from '../assets/SVG(2).svg';
@@ -47,6 +46,16 @@ import SVG41 from '../assets/SVG(41).svg';
 import SVG42 from '../assets/SVG(42).svg';
 import SVG43 from '../assets/SVG(43).svg';
 import Button from '../components/Button';
+import stripe from '../assets/Stripe.svg';
+import grok from '../assets/Grok logo.svg';
+import gpt from '../assets/ChatGPT logo.svg';
+import claude from '../assets/Claude.svg';
+import base from '../assets/Base.svg';
+import binance from '../assets/Binance logo.svg';
+import cloudflare from '../assets/CloudFlare.svg';
+import favicon from '../assets/favicon 1.svg';
+import paystack from '../assets/Paystack.svg';
+
 
 const Home = () => {
 	const [activeListItem, setActiveListItem] = useState(0);
@@ -112,7 +121,7 @@ const Home = () => {
 		},
 		{
 			name: 'Ritebox',
-			image: Riteaseboard,
+			image: Ritebox,
 		},
 		{
 			name: 'Templates',
@@ -128,11 +137,11 @@ const Home = () => {
 		},
 		{
 			name: 'Signature',
-			image: Riteaseform,
+			image: Riteasesign,
 		},
 		{
 			name: 'Forms',
-			image: Riteasescan,
+			image: Riteaseform,
 		},
 	];
 
@@ -224,6 +233,21 @@ const Home = () => {
 			</header>
 
 			<main className={styles.main}>
+				<section className={styles.ecosystem}>
+					<h2 className={styles.eco_title}>our ecosystem</h2>
+						<section className={styles.ecosystem_container}>
+							<img src={stripe} alt="" />
+							<img src={grok} alt="" />
+							<img src={gpt} alt="" />
+							<img src={claude} alt="" />
+							<img src={base} alt="" />
+							<img src={binance} alt="" />
+							<img src={cloudflare} alt="" />
+							<img src={favicon} alt="" />
+							<img src={paystack} alt="" />
+						</section>
+				</section>
+
 				<section className={styles.main1}>
 					<div className={styles.heading}>
 						<h2 className={styles.title}>

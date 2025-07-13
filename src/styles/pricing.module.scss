@@ -40,14 +40,14 @@
 }
 
 main {
-	padding: 0 $bodymargin;
+	padding: 0 84px;
 	margin-top: 58px;
 
 	@include macbookpro {
-		padding: 0 17rem;
+		padding: 0 58px;
 	}
 	@include macbook {
-		padding: 0 5rem;
+		padding: 0 15px;
 	}
 	@include mobile {
 		padding: 0 16px;
@@ -92,15 +92,16 @@ main {
 			border: 0.5px solid #737373;
 			border-radius: 10px;
 			width: 400px;
-			height: 820px;
+			height: 950px;
 
 			@include macbookpro {
 				padding: 30px 16px;
 				width: 380px;
 			}
 			@include macbook {
-				padding: 30px 16px;
-				width: 360px;
+				padding: 30px 10px;
+				width: 300px;
+				height: 1020px;
 			}
 			@include mobile {
 				padding: 30px 16px;
@@ -148,11 +149,16 @@ main {
 
 				p {
 					display: flex;
-					gap: 1.25rem;
+					align-items: baseline;
+					gap: 20px;
 					font-family: interRegular;
 					font-size: 0.875rem;
 					color: #d4d4d4;
 					margin-bottom: 18px;
+
+					@include mobile{
+						gap: 10px;
+					}
 
 					@include mobile {
 						font-size: 12px;
@@ -161,7 +167,7 @@ main {
 			}
 		}
 
-		.pricing__cards:nth-child(2) {
+		.pricing__cards:nth-child(3) {
 			border: none;
 			background: #86efac;
 
@@ -215,7 +221,8 @@ main {
 			}
 		}
 
-		.pricing__cards:nth-child(3) {
+		.pricing__cards:nth-child(4),
+		.pricing__cards:nth-child(2) {
 			.price__container {
 				display: flex;
 				justify-content: space-between;
@@ -320,6 +327,7 @@ main {
 					flex: 1;
 					text-align: center;
 					font-family: interRegular;
+					text-transform: capitalize;
 					font-size: 14px;
 					color: $primary;
 

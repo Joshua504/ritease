@@ -2,7 +2,15 @@ import styles from '../styles/feature.module.scss';
 
 import AnimatedText from '../components/AnimatedText';
 
-import SVG8 from '../assets/Note editor.svg';
+import SVG8 from '../assets/SVG(8).svg';
+import Riteaseai from '../assets/Riteaseai.svg';
+import Scan from '../assets/Scan.svg';
+import pdftool from '../assets/Pdftool.svg';
+import storage from '../assets/Storage.svg';
+import Generateai from '../assets/Generateai.svg';
+import Publish from '../assets/Publish2.svg';
+import Riteasesign from '../assets/Signature.svg';
+import paper from '../assets/Paper.svg';
 import SVG25 from '../assets/SVG(25).svg';
 import SVG26 from '../assets/SVG(26).svg';
 import SVG27 from '../assets/SVG(27).svg';
@@ -170,7 +178,7 @@ const Features = () => {
 								</div>
 							</section>
 							<div className={styles.feature1__flex__img}>
-								<img src={SVG8} alt="" />
+								<img src={Riteaseai} alt="" />
 							</div>
 						</section>
 						<div className={styles.btn}>
@@ -201,45 +209,50 @@ const Features = () => {
 							/>
 						</div>
 
-						<section className={styles.main2__flex__container}>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG27} alt="" />
-									<span>For You</span>
-								</h3>
-								<p>
-									Finish that overdue blog post or nail your uni
-									assignment—faster than ever.
-								</p>
+						<div className={`${styles.feature1__flex} ${styles.feature2__mod}`}>
+							<section className={styles.main2__flex__container}>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG27} alt="" />
+										<span>For You</span>
+									</h3>
+									<p>
+										Finish that overdue blog post or nail your uni
+										assignment—faster than ever.
+									</p>
+								</div>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG28} alt="" />
+										<span>For Your Team</span>
+									</h3>
+									<p>
+										Create pitch docs or training scripts while your rivals
+										scramble.
+									</p>
+								</div>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG29} alt="" />
+										<span>For Your Organisation</span>
+									</h3>
+									<p>
+										Roll out perfect policies or customer letters across
+										regions—effortlessly.
+									</p>
+								</div>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG30} alt="" />
+										<span>Why Wait?</span>
+									</h3>
+									<p>Time’s ticking—get ahead now.</p>
+								</div>
+							</section>
+							<div className={styles.feature1__flex__img}>
+								<img src={Generateai} alt="" />
 							</div>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG28} alt="" />
-									<span>For Your Team</span>
-								</h3>
-								<p>
-									Create pitch docs or training scripts while your rivals
-									scramble.
-								</p>
-							</div>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG29} alt="" />
-									<span>For Your Organisation</span>
-								</h3>
-								<p>
-									Roll out perfect policies or customer letters across
-									regions—effortlessly.
-								</p>
-							</div>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG30} alt="" />
-									<span>Why Wait?</span>
-								</h3>
-								<p>Time’s ticking—get ahead now.</p>
-							</div>
-						</section>
+						</div>
 					</section>
 				</div>
 
@@ -266,43 +279,51 @@ const Features = () => {
 							/>
 						</div>
 
-						<section className={styles.main2__flex__container}>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG27} alt="" />
-									<span>For You</span>
-								</h3>
-								<p>
-									Sell fitness plans or photography tips—turn passion into
-									profit.
-								</p>
+						<div className={`${styles.feature1__flex} ${styles.feature__mod}`}>
+							<div className={styles.feature1__flex__img}>
+								<img src={Publish} alt="" />
 							</div>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG28} alt="" />
-									<span>For Your Team</span>
-								</h3>
-								<p>Share internal playbooks or client case studies—securely.</p>
-							</div>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG29} alt="" />
-									<span>For Your Organisation</span>
-								</h3>
-								<p>
-									Publish whitepapers or industry insights—build authority fast.
-								</p>
-							</div>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG30} alt="" />
-									<span>Why Wait?</span>
-								</h3>
-								<p>
-									Creators are raking it in—don’t let your ideas gather dust.
-								</p>
-							</div>
-						</section>
+							<section className={styles.main2__flex__container}>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG27} alt="" />
+										<span>For You</span>
+									</h3>
+									<p>
+										Sell fitness plans or photography tips—turn passion into
+										profit.
+									</p>
+								</div>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG28} alt="" />
+										<span>For Your Team</span>
+									</h3>
+									<p>
+										Share internal playbooks or client case studies—securely.
+									</p>
+								</div>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG29} alt="" />
+										<span>For Your Organisation</span>
+									</h3>
+									<p>
+										Publish whitepapers or industry insights—build authority
+										fast.
+									</p>
+								</div>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG30} alt="" />
+										<span>Why Wait?</span>
+									</h3>
+									<p>
+										Creators are raking it in—don’t let your ideas gather dust.
+									</p>
+								</div>
+							</section>
+						</div>
 					</section>
 				</div>
 
@@ -327,50 +348,56 @@ const Features = () => {
 							/>
 						</div>
 
-						<section className={styles.main2__flex__container}>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG27} alt="" />
-									<span>For You</span>
-								</h3>
-								<p>
-									Sign leases or freelance agreements—no delays, no hassle.
-									Invite a landlord or client to sign instantly, with blockchain
-									ensuring the signatures stay dispute-free.
-								</p>
+						<div className={`${styles.feature1__flex} ${styles.feature2__mod}`}>
+							<section className={styles.main2__flex__container}>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG27} alt="" />
+										<span>For You</span>
+									</h3>
+									<p>
+										Sign leases or freelance agreements—no delays, no hassle.
+										Invite a landlord or client to sign instantly, with
+										blockchain ensuring the signatures stay dispute-free.
+									</p>
+								</div>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG28} alt="" />
+										<span>For Your Team</span>
+									</h3>
+									<p>
+										Finalise NDAs or vendor deals—keep projects flying. Invite
+										teammates to sign off together, with immutable records
+										preventing sneaky changes and keeping everyone honest.
+									</p>
+								</div>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG29} alt="" />
+										<span>For Your Organisation</span>
+									</h3>
+									<p>
+										Approve budgets or contracts at scale—securely, instantly.
+										Invite global branches to sign in sync, while blockchain’s
+										unchangeable audit trail slashes fraud risks and legal woes.
+									</p>
+								</div>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG30} alt="" />
+										<span>Why Wait?</span>
+									</h3>
+									<p>
+										Deals are closing now—don’t lose out to slow, shaky
+										paperwork.
+									</p>
+								</div>
+							</section>
+							<div className={styles.feature1__flex__img}>
+								<img src={Riteasesign} alt="" />
 							</div>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG28} alt="" />
-									<span>For Your Team</span>
-								</h3>
-								<p>
-									Finalise NDAs or vendor deals—keep projects flying. Invite
-									teammates to sign off together, with immutable records
-									preventing sneaky changes and keeping everyone honest.
-								</p>
-							</div>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG29} alt="" />
-									<span>For Your Organisation</span>
-								</h3>
-								<p>
-									Approve budgets or contracts at scale—securely, instantly.
-									Invite global branches to sign in sync, while blockchain’s
-									unchangeable audit trail slashes fraud risks and legal woes.
-								</p>
-							</div>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG30} alt="" />
-									<span>Why Wait?</span>
-								</h3>
-								<p>
-									Deals are closing now—don’t lose out to slow, shaky paperwork.
-								</p>
-							</div>
-						</section>
+						</div>
 					</section>
 				</div>
 
@@ -401,46 +428,51 @@ const Features = () => {
 							/>
 						</div>
 
-						<section className={styles.main2__flex__container}>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG27} alt="" />
-									<span>For You</span>
-								</h3>
-								<p>
-									Create a sign-up sheet for your yoga class or a petition that
-									spreads.
-								</p>
+						<div className={`${styles.feature1__flex} ${styles.feature1__mod}`}>
+							<div className={styles.feature1__flex__img}>
+								<img src={paper} alt="" />
 							</div>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG28} alt="" />
-									<span>For Your Team</span>
-								</h3>
-								<p>Streamline expense claims or client intakes—no mess.</p>
-							</div>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG29} alt="" />
-									<span>For Your Organisation</span>
-								</h3>
-								<p>
-									Roll out signable compliance forms or event RSVPs—done in a
-									snap.
-								</p>
-							</div>
-							<div className={styles.flex__content}>
-								<h3>
-									<img src={SVG30} alt="" />
-									<span>Why Wait?</span>
-								</h3>
-								<p>
-									Businesses are cutting admin time—join them before you’re
-									buried in paper. Paperwork of the future is seamless and
-									digital.
-								</p>
-							</div>
-						</section>
+							<section className={styles.main2__flex__container}>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG27} alt="" />
+										<span>For You</span>
+									</h3>
+									<p>
+										Create a sign-up sheet for your yoga class or a petition
+										that spreads.
+									</p>
+								</div>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG28} alt="" />
+										<span>For Your Team</span>
+									</h3>
+									<p>Streamline expense claims or client intakes—no mess.</p>
+								</div>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG29} alt="" />
+										<span>For Your Organisation</span>
+									</h3>
+									<p>
+										Roll out signable compliance forms or event RSVPs—done in a
+										snap.
+									</p>
+								</div>
+								<div className={styles.flex__content}>
+									<h3>
+										<img src={SVG30} alt="" />
+										<span>Why Wait?</span>
+									</h3>
+									<p>
+										Businesses are cutting admin time—join them before you’re
+										buried in paper. Paperwork of the future is seamless and
+										digital.
+									</p>
+								</div>
+							</section>
+						</div>
 					</section>
 				</div>
 			</section>
@@ -465,7 +497,7 @@ const Features = () => {
 
 					<section className={styles.feature1__flex}>
 						<div className={styles.feature1__flex}>
-							<img src={SVG8} alt="" />
+							<img src={Scan} alt="" />
 						</div>
 						<section className={styles.feature1__flex__container}>
 							<div className={styles.feature1__flex__content}>
@@ -520,7 +552,7 @@ const Features = () => {
 
 					<section className={styles.feature1__flex}>
 						<div className={styles.feature1__flex}>
-							<img src={SVG8} alt="" />
+							<img src={pdftool} alt="" />
 						</div>
 						<section className={styles.feature1__flex__container}>
 							<div className={styles.feature1__flex__content}>
@@ -605,12 +637,12 @@ const Features = () => {
 							</div>
 						</section>
 						<div className={styles.feature1__flex}>
-							<img src={SVG8} alt="" />
+							<img src={storage} alt="" />
 						</div>
 					</section>
 				</section>
 
-				<section className={styles.feature1}>
+				<section className={`${styles.feature1} ${styles.feature1__mod}`}>
 					<div className={styles.feature1__title}>
 						<h2>Rite SDK/API: Build Smarter, Launch Faster</h2>
 						<p>
@@ -628,9 +660,6 @@ const Features = () => {
 					</div>
 
 					<section className={styles.feature1__flex}>
-						<div className={styles.feature1__flex}>
-							<img src={SVG8} alt="" />
-						</div>
 						<section className={styles.feature1__flex__container}>
 							<div className={styles.feature1__flex__content}>
 								<h3>
@@ -663,6 +692,9 @@ const Features = () => {
 								<p>Innovators are building now—don’t let rivals outpace you.</p>
 							</div>
 						</section>
+						<div className={styles.feature1__flex}>
+							<img src={SVG8} alt="" />
+						</div>
 					</section>
 				</section>
 			</section>

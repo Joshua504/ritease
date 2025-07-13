@@ -159,6 +159,34 @@
 		padding: 0 1.2225rem;
 	}
 
+	.eco_title{
+		@include sub-title;
+		font-size: 32px;
+		margin-bottom: 4.125rem;
+		text-transform: capitalize;
+		text-align: center;
+
+		@include mobile {
+			font-size: 1.5rem;
+			line-height: 2rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	.ecosystem_container{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 39px;
+		margin-bottom: 117px;
+
+		@include mobile {
+			flex-wrap: wrap;
+			gap: 15px;
+			margin-bottom: 30px;
+		}
+	}
+
 	.main1 {
 		padding-top: 3rem;
 
