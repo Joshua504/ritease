@@ -13,26 +13,58 @@ import Reads from './pages/Reads';
 import BlogPage from './pages/BlogPage';
 import Blog from './pages/Blog';
 import PaidBlog from './pages/PaidBlog';
+import Modal from './components/Modal';
+import EarlyAccessForm from './components/EarlyAccessForm';
+import { useState } from 'react';
 
 function App() {
-	return (
-		<Router>
-			<Nav Logo={Logo} />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/features" element={<Features />} />
-				<Route path="/pricing" element={<Pricing />} />
-				<Route path="/riteboards" element={<Riteboards />} />
-				<Route path="/privacy" element={<Privacy />} />
-				<Route path="/terms" element={<Terms /> } />
-				<Route path="/reads" element={<Reads /> } />
-				<Route path="/blog" element={<BlogPage /> } />
-				<Route path="/blogs" element={<Blog /> } />
-				<Route path="/paid" element={<PaidBlog /> } />
-			</Routes>
-			<Footer />
-		</Router>
-	);
+ const [modalOpen, setModalOpen] = useState(false);
+ const [prefillEmail, setPrefillEmail] = useState('');
+
+ const openEarlyAccessModal = (email = '') => {
+  setPrefillEmail(email);
+  setModalOpen(true);
+ };
+ const closeModal = () => setModalOpen(false);
+
+ const handleEarlyAccessSubmit = () => {
+  setPrefillEmail('');
+  // Do NOT close the modal here!
+ };
+
+ return (
+  <Router>
+   <Nav Logo={Logo} onEarlyAccessClick={openEarlyAccessModal} />
+   <Routes>
+    <Route
+     path='/'
+     element={<Home onEarlyAccessClick={openEarlyAccessModal} />}
+    />
+    <Route
+     path='/features'
+     element={<Features onEarlyAccessClick={openEarlyAccessModal} />}
+    />
+    <Route
+     path='/pricing'
+     element={<Pricing onEarlyAccessClick={openEarlyAccessModal} />}
+    />
+    <Route path='/riteboards' element={<Riteboards />} />
+    <Route path='/privacy' element={<Privacy />} />
+    <Route path='/terms' element={<Terms />} />
+    <Route path='/reads' element={<Reads />} />
+    <Route path='/blog' element={<BlogPage />} />
+    <Route path='/blogs' element={<Blog />} />
+    <Route path='/paid' element={<PaidBlog />} />
+   </Routes>
+   <Footer onEarlyAccessClick={openEarlyAccessModal} />
+   <Modal isOpen={modalOpen} onClose={closeModal}>
+    <EarlyAccessForm
+     initialEmail={prefillEmail}
+     onSubmit={handleEarlyAccessSubmit}
+    />
+   </Modal>
+  </Router>
+ );
 }
 
 export default App;
