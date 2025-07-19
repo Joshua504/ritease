@@ -54,22 +54,23 @@ const Nav = ({ Logo, onEarlyAccessClick }) => {
       }`}
      >
       {navLinks.map((link, index) => (
-       <Link
-        key={index}
-        className={`${styles.links} ${
-         activeNav === index ? styles.active__link : ''
-        }`}
-        onClick={() => handleNavClick(index)}
-        to={link.link}
-       >
-        {link.name}
-       </Link>
+       <div>
+         <Link
+          key={index}
+          className={`${styles.links} ${
+           activeNav === index ? styles.active__link : ''
+          }`}
+          onClick={() => handleNavClick(index)}
+          to={link.link}
+         >
+          {link.name}
+         </Link>
+          <div className={styles.bar}></div>
+       </div>
       ))}
      </ul>
      <div className={styles.nav__btns}>
-      <Link className={`${styles.links} ${styles.links__mod}`} to='/'>
-       login
-      </Link>
+      {/* <Link to='/login'>Login</Link> */}
       <Button
        btnText='Early Access'
        borderRadius='24px'

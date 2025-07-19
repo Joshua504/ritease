@@ -1,0 +1,135 @@
+@use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
+
+.blog__header {
+	@include Hd {
+		padding: 15.75rem 5rem 3rem;
+	}
+	@include macbookpro {
+		padding: 15.75rem 17rem 3rem;
+	}
+	@include Fhd {
+		padding: 15.75rem $bodymargin 3rem;
+	}
+	@include Qhd {
+		padding: 15.75rem 42rem 3rem;
+	}
+	@include Uhd {
+		padding: 15.75rem 82rem 3rem;
+	}
+	@include mobile {
+		padding: 8rem 1rem 1rem;
+	}
+}
+
+.main {
+	padding: 0 16rem;
+
+	@include Hd {
+		padding: 0 12rem;
+	}
+	@include macbookpro {
+		padding: 0 12rem;
+	}
+	@include Qhd {
+		padding: 0 42rem;
+	}
+	@include Uhd {
+		padding: 0 82rem;
+	}
+
+	@include mobile {
+		padding: 0 1rem;
+	}
+
+	.main1 {
+		margin-bottom: 61px;
+
+		.searchContainer {
+			position: relative;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			max-width: 724px; // Adjust as needed
+		}
+
+		.searchIcon {
+			position: absolute;
+			left: 12px;
+			color: #404040;
+			pointer-events: none;
+			z-index: 1;
+		}
+
+		.searchInput {
+			width: 100%;
+			padding: 12px 12px 12px 40px;
+			border: 1px solid #404040;
+			color: $primary;
+			border-radius: 30px;
+			font-size: 16px;
+			background: transparent;
+
+			&::placeholder {
+				color: #404040;
+			}
+		}
+	}
+
+	.blogs {
+		.blog_title {
+			@include sub-title;
+			text-align: start;
+			margin-bottom: 56px;
+		}
+
+		.blog_container {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			width: 1372px;
+			max-width: 1372px;
+
+			@include Hd {
+				width: 100%;
+			}
+			@include mobile {
+				width: 100%;
+				max-width: fit-content;
+			}
+		}
+
+		.ads {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 1372px;
+			max-width: 1372px;
+			height: 440px;
+			max-height: 440px;
+			background: #ffc107;
+			border-radius: 16px;
+			color: $secondary;
+			font-size: 220px;
+			font-family: 'interSemiBold';
+			text-align: center;
+			margin: 56px 0;
+
+			@include Hd {
+				width: 100%;
+			}
+			@include mobile {
+				width: 100%;
+				font-size: 90px
+			}
+		}
+	}
+
+	.wait {
+		padding: 9.3125rem 3rem 7.6875rem;
+
+		@include mobile {
+			padding: 5rem 0 3rem;
+		}
+	}
+}

@@ -6,18 +6,30 @@
 	justify-content: center;
 	align-items: center;
 	margin: 62px 0;
-	padding: 0 $bodymargin;
 	position: fixed;
 	width: 100%;
 	z-index: 100;
+
+	@include Hd {
+		padding: 0 5rem;
+	}
+
+	@include Fhd {
+		padding: 0 $bodymargin ;
+	}
+
+	@include Qhd {
+		padding: 0 42rem ;
+	}
+
+	@include Uhd {
+		padding: 0 82rem;
+	}
 
 	@include macbookpro {
 		padding: 0 17rem ;
 	}
 
-	@include macbook {
-		padding: 0 5rem;
-	}
 	@include mobile {
 		padding: 16px;
 		margin: 0 0;

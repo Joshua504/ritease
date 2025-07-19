@@ -6,11 +6,18 @@
 	}
 }
 
+@mixin scalemobile {
+	@media (min-width: 1024px) and (pointer: coarse) and (hover: none){
+		@content;
+	}
+}
+
 @mixin tablet {
 	@media (768px < width <= 1024px) {
 		@content;
 	}
 }
+
 @mixin macbook {
 	@media (1025px < width <= 1440px) {
 		@content;
@@ -18,27 +25,43 @@
 }
 
 @mixin macbookpro {
-  @media screen and (max-width: 1728px) {
-    @content;
-  }
+	@media (1440px <= width <= 1728px) {
+		@content;
+	}
 }
 
-@mixin largeDesktop {
-  @media (min-width: 1440px) {
-    @content;
-  }
+@mixin Hd {
+	@media (1024px <= width <= 1366px) {
+		@content;
+	}
+}
+
+@mixin Fhd {
+	@media (1920px <= width <= 2560px) {
+		@content;
+	}
+}
+
+@mixin Qhd {
+	@media (2560px <= width <= 3840px) {
+		@content;
+	}
+}
+
+@mixin Uhd {
+	@media (3840px <= width) {
+		@content;
+	}
 }
 
 @mixin btn {
 	font-family: interSemiBold;
-	font-size: 1rem;
 	text-transform: capitalize;
 	color: #1f4c3b;
-	padding: 0.5rem 1rem;
 	border-radius: 24px;
 	border: none;
 	outline: transparent;
-	background: #FFD12D;
+	background: #ffd12d;
 	filter: drop-shadow(-6.9px -4px 34.25px rgba(24, 226, 153, 0.24));
 	cursor: pointer;
 	transition: 0.5s ease-in-out;
@@ -55,10 +78,11 @@
 }
 
 @mixin sub-title {
-	font-family: interSemiBold;
+	font-family: interMedium;
 	font-size: 2.5rem;
 	line-height: 48px;
 	color: $primary;
+	text-align: start;
 }
 
 @mixin sub-text {
@@ -80,20 +104,8 @@
 		rgba(255, 255, 255, 0.5) 0%,
 		rgba(255, 255, 255, 0) 100%
 	);
-	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
-	-webkit-text-fill-color: transparent;
-
-	&:hover {
-		background: linear-gradient(
-			to top,
-			rgba(255, 255, 255, 0.5) 0%,
-			rgba(255, 255, 255, 0) 100%
-		);
-		background-clip: text;
-		color: transparent;
-	}
 }
 
 @mixin flex-item__h3 {
@@ -112,7 +124,6 @@
 }
 
 @mixin terms {
-	padding: 0 $bodymargin 23.5rem;
 	display: flex;
 	gap: 88px;
 

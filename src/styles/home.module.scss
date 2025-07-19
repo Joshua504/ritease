@@ -2,19 +2,30 @@
 @use '/src/styles/mixins' as *;
 
 .header {
-	padding: 15.75rem $bodymargin 3rem;
 	background-image: url('/src/assets/HomeHero.svg');
-	background-position: center;
-
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	@include Hd {
+		padding: 15.75rem 5rem 3rem;
+	}
 	@include macbookpro {
 		padding: 15.75rem 17rem 3rem;
 	}
-
-	@include macbook {
-		padding: 15.75rem 5rem 3rem;
+	@include Fhd {
+		padding: 15.75rem $bodymargin 3rem;
 	}
-	@include mobile {
-		padding: 8rem 1rem 1rem;
+	@include Qhd {
+		padding: 15.75rem 42rem 3rem;
+	}
+	@include Uhd {
+		padding: 15.75rem 82rem 3rem;
+	}
+
+	@include scalemobile {
+		padding: 15.75rem 5rem 3rem;
+		background: red;
 	}
 
 	.container {
@@ -32,17 +43,28 @@
 			line-height: 4.175rem;
 			letter-spacing: -0.0762rem;
 			margin-bottom: 1.5rem;
-			width: 75%;
+
+			@include Hd {
+				width: 78%;
+			}
+			@include Fhd {
+				width: 70%;
+			}
+			@include Qhd {
+				width: 75%;
+			}
+			@include Uhd {
+				width: 75%;
+			}
+			@include macbookpro {
+				width: 75%;
+			}
 
 			@include mobile {
 				font-size: 2.5rem;
 				line-height: 48px;
 				width: 85%;
 				margin-bottom: 1rem;
-			}
-
-			@include macbook {
-				width: 80%;
 			}
 		}
 		.m__text {
@@ -54,6 +76,16 @@
 			margin-bottom: 1.5rem;
 			width: 75%;
 			text-align: start;
+
+			@include Fhd {
+				width: 70%;
+			}
+			@include Qhd {
+				width: 75%;
+			}
+			@include Uhd {
+				width: 75%;
+			}
 
 			@include mobile {
 				font-size: 14px;
@@ -68,8 +100,10 @@
 
 			.btns {
 				@include btn;
-				background: #FFD12D;
+				background: #ffd12d;
 				color: #1b1b1b;
+				font-size: 1rem;
+				padding: 0.5rem 1rem;
 
 				@include mobile {
 					font-size: 12px;
@@ -146,20 +180,33 @@
 }
 
 .main {
-	padding: 0 $bodymargin;
+	@include Hd{
+		padding: 0 5rem;
+	}
+
+	@include Fhd{
+		padding: 0 $bodymargin;
+	}
 
 	@include macbookpro {
 		padding: 0 17rem;
 	}
 
-	@include macbook {
-		padding: 0 5rem;
+	@include Qhd {
+		padding: 0 42rem;
 	}
+
+	@include Uhd {
+		padding: 0 82rem;
+	}
+
 	@include mobile {
 		padding: 0 1.2225rem;
 	}
 
-	.eco_title{
+
+
+	.eco_title {
 		@include sub-title;
 		font-size: 32px;
 		margin-bottom: 4.125rem;
@@ -167,13 +214,13 @@
 		text-align: center;
 
 		@include mobile {
-			font-size: 1.5rem;
+			font-size: 32px;
 			line-height: 2rem;
-			margin-bottom: 1rem;
+			margin-bottom: 3.5rem;
 		}
 	}
 
-	.ecosystem_container{
+	.ecosystem_container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -184,6 +231,17 @@
 			flex-wrap: wrap;
 			gap: 15px;
 			margin-bottom: 30px;
+		}
+
+		div {
+			height: 57.2px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				width: 100%;
+			}
 		}
 	}
 
@@ -258,7 +316,6 @@
 
 			.card__img {
 				position: relative;
-				// z-index: 2;
 				opacity: -1;
 				transition: scale 2s ease;
 			}
@@ -326,6 +383,7 @@
 				.anime__subtitle {
 					@include sub-title;
 					letter-spacing: 0;
+					text-align: start;
 					width: 80%;
 					margin-bottom: 24px;
 
@@ -435,6 +493,8 @@
 					@include btn;
 					background: $primary;
 					color: #1b1b1b;
+					font-size: 1rem;
+					padding: 0.5rem 1rem;
 
 					@include mobile {
 						font-size: 12px;
@@ -488,6 +548,7 @@
 			.l__txt {
 				@include sub-title;
 				margin-bottom: 1rem;
+				text-align: center;
 
 				@include mobile {
 					font-size: 24px;
@@ -514,7 +575,10 @@
 			}
 
 			.main3__container__img {
-				width: 90%;
+				max-width: 718px;
+				width: 100%;
+				max-height: 800px;
+				height: 100%;
 
 				@include mobile {
 					width: 100%;
@@ -522,7 +586,7 @@
 
 				img {
 					width: 100%;
-					height: 100%;
+					height: fit-content;
 				}
 			}
 
@@ -534,9 +598,24 @@
 				}
 			}
 
+			.main3__container__list {
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+				gap: 35px;
+
+				@include macbookpro {
+					gap: 20px;
+				}
+
+				@include macbook {
+					gap: 18px;
+				}
+			}
+
 			.main3__container__list__item {
 				display: flex;
-				gap: 20px;
+				gap: 15px;
 				border-bottom: 2px solid transparent;
 				cursor: pointer;
 				border-image: linear-gradient(
@@ -546,7 +625,7 @@
 						rgba(255, 255, 255, 0) 100%
 					)
 					1;
-				margin-bottom: 10px;
+				margin-bottom: 1px;
 			}
 
 			.indicator__container {
@@ -555,8 +634,12 @@
 
 				.list__item__l__txt {
 					@include sub-title;
-					margin-bottom: 24px;
+					margin-bottom: 20px;
 					color: #737373;
+
+					@include macbook {
+						font-size: 30px;
+					}
 
 					@include mobile {
 						font-size: 20px;
@@ -566,7 +649,7 @@
 				}
 				.list__item__m__txt {
 					@include sub-text;
-					margin-bottom: 24px;
+					margin-bottom: 10px;
 					color: rgba(255, 255, 255, 0.5);
 
 					@include mobile {
@@ -622,6 +705,10 @@
 				h2 {
 					@include sub-title;
 					margin-bottom: 4.9375rem;
+
+					@include macbookpro {
+						font-size: 35px;
+					}
 
 					@include mobile {
 						font-size: 24px;
@@ -698,6 +785,7 @@
 
 			h2 {
 				@include sub-title;
+				text-align: center;
 				margin-bottom: 17px;
 
 				@include mobile {
@@ -715,6 +803,8 @@
 		.faq {
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 			gap: 33px;
 
 			@include mobile {

@@ -101,7 +101,7 @@ const Home = ({ onEarlyAccessClick }) => {
  ];
 
  const listItems = [
-  { icon: SVG1, text: 'Create Notes and Docs', bannerImage: banner },
+  { icon: SVG1, text: 'Create Docs', bannerImage: banner },
   { icon: SVG2, text: 'Generate Docs', bannerImage: banner2 },
   { icon: SVG3, text: 'Sign Docs', bannerImage: banner3 },
   { icon: SVG4, text: 'Admin Forms', bannerImage: banner4 },
@@ -191,287 +191,301 @@ const Home = ({ onEarlyAccessClick }) => {
  }, []);
 
  return (
-  <>
-   <header className={styles.header}>
-    <div className={styles.container}>
-     <h1 className={styles.l__text}>
-      Smart Document Management, All in One Place.
-     </h1>
-     <p className={styles.m__text}>
-      The all-in-one platform for freelancers, startups, and enterprises to
-      create, sign, manage, and automate documents and admin forms—powered by
-      AI.
-     </p>
-     <div className={styles.btns__container}>
-      <button className={styles.btns}>
-       Watch demo <img src={PlayBtn} alt='' />
-      </button>
-     </div>
-    </div>
+		<>
+			<header className={styles.header}>
+				<div className={styles.container}>
+					<h1 className={styles.l__text}>
+						Smart Document Management, All in One Place.
+					</h1>
+					<p className={styles.m__text}>
+						The all-in-one platform for freelancers, startups, and enterprises
+						to create, sign, manage, and automate documents and admin
+						forms—powered by AI.
+					</p>
+					<div className={styles.btns__container}>
+						<button className={styles.btns}>
+							Watch demo <img src={PlayBtn} alt="" />
+						</button>
+					</div>
+				</div>
 
-    <div className={styles.banner}>
-     <ul className={styles.list}>
-      {listItems.map((item, index) => (
-       <li
-        key={index}
-        className={`${styles.list__item} ${
-         activeListItem === index ? styles.list__item__active : ''
-        }`}
-        onClick={() => handleListItemClick(index)}
-       >
-        <img src={item.icon} alt='' />
-        <span>{item.text}</span>
-       </li>
-      ))}
-     </ul>
-     <img
-      className={styles.banner_img}
-      src={listItems[activeListItem].bannerImage}
-      alt=''
-     />
-    </div>
-   </header>
+				<div className={styles.banner}>
+					<ul className={styles.list}>
+						{listItems.map((item, index) => (
+							<li
+								key={index}
+								className={`${styles.list__item} ${
+									activeListItem === index ? styles.list__item__active : ''
+								}`}
+								onClick={() => handleListItemClick(index)}>
+								<img src={item.icon} alt="" />
+								<span>{item.text}</span>
+							</li>
+						))}
+					</ul>
+					<img
+						className={styles.banner_img}
+						src={listItems[activeListItem].bannerImage}
+						alt=""
+					/>
+				</div>
+			</header>
 
-   <main className={styles.main}>
-    <section className={styles.ecosystem}>
-     <h2 className={styles.eco_title}>our ecosystem</h2>
-     <section className={styles.ecosystem_container}>
-      <img src={stripe} alt='' />
-      <img src={grok} alt='' />
-      <img src={gpt} alt='' />
-      <img src={claude} alt='' />
-      <img src={base} alt='' />
-      <img src={binance} alt='' />
-      <img src={cloudflare} alt='' />
-      <img src={favicon} alt='' />
-      <img src={paystack} alt='' />
-     </section>
-    </section>
+			<main className={styles.main}>
+				<section className={styles.ecosystem}>
+					<h2 className={styles.eco_title}>our ecosystem</h2>
+					<section className={styles.ecosystem_container}>
+						<div><img src={stripe} alt="" /></div>
+						<div><img src={grok} alt="" /></div>
+						<div><img src={gpt} alt="" /></div>
+						<div><img src={claude} alt="" /></div>
+						<div><img src={base} alt="" /></div>
+						<div><img src={binance} alt="" /></div>
+						<div><img src={cloudflare} alt="" /></div>
+						<div><img src={favicon} alt="" /></div>
+						<div><img src={paystack} alt="" /></div>
+					</section>
+				</section>
 
-    <section className={styles.main1}>
-     <div className={styles.heading}>
-      <h2 className={styles.title}>
-       One Platform for All Your Document Workflows.
-      </h2>
-      <p className={styles.text}>
-       Ritease streamlines your workflow, so you can focus on what truly matters
-      </p>
-     </div>
-     <section className={styles.cards__container}>
-      <div className={styles.cards}>
-       <div className={styles.overlay}></div>
-       <div className={styles.card_img}>
-        <img className={styles.img} src={SVG41} alt='' />
-       </div>
-       <div className={styles.cards__text}>
-        <h3>Seamless Design</h3>
-       </div>
-      </div>
-      <div className={styles.cards}>
-       <div className={styles.overlay}></div>
-       <div className={styles.card_img}>
-        <img className={styles.img} src={SVG42} alt='' />
-       </div>
-       <div className={styles.cards__text}>
-        <h3>All-in-One Document Solution</h3>
-       </div>
-      </div>
-      <div className={styles.cards}>
-       <div className={styles.overlay}></div>
-       <div className={styles.card_img}>
-        <img className={styles.img} src={SVG43} alt='' />
-       </div>
-       <div className={styles.cards__text}>
-        <h3>Monetise with Ease</h3>
-       </div>
-      </div>
-     </section>
-    </section>
+				<section className={styles.main1}>
+					<div className={styles.heading}>
+						<h2 className={styles.title}>
+							One Platform for All Your Document Workflows.
+						</h2>
+						<p className={styles.text}>
+							Ritease streamlines your workflow, so you can focus on what truly
+							matters
+						</p>
+					</div>
+					<section className={styles.cards__container}>
+						<div className={styles.cards}>
+							<div className={styles.overlay}></div>
+							<div className={styles.card_img}>
+								<img className={styles.img} src={SVG41} alt="" />
+							</div>
+							<div className={styles.cards__text}>
+								<h3>Seamless Design</h3>
+							</div>
+						</div>
+						<div className={styles.cards}>
+							<div className={styles.overlay}></div>
+							<div className={styles.card_img}>
+								<img className={styles.img} src={SVG42} alt="" />
+							</div>
+							<div className={styles.cards__text}>
+								<h3>All-in-One Document Solution</h3>
+							</div>
+						</div>
+						<div className={styles.cards}>
+							<div className={styles.overlay}></div>
+							<div className={styles.card_img}>
+								<img className={styles.img} src={SVG43} alt="" />
+							</div>
+							<div className={styles.cards__text}>
+								<h3>Monetise with Ease</h3>
+							</div>
+						</div>
+					</section>
+				</section>
 
-    <section className={styles.main2}>
-     <div className={styles.heading1}>
-      <AnimatedText
-       animeText={
-        'Great for Individuals. Perfect for Teams. Essential for Businesses.'
-       }
-      />
-      <Button
-       btnText={'Get Early Access Now!'}
-       fontSize='1.5rem'
-       className={styles.homeButton}
-       onClick={() => onEarlyAccessClick()}
-      />
-     </div>
-     <section className={styles.main2__container}>
-      <div>
-       <img
-        className={styles.nextgen}
-        src={nextGenFeatures[activeNextGenItem].image}
-        alt={nextGenFeatures[activeNextGenItem].name}
-       />
-      </div>
-      <section className={styles.main2__wrapper}>
-       <div className={styles.main2__textcontainer}>
-        <h2 className={styles.anime__subtitle}>
-         The Next-Gen Of Smart Document Management
-        </h2>
-        <p className={styles.anime__text}>
-         Say goodbye to scattered files and multiple apps. Ritease brings
-         everything you need to manage documents into one seamless platform for
-         individuals, teams, and businesses.
-        </p>
-       </div>
+				<section className={styles.main2}>
+					<div className={styles.heading1}>
+						<AnimatedText
+							animeText={
+								'Great for Individuals. Perfect for Teams. Essential for Businesses.'
+							}
+						/>
+						<Button
+							btnText={'Get Early Access Now!'}
+							fontSize="1rem"
+							padding="20px 32px"
+							className={styles.homeButton}
+							onClick={() => onEarlyAccessClick()}
+						/>
+					</div>
+					<section className={styles.main2__container}>
+						<div>
+							<img
+								className={styles.nextgen}
+								src={nextGenFeatures[activeNextGenItem].image}
+								alt={nextGenFeatures[activeNextGenItem].name}
+							/>
+						</div>
+						<section className={styles.main2__wrapper}>
+							<div className={styles.main2__textcontainer}>
+								<h2 className={styles.anime__subtitle}>
+									The Next-Gen Of Smart Document Management
+								</h2>
+								<p className={styles.anime__text}>
+									Say goodbye to scattered files and multiple apps. Ritease
+									brings everything you need to manage documents into one
+									seamless platform for individuals, teams, and businesses.
+								</p>
+							</div>
 
-       <ul className={styles.main2__textcontainerlist}>
-        {nextGenFeatures.map((feature, index) => (
-         <li
-          key={index}
-          className={`${styles.main2__textcontainerlist__item} ${
-           activeNextGenItem === index
-            ? styles.main2__textcontainerlist__item__active
-            : ''
-          }`}
-          onClick={() => handleNextGenItemClick(index)}
-         >
-          <div className={styles.indicator}></div>
-          <span>{feature.name}</span>
-         </li>
-        ))}
-       </ul>
-      </section>
-     </section>
-     <section className={styles.main2__container1}>
-      <div className={styles.main2__heading2}>
-       <h2 className={styles.l__txt}>
-        The Only Document Tool You’ll Ever Need
-       </h2>
-       <p className={styles.m__txt}>
-        Your all-in-one workspace for getting documents done. Smart writing,
-        secure signing, and seamless sharing—for people who mean business. Built
-        for founders, freelancers, and fast-moving teams.
-       </p>
-       <div className={styles.btn__con}>
-        <button className={styles.btn}>learn more</button>
-        <button className={styles.btn}>join waitlist</button>
-       </div>
-      </div>
-     </section>
-    </section>
-    <div className={styles.rite__img__con}>
-     <img className={styles.rite__img} src={SVG9} alt='' />
-    </div>
+							<ul className={styles.main2__textcontainerlist}>
+								{nextGenFeatures.map((feature, index) => (
+									<li
+										key={index}
+										className={`${styles.main2__textcontainerlist__item} ${
+											activeNextGenItem === index
+												? styles.main2__textcontainerlist__item__active
+												: ''
+										}`}
+										onClick={() => handleNextGenItemClick(index)}>
+										<div className={styles.indicator}></div>
+										<span>{feature.name}</span>
+									</li>
+								))}
+							</ul>
+						</section>
+					</section>
+					<section className={styles.main2__container1}>
+						<div className={styles.main2__heading2}>
+							<h2 className={styles.l__txt}>
+								The Only Document Tool You’ll Ever Need
+							</h2>
+							<p className={styles.m__txt}>
+								Your all-in-one workspace for getting documents done. Smart
+								writing, secure signing, and seamless sharing—for people who
+								mean business. Built for founders, freelancers, and fast-moving
+								teams.
+							</p>
+							<div className={styles.btn__con}>
+								<button className={styles.btn}>learn more</button>
+								<button
+									className={styles.btn}
+									onClick={() => onEarlyAccessClick()}>
+									join waitlist
+								</button>
+							</div>
+						</div>
+					</section>
+				</section>
+				<div className={styles.rite__img__con}>
+					<img className={styles.rite__img} src={SVG9} alt="" />
+				</div>
 
-    <section className={styles.main3}>
-     <div className={styles.main3__heading}>
-      <h2 className={styles.l__txt}>Key Features We Have For You</h2>
-      <p className={styles.m__txt}>What’s included in the Ritease platform</p>
-     </div>
-     <section className={styles.main3__container}>
-      <div className={styles.main3__container__img}>
-       <img src={keyFeatures[activeFeatures].image} alt='' />
-      </div>
-      <div className={styles.main3__container__text}>
-       <ul className={styles.main3__container__list}>
-        {keyFeatures.map((feature, index) => (
-         <li
-          key={index}
-          className={`${styles.main3__container__list__item} ${
-           activeFeatures === index
-            ? styles.main3__container__list__item__active
-            : ''
-          }`}
-          onClick={() => handleFeaturesClick(index)}
-         >
-          <div className={styles.indicator}></div>
-          <div className={styles.indicator__container}>
-           <span className={styles.list__item__l__txt}>{feature.name}</span>
-           <p className={styles.list__item__m__txt}>{feature.description}</p>
-          </div>
-         </li>
-        ))}
-       </ul>
-      </div>
-     </section>
-     <section className={styles.main3__elevate}>
-      <div>
-       <h2>Elevate document creation with intelligent features</h2>
-       <ul>
-        <div className={styles.main3__elevate__list}>
-         <li className={styles.main3__elevate__list__item}>
-          <div>
-           <img src={SVG12} alt='' />
-          </div>
-          <span>Edit suggestions</span>
-         </li>
-         <p>
-          AI analyzes your docs and suggests enhancements for clarity and
-          completeness
-         </p>
-        </div>
-        <div className={styles.main3__elevate__list}>
-         <li className={styles.main3__elevate__list__item}>
-          <div>
-           <img src={SVG13} alt='' />
-          </div>
-          <span>Automatic translations</span>
-         </li>
-         <p>Expand global reach with one- click multi-language support</p>
-        </div>
-        <div className={styles.main3__elevate__list}>
-         <li className={styles.main3__elevate__list__item}>
-          <div>
-           <img src={SVG14} alt='' />
-          </div>
-          <span>Writing assistance</span>
-         </li>
-         <p>
-          Craft clearer, more engaging documentation with real-time suggestions
-         </p>
-        </div>
-        <div className={styles.main3__elevate__list}>
-         <li className={styles.main3__elevate__list__item}>
-          <div>
-           <img src={SVG15} alt='' />
-          </div>
-          <span>Integrations</span>
-         </li>
-         <p>
-          Connect your favorite tools and workflows to streamline documentation
-         </p>
-        </div>
-       </ul>
-      </div>
-      <div>
-       <img className={styles.elevate__img} src={SVG11} alt='' />
-      </div>
-     </section>
-    </section>
+				<section className={styles.main3}>
+					<div className={styles.main3__heading}>
+						<h2 className={styles.l__txt}>Key Features We Have For You</h2>
+						<p className={styles.m__txt}>
+							What’s included in the Ritease platform
+						</p>
+					</div>
+					<section className={styles.main3__container}>
+						<div className={styles.main3__container__img}>
+							<img src={keyFeatures[activeFeatures].image} alt="" />
+						</div>
+						<div className={styles.main3__container__text}>
+							<ul className={styles.main3__container__list}>
+								{keyFeatures.map((feature, index) => (
+									<li
+										key={index}
+										className={`${styles.main3__container__list__item} ${
+											activeFeatures === index
+												? styles.main3__container__list__item__active
+												: ''
+										}`}
+										onClick={() => handleFeaturesClick(index)}>
+										<div className={styles.indicator}></div>
+										<div className={styles.indicator__container}>
+											<span className={styles.list__item__l__txt}>
+												{feature.name}
+											</span>
+											<p className={styles.list__item__m__txt}>
+												{feature.description}
+											</p>
+										</div>
+									</li>
+								))}
+							</ul>
+						</div>
+					</section>
+					<section className={styles.main3__elevate}>
+						<div>
+							<h2>Elevate document creation with intelligent features</h2>
+							<ul>
+								<div className={styles.main3__elevate__list}>
+									<li className={styles.main3__elevate__list__item}>
+										<div>
+											<img src={SVG12} alt="" />
+										</div>
+										<span>Edit suggestions</span>
+									</li>
+									<p>
+										AI analyzes your docs and suggests enhancements for clarity
+										and completeness
+									</p>
+								</div>
+								<div className={styles.main3__elevate__list}>
+									<li className={styles.main3__elevate__list__item}>
+										<div>
+											<img src={SVG13} alt="" />
+										</div>
+										<span>Automatic translations</span>
+									</li>
+									<p>
+										Expand global reach with one- click multi-language support
+									</p>
+								</div>
+								<div className={styles.main3__elevate__list}>
+									<li className={styles.main3__elevate__list__item}>
+										<div>
+											<img src={SVG14} alt="" />
+										</div>
+										<span>Writing assistance</span>
+									</li>
+									<p>
+										Craft clearer, more engaging documentation with real-time
+										suggestions
+									</p>
+								</div>
+								<div className={styles.main3__elevate__list}>
+									<li className={styles.main3__elevate__list__item}>
+										<div>
+											<img src={SVG15} alt="" />
+										</div>
+										<span>Integrations</span>
+									</li>
+									<p>
+										Connect your favorite tools and workflows to streamline
+										documentation
+									</p>
+								</div>
+							</ul>
+						</div>
+						<div>
+							<img className={styles.elevate__img} src={SVG11} alt="" />
+						</div>
+					</section>
+				</section>
 
-    <section className={styles.main4}>
-     <div className={styles.main4__banner}>
-      <img src={SVG16} alt='' />
-     </div>
-     <WaitList onEarlyAccessClick={onEarlyAccessClick} />
-    </section>
+				<section className={styles.main4}>
+					<div className={styles.main4__banner}>
+						<img src={SVG16} alt="" />
+					</div>
+					<WaitList onEarlyAccessClick={onEarlyAccessClick} />
+				</section>
 
-    <section className={styles.main5}>
-     <div className={styles.faq__heading}>
-      <h2>Frequently Asked Questions</h2>
-      <p>Some answers to satisfy your curiosity about Ritease</p>
-     </div>
-     <section className={styles.faq}>
-      {faqData.map((faq, index) => (
-       <Faq
-        key={index}
-        question={faq.question}
-        answer={faq.answer}
-        isFirst={index === 0}
-       />
-      ))}
-     </section>
-    </section>
-   </main>
-  </>
+				<section className={styles.main5}>
+					<div className={styles.faq__heading}>
+						<h2>Frequently Asked Questions</h2>
+						<p>Some answers to satisfy your curiosity about Ritease</p>
+					</div>
+					<section className={styles.faq}>
+						{faqData.map((faq, index) => (
+							<Faq
+								key={index}
+								question={faq.question}
+								answer={faq.answer}
+								isFirst={index === 0}
+							/>
+						))}
+					</section>
+				</section>
+			</main>
+		</>
  );
 };
 

@@ -3,6 +3,9 @@
 
 .login {
 	@include btn;
+	padding: var(--custom-padding);
+  font-size: var(--custom-font-size);
+  border-radius: var(--custom-border-radius);
 
 	@include mobile {
 		font-size: 12px;

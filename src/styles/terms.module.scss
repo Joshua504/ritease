@@ -4,6 +4,15 @@
 .head {
 	padding: 15.75rem $bodymargin 6.25rem;
 
+	@include Hd {
+		padding: 15.75rem 5rem 6.25rem;
+	}
+	@include Qhd {
+		padding: 15.75rem 42rem 6.25rem;
+	}
+	@include Uhd {
+		padding: 15.75rem 82rem 6.25rem;
+	}
 	@include mobile {
 		padding: 8rem 16px 16px;
 	}
@@ -11,6 +20,15 @@
 
 .wrapper {
 	@include terms;
+	padding: 0 $bodymargin 23.5rem;
+
+	@include Qhd {
+		padding: 0 42rem 23.5rem;
+	}
+	@include Uhd {
+		padding: 0 82rem 23.5rem;
+	}
+
 
 	@include mobile {
 		padding: 0 16px 16px;

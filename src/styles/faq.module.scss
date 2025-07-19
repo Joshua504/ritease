@@ -2,10 +2,15 @@
 @use '/src/styles/mixins' as *;
 
 .faq_item {
+	width: 1056px;
 	background: rgba(255, 255, 255, 0.04);
 	border-radius: 8px;
 	overflow: hidden;
 	transition: all 0.3s ease;
+
+	@include mobile {
+		width: 100%;
+	}
 }
 
 .faq_question {
@@ -15,7 +20,7 @@
 	padding: 30px 24px;
 	cursor: pointer;
 
-	@include mobile{
+	@include mobile {
 		padding: 11px 9px;
 	}
 
@@ -24,7 +29,7 @@
 		font-family: interMedium;
 		color: $primary;
 
-		@include mobile{
+		@include mobile {
 			font-size: 12px;
 			line-height: 16px;
 		}
@@ -42,7 +47,7 @@
 		font-family: interMedium;
 		color: $primary;
 
-		@include mobile{
+		@include mobile {
 			font-size: 12px;
 			line-height: 16px;
 		}
@@ -52,7 +57,7 @@
 		max-height: 600px;
 		padding: 44px 24px;
 
-		@include mobile{
+		@include mobile {
 			padding: 16px 9px;
 		}
 	}

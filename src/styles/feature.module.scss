@@ -2,14 +2,20 @@
 @use '/src/styles/mixins' as *;
 
 .head {
-	padding: 15.75rem $bodymargin 0rem;
-
+	@include Hd {
+		padding: 15.75rem 5rem 0rem;
+	}
+	@include Fhd {
+		padding: 15.75rem $bodymargin 0rem;
+	}
+	@include Qhd {
+		padding: 15.75rem 42rem 0rem;
+	}
+	@include Uhd {
+		padding: 15.75rem 82rem 0rem;
+	}
 	@include macbookpro {
 		padding: 15.75rem 17rem 0rem;
-	}
-
-	@include macbook {
-		padding: 15.75rem 5rem 0rem;
 	}
 	@include mobile {
 		padding: 8rem 16px 16px;
@@ -25,6 +31,7 @@
 
 		h2 {
 			@include sub-title;
+			text-align: center;
 			margin-bottom: 17px;
 
 			@include mobile {
@@ -37,8 +44,14 @@
 
 		p {
 			@include sub-text;
-			width: 85%;
 			margin: 0 auto;
+
+			@include Fhd {
+				width: 86%;
+			}
+			@include Qhd {
+				width: 88%;
+			}
 
 			@include mobile {
 				font-size: 12px;
@@ -69,21 +82,27 @@
 			gap: 8px;
 			position: absolute;
 			top: 55%;
+			display: none;
 		}
 	}
 }
 
 .main1 {
-	padding: 0 $bodymargin;
-
+	@include Hd {
+		padding: 0 5rem;
+	}
+	@include Fhd {
+		padding: 0 $bodymargin;
+	}
 	@include macbookpro {
 		padding: 0 17rem;
 	}
-
-	@include macbook {
-		padding: 0 5rem;
+	@include Qhd {
+		padding: 0 42rem;
 	}
-
+	@include Uhd {
+		padding: 0 82rem;
+	}
 	@include mobile {
 		padding: 0 16px;
 	}
@@ -96,6 +115,7 @@
 		}
 
 		.title__head {
+			text-align: start;
 			font-family: interSemiBold;
 			font-size: 64px;
 			line-height: 72px;
@@ -156,8 +176,7 @@
 
 			.feature1__flex {
 				display: flex;
-				justify-content: center;
-				width: 1270px;
+				justify-content: space-between;
 				height: 660px;
 				margin-bottom: 28px;
 
@@ -165,7 +184,7 @@
 					width: 100%;
 				}
 
-				@include macbook {
+				@include Hd {
 					width: 100%;
 				}
 
@@ -176,19 +195,24 @@
 				}
 
 				.feature1__flex__img {
-					width: 50%;
-					height: 100%;
+					width: 520px;
+					height: 660px;
 
 					@include macbookpro {
 						width: 100%;
 					}
-					@include macbook {
+					@include Hd {
+						width: 100%;
+					}
+					@include mobile {
 						width: 100%;
 					}
 
 					img {
 						width: 100%;
 						height: 100%;
+						object-fit: cover;
+						border-radius: 24px;
 
 						@include mobile {
 							width: 100%;
@@ -198,16 +222,21 @@
 				}
 
 				.feature1__flex__container {
-					width: 50%;
-					height: 100%;
+					height: 660px;
 					display: flex;
 					flex-wrap: wrap;
 
-					@include macbookpro {
+					@include Hd {
 						width: 100%;
 					}
-					@include macbook {
-						width: 100%;
+					@include Fhd {
+						width: 696px;
+					}
+					@include Qhd {
+						width: 47.5%;
+					}
+					@include Uhd {
+						width: 47.5%;
 					}
 
 					@include mobile {
@@ -217,16 +246,20 @@
 
 					.feature1__flex__content {
 						padding: 48px 50px;
-						width: 300px;
+						height: calc(50% - 1px);
+						width: 348px;
 						border: 1px solid rgba(255, 255, 255, 0.07);
 
 						@include macbookpro {
 							padding: 27px 30px;
 							width: 290px;
 						}
-						@include macbook {
+						@include Hd {
 							padding: 27px 30px;
-							width: 270px;
+							width: 280px;
+						}
+						@include Qhd {
+							width: 288px;
 						}
 						@include mobile {
 							padding: 27px 16px;
@@ -275,13 +308,20 @@
 }
 
 .main3 {
-	padding: 16rem $bodymargin 0;
-
-	@include macbookpro {
-		padding: 16rem 17rem 0rem;
+	@include Hd {
+		padding: 256px 5rem 0;
 	}
-	@include macbook {
-		padding: 16rem 5rem 0rem;
+	@include Fhd {
+		padding: 256px $bodymargin 0;
+	}
+	@include macbookpro {
+		padding: 256px 17rem 0;
+	}
+	@include Qhd {
+		padding: 256px 42rem 0;
+	}
+	@include Uhd {
+		padding: 256px 82rem 0;
 	}
 	@include mobile {
 		padding: 1.5rem 16px 0rem;
@@ -307,6 +347,7 @@
 			h2 {
 				font-family: interSemiBold;
 				font-size: 4rem;
+				text-align: start;
 				line-height: 72px;
 				color: rgba(255, 255, 255, 0.24);
 				width: 90%;
@@ -347,18 +388,16 @@
 		}
 
 		.feature1__flex {
-			width: 1270px;
 			height: 660px;
 			display: flex;
-			justify-content: center;
-			gap: 20px;
+			justify-content: space-between;
 			margin-bottom: 28px;
 
 			@include macbookpro {
 				width: 100%;
 			}
 
-			@include macbook {
+			@include Hd {
 				width: 100%;
 			}
 
@@ -369,8 +408,8 @@
 			}
 
 			.feature1__flex__img {
-				width: 50%;
-				height: 100%;
+				width: 520px;
+				height: 660px;
 
 				@include macbookpro {
 					width: 100%;
@@ -386,6 +425,8 @@
 				img {
 					width: 100%;
 					height: 100%;
+					object-fit: cover;
+					border-radius: 24px;
 
 					@include mobile {
 						width: 100%;
@@ -395,7 +436,7 @@
 			}
 
 			.feature1__flex__container {
-				width: 50%;
+				width: 696px;
 				height: 100%;
 				display: flex;
 				flex-wrap: wrap;
@@ -403,26 +444,29 @@
 				@include macbookpro {
 					width: 100%;
 				}
-
-				@include macbook {
+				@include Hd {
+					width: 100%;
+				}
+				@include mobile {
 					width: 100%;
 				}
 
 				.feature1__flex__content {
 					padding: 48px 50px;
-					width: 300px;
+					height: calc(50% - 1px);
+					width: 348px;
 					border: 1px solid rgba(255, 255, 255, 0.07);
 
 					@include macbookpro {
 						padding: 27px 28px;
-						width: 270px;
+						width: 295.5px;
 					}
-					@include macbook {
+					@include Hd {
 						padding: 27px 30px;
-						width: 220px;
+						width: 280px;
 					}
 					@include mobile {
-						padding: 27px 16px;
+						padding: 27px 12px;
 						width: 180px;
 					}
 
@@ -449,13 +493,20 @@
 
 .main2 {
 	background: #171717;
-	padding: 148px $bodymargin 172px;
-
-	@include macbookpro {
-		padding: 9.25rem 17rem 10.75rem;
+	@include Hd {
+		padding: 148px 5rem 124px;
 	}
-	@include macbook {
-		padding: 9.25rem 5rem 10.75rem;
+	@include Fhd {
+		padding: 148px $bodymargin 124px;
+	}
+	@include macbookpro {
+		padding: 148px 17rem;
+	}
+	@include Qhd {
+		padding: 148px 42rem 124px;
+	}
+	@include Uhd {
+		padding: 148px 82rem 124px;
 	}
 	@include mobile {
 		padding: 42px 16px 42px;
@@ -471,6 +522,7 @@
 		h2 {
 			font-family: interSemiBold;
 			font-size: 4rem;
+			text-align: start;
 			line-height: 72px;
 			color: rgba(255, 255, 255, 0.24);
 			width: 90%;
@@ -560,8 +612,7 @@
 
 	.feature1__flex {
 		display: flex;
-		justify-content: center;
-		width: 1270px;
+		justify-content: space-between;
 		height: 660px;
 		margin-bottom: 28px;
 
@@ -580,8 +631,8 @@
 		}
 
 		.feature1__flex__img {
-			width: 50%;
-			height: 100%;
+			width: 520px;
+			height: 660px;
 
 			@include macbookpro {
 				width: 100%;
@@ -598,6 +649,8 @@
 			img {
 				width: 100%;
 				height: 100%;
+				object-fit: cover;
+				border-radius: 24px;
 
 				@include mobile {
 					width: 100%;
@@ -609,15 +662,16 @@
 
 	.main2__flex__container {
 		display: flex;
+		justify-content: space-between;
 		flex-wrap: wrap;
-		width: 50%;
+		width: 696px;
 		border-left: 1px solid rgba(255, 255, 255, 0.07);
 
 		@include macbookpro {
 			width: 100%;
 		}
 
-		@include macbook {
+		@include Hd {
 			width: 100%;
 		}
 
@@ -628,17 +682,18 @@
 
 		.flex__content {
 			padding: 48px 50px;
-			width: 300px;
+			width: 347.5px;
+			height: calc(50% - 1px);
 			border: 1px solid rgba(255, 255, 255, 0.07);
 
 			@include macbookpro {
 				padding: 27px 30px;
-				width: 290px;
+				width: 295.5px;
 			}
 
-			@include macbook {
+			@include Hd {
 				padding: 27px 30px;
-				width: 270px;
+				width: 279.5px;
 			}
 
 			@include mobile {

@@ -269,6 +269,7 @@ h2 {
 }
 
 .expandBtn {
+text-align: center;
  background: none;
  border: none;
  color: #4be389;
@@ -278,12 +279,7 @@ h2 {
  cursor: pointer;
  margin-top: 0.5rem;
  margin-bottom: 0.5rem;
- text-align: left;
  width: 100%;
- padding: 0;
- text-decoration: none;
- letter-spacing: 0;
- display: block;
 }
 
 .extraFields {

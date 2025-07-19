@@ -2,17 +2,21 @@
 @use '/src/styles/mixins' as *;
 
 footer {
-	padding: 3rem $bodymargin 0;
+	padding: 3rem 192px 0;
 	background: #171717;
 
-	@include macbookpro {
-		padding: 3rem 17rem 0;
-	}
-
-	@include macbook {
+	@include Hd {
 		padding: 3rem 5rem 0;
 	}
-
+	@include macbookpro {
+		padding: 3rem 192px 0;
+	}
+	@include Qhd {
+		padding: 3rem 300px 0;
+	}
+	@include Uhd {
+		padding: 3rem 880px 0;
+	}
 	@include mobile {
 		padding: 42px 19.56px;
 	}
@@ -40,7 +44,7 @@ footer {
 		}
 
 		.main2__copyright {
-			width: 40%;
+			width: 50%;
 
 			@include mobile {
 				width: 100%;
@@ -68,15 +72,23 @@ footer {
 
 		.main2__links {
 			display: flex;
-			justify-content: center;
-			gap: 2.75rem;
+			justify-content: space-between;
+			padding: 0 65px;
 			width: 100%;
 
 			@include mobile {
 				justify-content: space-between;
+				padding: 0;
+				margin-bottom: 89px;
 			}
 
 			.links {
+				width: 30%;
+
+				@include mobile {
+					width: 100%;
+				}
+
 				h3 {
 					font-family: interMedium;
 					font-size: 20px;
@@ -99,10 +111,21 @@ footer {
 
 			.link__con {
 				display: flex;
+				justify-content: space-between;
+				width: 60%;
 				gap: 2.75rem;
+
+				@include macbookpro {
+					width: 60%;
+				}
+				@include macbook {
+					width: 60%;
+				}
 
 				@include mobile {
 					flex-direction: column;
+					justify-content: start;
+					width: 100%;
 				}
 			}
 		}
@@ -112,6 +135,7 @@ footer {
 				display: flex;
 				justify-content: end;
 				align-items: center;
+				gap: 16px;
 				margin-bottom: 0.9375rem;
 
 				@include mobile {

@@ -225,7 +225,7 @@ const EarlyAccessForm = ({ initialEmail = '', onSubmit }) => {
     {expand ? 'Hide extra questions' : 'Add more info (optional)'}
    </button>
    <div className={styles.subtext}>
-    By joining the waitlist, you agree to our{' '}
+    By joining the waitlist, you agree to our
     <a href='/privacy' target='_blank' rel='noopener noreferrer'>
      Privacy Policy
     </a>
