@@ -15,6 +15,7 @@
 	}
 	@include Fhd {
 		padding: 15.75rem $bodymargin 3rem;
+		background: red;
 	}
 	@include Qhd {
 		padding: 15.75rem 42rem 3rem;
