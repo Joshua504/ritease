@@ -6,7 +6,7 @@
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	
+
 	@include Hd {
 		padding: 15.75rem 5rem 3rem;
 	}
@@ -22,9 +22,12 @@
 	@include Uhd {
 		padding: 15.75rem 82rem 3rem;
 	}
+	@include mobile {
+		padding: 5rem 1.1875rem 3rem;
+	}
 
 	@include scalemobile {
-		
+		padding: 15.75rem 3rem 3rem;
 	}
 
 	.container {
@@ -179,11 +182,11 @@
 }
 
 .main {
-	@include Hd{
+	@include Hd {
 		padding: 0 5rem;
 	}
 
-	@include Fhd{
+	@include Fhd {
 		padding: 0 $bodymargin;
 	}
 
@@ -202,8 +205,6 @@
 	@include mobile {
 		padding: 0 1.2225rem;
 	}
-
-
 
 	.eco_title {
 		@include sub-title;
