@@ -8,6 +8,10 @@
 	overflow: hidden;
 	transition: all 0.3s ease;
 
+	@include tablet{
+		width: 100%;
+	}
+
 	@include mobile {
 		width: 100%;
 	}

@@ -12,10 +12,8 @@
 	}
 }
 
-@mixin scalemobile {
-	@media (min-width: 1024px) and (pointer: coarse) and (hover: none){
-		@content;
-	}
+@mixin chrome {
+	
 }
 
 @mixin tablet {

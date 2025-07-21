@@ -22,6 +22,9 @@
 	@include Uhd {
 		padding: 15.75rem 82rem 3rem;
 	}
+	@include tablet{
+		padding: 8.75rem 1.5rem 3rem;
+	}
 	@include mobile {
 		padding: 5rem 1.1875rem 3rem;
 	}
@@ -57,69 +60,73 @@
 			@include macbookpro {
 				width: 75%;
 			}
-
+			@include tablet{
+				width: 100%;
+				font-size: 3.20rem;
+			}
 			@include mobile {
 				font-size: 2.5rem;
 				line-height: 48px;
 				width: 87%;
 				margin-bottom: 1rem;
 			}
-
 			@include sm{
 				width: 100%;
 			}
 		}
-		.m__text {
-			color: $txt2;
-			font-family: interMedium;
-			font-size: 1.125rem;
-			line-height: 1.75rem;
-			letter-spacing: -0.01rem;
-			margin-bottom: 1.5rem;
-			width: 75%;
-			text-align: start;
+	}
+	.m__text {
+		color: $txt2;
+		font-family: interMedium;
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+		letter-spacing: -0.01rem;
+		margin-bottom: 1.5rem;
+		width: 75%;
+		text-align: start;
 
-			@include Fhd {
-				width: 70%;
-			}
-			@include Qhd {
-				width: 75%;
-			}
-			@include Uhd {
-				width: 75%;
-			}
+		@include Fhd {
+			width: 70%;
+		}
+		@include Qhd {
+			width: 75%;
+		}
+		@include Uhd {
+			width: 75%;
+		}
+		@include tablet{
+			width: 100%;
+		}
+		@include mobile {
+			font-size: 14px;
+			width: 100%;
+			margin-bottom: 1rem;
+		}
+	}
+
+	.btns__container {
+		display: flex;
+		gap: 1rem;
+
+		.btns {
+			@include btn;
+			background: #ffd12d;
+			color: #1b1b1b;
+			font-size: 1rem;
+			padding: 0.5rem 1rem;
 
 			@include mobile {
-				font-size: 14px;
-				width: 100%;
-				margin-bottom: 1rem;
+				font-size: 12px;
 			}
 		}
 
-		.btns__container {
+		.btns:nth-child(1) {
 			display: flex;
-			gap: 1rem;
+			justify-content: center;
+			align-items: center;
 
-			.btns {
-				@include btn;
-				background: #ffd12d;
-				color: #1b1b1b;
-				font-size: 1rem;
-				padding: 0.5rem 1rem;
-
-				@include mobile {
-					font-size: 12px;
-				}
-			}
-
-			.btns:nth-child(1) {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-
-				&:hover {
-					background: rgba(255, 255, 255, 0.84);
-				}
+			&:hover {
+				background: rgba(255, 255, 255, 0.84);
 			}
 		}
 	}
@@ -141,6 +148,9 @@
 			@include macbook {
 				gap: 0.375rem;
 			}
+			@include tablet{
+				gap: 0;
+			}
 			@include mobile {
 				gap: 0.375rem;
 			}
@@ -156,6 +166,10 @@
 
 				@include macbookpro {
 					padding: 11px 4px;
+				}
+
+				@include tablet{
+					font-size: 10px;
 				}
 
 				@include mobile {
@@ -202,6 +216,10 @@
 		padding: 0 82rem;
 	}
 
+	@include tablet {
+		padding: 0 1.5rem;
+	}
+
 	@include mobile {
 		padding: 0 1.2225rem;
 	}
@@ -226,6 +244,10 @@
 		align-items: center;
 		gap: 39px;
 		margin-bottom: 117px;
+
+		@include tablet{
+			flex-wrap: wrap;
+		}
 
 		@include mobile {
 			flex-wrap: wrap;
@@ -261,6 +283,10 @@
 				@include sub-title;
 				margin-bottom: 1rem;
 
+				@include tablet {
+					text-align: center;
+				}
+
 				@include mobile {
 					font-size: 1.5rem;
 					line-height: 32px;
@@ -285,6 +311,11 @@
 		.cards__container {
 			@include flex;
 			justify-content: space-between;
+
+			@include tablet{
+				gap: 10px;
+				flex-wrap: wrap;
+			}
 
 			@include mobile {
 				flex-direction: column;
@@ -369,6 +400,10 @@
 			.main2__wrapper {
 				width: 40%;
 
+				@include tablet {
+					width: 50%;
+				}
+
 				@include mobile {
 					width: 100%;
 					display: flex;
@@ -396,6 +431,14 @@
 					width: 80%;
 					margin-bottom: 24px;
 
+
+					@include tablet{
+						font-size: 1.8rem;
+						line-height: 40px;
+						margin-bottom: 15px;
+						width: 100%;
+					}
+
 					@include mobile {
 						width: 100%;
 						font-size: 1.5rem;
@@ -409,6 +452,10 @@
 					@include sub-text;
 					margin-bottom: 24px;
 
+					@include tablet{
+						width: 100%;
+					}
+
 					@include mobile {
 						width: 100%;
 						text-align: center;
@@ -417,8 +464,22 @@
 				}
 			}
 
+			.nextgen_con{
+				@include tablet{
+					width: 45%;
+					height: 557px;
+				}
+			}
+
 			.nextgen {
 				transition: opacity 0.3s ease;
+
+				@include tablet{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 10px;
+				}
 
 				@include mobile {
 					width: 100%;
@@ -705,6 +766,10 @@
 			}
 
 			.elevate__img {
+				@include tablet {
+					width: 50%;
+				}
+
 				@include mobile {
 					width: 100%;
 				}

@@ -304,7 +304,7 @@ const Home = ({ onEarlyAccessClick }) => {
 						/>
 					</div>
 					<section className={styles.main2__container}>
-						<div>
+						<div className={styles.nextgen_con}>
 							<img
 								className={styles.nextgen}
 								src={nextGenFeatures[activeNextGenItem].image}

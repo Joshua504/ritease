@@ -17,6 +17,9 @@ footer {
 	@include Uhd {
 		padding: 3rem 880px 0;
 	}
+	@include tablet{
+		padding: 3rem 1.5rem 0;
+	}
 	@include mobile {
 		padding: 42px 19.56px;
 	}
@@ -171,6 +174,14 @@ footer {
 
 	.footerlogo {
 		@include flex;
+
+		@include tablet{
+			width: 100%;
+
+			img{
+				width: 100%;
+			}
+		}
 
 		@include mobile {
 			display: none;
