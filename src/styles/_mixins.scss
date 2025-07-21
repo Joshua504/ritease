@@ -1,5 +1,11 @@
 @use '/src/styles/variables' as *;
 
+@mixin sm{
+	@media (max-width: 375px) {
+		@content
+	}
+}
+
 @mixin mobile {
 	@media (max-width: 767px) {
 		@content;

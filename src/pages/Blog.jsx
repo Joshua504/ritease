@@ -8,7 +8,7 @@ const Blog = () => {
 	return (
 		<>
 			<header className={styles.blog__header}>
-				<AnimatedText fontSize="75px" animeText="Ritease Blogs" />
+				<AnimatedText  animeText="Ritease Blogs" />
 			</header>
 			<main className={styles.main}>
 				<section className={styles.main1}>
