@@ -69,6 +69,10 @@
 		align-items: center;
 		gap: 2.25rem;
 
+		@include tablet{
+			gap: 0rem;
+		}
+
 		@include mobile {
 			position: fixed;
 			top: 0px;
@@ -77,8 +81,7 @@
 			background: #000000d6;
 			flex-wrap: wrap;
 			padding: 66px 50px 33px;
-			transition: right 0.3s ease-in-out;
-			// z-index: 99;
+			transition: right 0.3s ease-in-out;;
 
 			&.nav__links__open {
 				right: 0;

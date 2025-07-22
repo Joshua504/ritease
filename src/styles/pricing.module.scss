@@ -17,6 +17,9 @@
 	@include Uhd {
 		padding: 15.75rem 82rem 3rem;
 	}
+	@include tablet {
+		padding: 8.75rem 1.5rem 3rem;
+	}
 	@include mobile {
 		padding: 8rem 16px 16px;
 	}
@@ -29,6 +32,10 @@
 		letter-spacing: -0.0762rem;
 		margin-bottom: 2.5rem;
 
+		@include tablet {
+			font-size: 2.5rem;
+			margin-bottom: 1rem;
+		}
 		@include mobile {
 			font-size: 36px;
 			line-height: 26px;
@@ -41,6 +48,9 @@
 		font-family: interRegular;
 		font-size: 1.25rem;
 
+		@include tablet {
+			font-size: 14px;
+		}
 		@include mobile {
 			font-size: 20px;
 			line-height: 24px;
@@ -63,6 +73,10 @@ main {
 	}
 	@include Uhd {
 		padding: 0 966px;
+	}
+	@include tablet {
+		margin-top: 20px;
+		padding: 0 1.5rem;
 	}
 	@include mobile {
 		padding: 0 16px;
@@ -99,6 +113,10 @@ main {
 		justify-content: space-between;
 		align-items: center;
 
+		@include tablet {
+			flex-wrap: wrap;
+			row-gap: 1em;
+		}
 		@include mobile {
 			flex-direction: column;
 			gap: 41px;
@@ -119,6 +137,10 @@ main {
 				padding: 30px 10px;
 				width: 300px;
 				height: 1020px;
+			}
+			@include tablet {
+				padding: 10px;
+				width: 370px;
 			}
 			@include mobile {
 				padding: 30px 16px;
@@ -365,6 +387,9 @@ main {
 		margin: 114px 0 91px;
 		padding: 7rem;
 
+		@include tablet{
+			padding: 0;
+		}
 		@include mobile {
 			padding: 0 20px;
 		}

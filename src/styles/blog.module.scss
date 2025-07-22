@@ -17,6 +17,9 @@
 	@include Uhd {
 		padding: 15.75rem 82rem 3rem;
 	}
+	@include tablet{
+		padding: 8.75rem 1.5rem 3rem;
+	}
 	@include mobile {
 		padding: 8rem 1rem 1rem;
 	}
@@ -37,7 +40,9 @@
 	@include Uhd {
 		padding: 0 82rem;
 	}
-
+	@include tablet {
+		padding: 0 1.5rem;
+	}
 	@include mobile {
 		padding: 0 1rem;
 	}
@@ -93,6 +98,9 @@
 			@include Hd {
 				width: 100%;
 			}
+			@include tablet{
+				width: fit-content;
+			}
 			@include mobile {
 				width: 100%;
 				max-width: fit-content;
@@ -116,6 +124,9 @@
 			margin: 56px 0;
 
 			@include Hd {
+				width: 100%;
+			}
+			@include tablet{
 				width: 100%;
 			}
 			@include mobile {

@@ -335,6 +335,10 @@
 				transform: scale(1.1);
 			}
 
+			@include tablet{
+				width: 240px;
+			}
+
 			@include mobile {
 				width: 100%;
 			}
@@ -510,7 +514,6 @@
 
 					@include mobile {
 						justify-content: center;
-						// margin: 0 auto;
 					}
 
 					.indicator {
@@ -535,6 +538,10 @@
 					@include sub-title;
 					margin-bottom: 1.8125rem;
 
+					@include tablet{
+						font-size: 2.3rem;
+					}
+
 					@include mobile {
 						font-size: 20px;
 						line-height: 24px;
@@ -545,6 +552,10 @@
 					@include sub-text;
 					width: 45%;
 					margin-bottom: 28px;
+
+					@include tablet{
+						width: 100%;
+					}
 
 					@include mobile {
 						width: 100%;
@@ -650,6 +661,10 @@
 				max-height: 800px;
 				height: 100%;
 
+				@include tablet {
+					height: 541px;
+				}
+
 				@include mobile {
 					width: 100%;
 				}
@@ -657,6 +672,13 @@
 				img {
 					width: 100%;
 					height: fit-content;
+
+					@include tablet {
+						height: 100%;
+						width: 100%;
+						object-fit: cover;
+						border-radius: 15px;
+					}
 				}
 			}
 
@@ -707,6 +729,12 @@
 					margin-bottom: 20px;
 					color: #737373;
 
+					@include tablet{
+						font-size: 1rem;
+						line-height: 20px;
+						margin-bottom: 8px;
+					}
+
 					@include macbook {
 						font-size: 30px;
 					}
@@ -721,6 +749,12 @@
 					@include sub-text;
 					margin-bottom: 10px;
 					color: rgba(255, 255, 255, 0.5);
+
+					@include tablet{
+						font-size: 12px;
+						line-height: 20px;
+						margin-bottom: 8px;
+					}
 
 					@include mobile {
 						font-size: 12px;
@@ -767,7 +801,9 @@
 
 			.elevate__img {
 				@include tablet {
-					width: 50%;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
 				}
 
 				@include mobile {
@@ -779,6 +815,11 @@
 				h2 {
 					@include sub-title;
 					margin-bottom: 4.9375rem;
+
+					@include tablet {
+						font-size: 2rem;
+						margin-bottom: 1em;
+					}
 
 					@include macbookpro {
 						font-size: 35px;

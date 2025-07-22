@@ -5,6 +5,9 @@
 	width: 420px;
 	margin-bottom: 56px;
 
+	@include tablet{
+		width: 360px;
+	}
 	@include mobile {
 		width: 100%;
 	}
