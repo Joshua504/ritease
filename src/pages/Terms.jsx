@@ -90,7 +90,8 @@ const Terms = () => {
 								and any related services.
 							</li>
 							<li>
-								"User" refers to anyone who creates an account or uses Ritease.
+								“User” refers to anyone who joins our waitlist or creates an
+								account on Ritease.
 							</li>
 							<li>
 								"Content" refers to documents, images, text, or any other
@@ -266,8 +267,8 @@ const Terms = () => {
 							If you have any issues with Ritease, we encourage you to contact
 							us to resolve the matter quickly. Any disputes that cannot be
 							resolved informally will be handled under the laws of the United
-							Kingdom. You agree to the exclusive jurisdiction of UK courts for
-							resolving disputes.
+							States of America. You agree to the exclusive jurisdiction of US
+							courts for resolving disputes.
 						</p>
 					</section>
 
@@ -287,7 +288,7 @@ const Terms = () => {
 
 					<section id="16" className={styles.term__details}>
 						<div className={styles.number}>
-							<p>15.</p>
+							<p>16.</p>
 						</div>
 						<h2>Contact Information</h2>
 						<p>
@@ -298,7 +299,7 @@ const Terms = () => {
 
 					<section id="17" className={styles.term__details}>
 						<div className={styles.number}>
-							<p>15.</p>
+							<p>17.</p>
 						</div>
 						<h2>Acceptance Of Terms</h2>
 						<p>

@@ -91,6 +91,10 @@ footer {
 			.links {
 				width: 30%;
 
+				@include Hd{
+					width: 40%;
+				}
+
 				@include mobile {
 					width: 100%;
 				}

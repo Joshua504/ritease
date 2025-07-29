@@ -1,3 +1,6 @@
+@use '/src/styles/variables' as *;
+@use '/src/styles/mixins' as *;
+
 .form {
  display: flex;
  flex-direction: column;
@@ -25,7 +28,6 @@ textarea {
  border-radius: 16px;
  font-size: 1rem;
  background: #f7f7f7;
- color: #1f4c3b;
  outline: none;
  transition: border 0.2s;
  font-family: 'interRegular', Inter, Arial, sans-serif;
@@ -236,7 +238,7 @@ h2 {
  line-height: 48px;
  padding: 12px 10px;
  border: 1px solid #404040;
- border-radius: 50px;
+ border-radius: 16px;
  background-color: transparent;
  color: rgba(255, 255, 255, 0.84);
  font-family: interRegular, Inter, Arial, sans-serif;
@@ -305,7 +307,7 @@ text-align: center;
  border: 1px solid #404040;
  border-radius: 16px;
  font-size: 1rem;
- background: transparent;
+ background: $secondary;
  color: rgba(255, 255, 255, 0.84);
  font-family: interRegular, Inter, Arial, sans-serif;
  outline: none;

@@ -66,7 +66,8 @@ const Privacy = () => {
 							website, app, or services, you agree to these Terms of Use. These
 							terms form a legal agreement between you (the user) and Ritease.
 							If you do not agree to these terms, please do not use Ritease.
-							These Terms of Use are governed by the laws of the United Kingdom.
+							These Terms of Use are governed by the laws of the United States
+							of America.
 						</p>
 						<p>
 							This policy covers all services provided by Ritease and any

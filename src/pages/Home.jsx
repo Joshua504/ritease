@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import styles from '../styles/home.module.scss';
 
 /* -------------------------------------------------------------------------- */
@@ -14,7 +15,7 @@ import PlayBtn from '../assets/bx-play.svg';
 import banner from '../assets/Banner.svg';
 import banner2 from '../assets/Banner2.svg';
 import banner3 from '../assets/Banner3.png';
-import banner4 from '../assets/Banner4.png';
+import banner4 from '../assets/Banner4.svg';
 import banner5 from '../assets/Banner5.png';
 import banner6 from '../assets/Banner6.png';
 import Riteaseai from '../assets/Riteaseai.svg';
@@ -57,140 +58,147 @@ import favicon from '../assets/favicon 1.svg';
 import paystack from '../assets/Paystack.svg';
 
 const Home = ({ onEarlyAccessClick }) => {
- const [activeListItem, setActiveListItem] = useState(0);
- const [activeNextGenItem, setActiveNextGenItem] = useState(0);
- const [activeFeatures, setActiveFeatures] = useState(0);
+	const [activeListItem, setActiveListItem] = useState(0);
+	const [activeNextGenItem, setActiveNextGenItem] = useState(0);
+	const [activeFeatures, setActiveFeatures] = useState(0);
 
- const faqData = [
-  {
-   question: 'What is Ritease?',
-   answer:
-    'Ritease is an intelligent and secure platform for creating, managing, and selling documents, combining human intelligence with AI and blockchain technology.',
-  },
-  {
-   question: 'Who can use Ritease?',
-   answer:
-    'Ritease streamlines your document workflows, allowing you to focus on what truly matters. Our platform offers smart document management, AI-powered content generation, electronic signatures, business forms, scan-to-text functionality, and the ability to publish and monetize your content.',
-  },
-  {
-   question:
-    'What makes Ritease different from other document management tools?',
-   answer:
-    'Absolutely! Ritease is designed to be great for individuals, perfect for teams, and essential for businesses. Our flexible platform scales with your needs.',
-  },
-  {
-   question: 'What can I do with Ritease?',
-   answer:
-    'Our AI technology analyzes your requirements and automatically generates professional documents, saving you time and ensuring consistency. Simply input your needs, and let our AI handle the rest.',
-  },
-  {
-   question: 'Does Ritease support e-signatures?',
-   answer:
-    'Yes! You can join our waitlist for early access or watch our demo to see Ritease in action before making a decision.',
-  },
-  {
-   question: 'How secure are my documents on Ritease?',
-   answer:
-    'Yes! You can join our waitlist for early access or watch our demo to see Ritease in action before making a decision.',
-  },
-  {
-   question: 'Do I need to download anything to use Ritease?',
-   answer:
-    'Yes! You can join our waitlist for early access or watch our demo to see Ritease in action before making a decision.',
-  },
- ];
+	const faqData = [
+		{
+			question: 'What is Ritease?',
+			answer:
+				'Ritease is an all-in-one smart document management platform that lets you create, sign, and manage documents with built-in AI tools, payment collection features, and blockchain-grade security.',
+		},
+		{
+			question: 'Who can use Ritease?',
+			answer:
+				'Ritease is designed for individuals, teams, and enterprises—anyone who needs smart, efficient document management.',
+		},
+		{
+			question:
+				'What makes Ritease different from other document management tools?',
+			answer:
+				'Unlike other platforms, Ritease combines document creation, editing, e-signing, form building, payments, AI and storage, all in one platform. No need for multiple tools or subscriptions.',
+		},
+		{
+			question: 'Can I collect payments on Ritease?',
+			answer:
+				'Yes. You can publish premium Notes with a shareable link and get paid when people access your content. You can also collect payments through custom forms built with the Ritease Forms tool.',
+		},
+		{
+			question: 'Does Ritease support e-signatures?',
+			answer:
+				'Yes! Ritease includes full e‑signature functionality, allowing you to sign documents digitally, invite others to sign, and track signatures in real time, all within the same platform.',
+		},
+		{
+			question: 'Can I collaborate with others on Ritease in real time?',
+			answer:
+				'Yes. Ritease lets you invite team members to work on documents, forms, or folders with real-time editing, commenting, and access control, so everyone stays in sync, wherever they are.',
+		},
+	];
 
- const listItems = [
-  { icon: SVG1, text: 'Create Docs', bannerImage: banner },
-  { icon: SVG2, text: 'Generate Docs', bannerImage: banner2 },
-  { icon: SVG3, text: 'Sign Docs', bannerImage: banner3 },
-  { icon: SVG4, text: 'Admin Forms', bannerImage: banner4 },
-  { icon: SVG5, text: 'Scan-To-Text', bannerImage: banner5 },
-  { icon: SVG6, text: 'Publish and Earn', bannerImage: banner6 },
- ];
+	const listItems = [
+		{ icon: SVG1, text: 'Create Docs', bannerImage: banner },
+		{ icon: SVG2, text: 'Generate Docs', bannerImage: banner2 },
+		{ icon: SVG3, text: 'Sign Docs', bannerImage: banner3 },
+		{ icon: SVG4, text: 'Admin Forms', bannerImage: banner4 },
+		{ icon: SVG5, text: 'Scan-To-Text', bannerImage: banner5 },
+		{ icon: SVG6, text: 'Publish and Earn', bannerImage: banner6 },
+	];
 
- const nextGenFeatures = [
-  {
-   name: 'Note Editor',
-   image: SVG8,
-  },
-  {
-   name: 'Document Editor',
-   image: Riteaseai,
-  },
-  {
-   name: 'Ritebox',
-   image: Ritebox,
-  },
-  {
-   name: 'Templates',
-   image: Riteasetemp,
-  },
-  {
-   name: 'Generate with AI',
-   image: Generateai,
-  },
-  {
-   name: 'Scan',
-   image: Scan,
-  },
-  {
-   name: 'Signature',
-   image: Riteasesign,
-  },
-  {
-   name: 'Forms',
-   image: Riteaseform,
-  },
- ];
+	const nextGenFeatures = [
+		{
+			name: 'Note Editor',
+			image: SVG8,
+		},
+		{
+			name: 'Document Editor',
+			image: Riteaseai,
+		},
+		{
+			name: 'Ritebox',
+			image: Ritebox,
+		},
+		{
+			name: 'Templates',
+			image: Riteasetemp,
+		},
+		{
+			name: 'Generate with AI',
+			image: Generateai,
+		},
+		{
+			name: 'Scan',
+			image: Scan,
+		},
+		{
+			name: 'Signature',
+			image: Riteasesign,
+		},
+		{
+			name: 'Forms',
+			image: Riteaseform,
+		},
+	];
 
- const keyFeatures = [
-  {
-   name: 'Instant Document Creation',
-   description:
-    'Use Ritease AI to create documents instantly using prompts, such as letterheads, invoices, business reports, academic documents, and more.',
-   image: SVG10,
-  },
-  {
-   name: 'Smart Content Creation',
-   description:
-    "Ritease AI's writing assist and image generation tools help you create and insert tailored content using prompts, 10x faster.",
-   image: Smart,
-  },
-  {
-   name: 'Auto-Vet Forms',
-   description:
-    'Auto-vetting lets you set the answers you’re looking for, so when people fill your form, Ritease instantly shows you who meets the mark—no manual checking needed.',
-   image: Blockchain,
-  },
-  {
-   name: 'Publish and Earn with Ease',
-   description:
-    "Ritease empowers creators to earn money by publishing their work and sharing the publication links. Whether it's an article, a novel, or a research piece, you set the price for your premium content, and get paid whenever readers pay to read your work.",
-   image: Publish,
-  },
- ];
+	const keyFeatures = [
+		{
+			name: 'Instant Document Creation',
+			description:
+				'Use Ritease AI to create documents instantly using prompts, such as letterheads, invoices, business reports, academic documents, and more.',
+			image: SVG10,
+		},
+		{
+			name: 'Smart Content Creation',
+			description:
+				"Ritease AI's writing assist and image generation tools help you create and insert tailored content using prompts, 10x faster.",
+			image: Smart,
+		},
+		{
+			name: 'Auto-Vet Forms',
+			description:
+				'Auto-vetting lets you set the answers you’re looking for, so when people fill your form, Ritease instantly shows you who meets the mark—no manual checking needed.',
+			image: Blockchain,
+		},
+		{
+			name: 'Publish and Earn with Ease',
+			description:
+				"Ritease empowers creators to earn money by publishing their work and sharing the publication links. Whether it's an article, a novel, or a research piece, you set the price for your premium content, and get paid whenever readers pay to read your work.",
+			image: Publish,
+		},
+	];
 
- const handleListItemClick = (index) => {
-  setActiveListItem(index);
- };
+	const handleListItemClick = (index) => {
+		setActiveListItem(index);
+	};
 
- const handleNextGenItemClick = (index) => {
-  setActiveNextGenItem(index);
- };
- const handleFeaturesClick = (index) => {
-  setActiveFeatures(index);
- };
+	const handleNextGenItemClick = (index) => {
+		setActiveNextGenItem(index);
+	};
+	const handleFeaturesClick = (index) => {
+		setActiveFeatures(index);
+	};
 
- useEffect(() => {
-  const interval = setInterval(() => {
-   setActiveListItem((prev) => (prev + 1) % listItems.length);
-  }, 5000);
+	const handleFeaturesHover = (index) => {
+		setActiveFeatures(index);
+	};
 
-  return () => clearInterval(interval);
- }, []);
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setActiveListItem((prev) => (prev + 1) % listItems.length);
+		}, 8000);
 
- return (
+		return () => clearInterval(interval);
+	}, []);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setActiveNextGenItem((prev) => (prev + 1) % nextGenFeatures.length);
+		}, 8000);
+
+		return () => clearInterval(interval);
+	}, []);
+
+	return (
 		<>
 			<header className={styles.header}>
 				<div className={styles.container}>
@@ -199,8 +207,8 @@ const Home = ({ onEarlyAccessClick }) => {
 					</h1>
 					<p className={styles.m__text}>
 						The all-in-one platform for freelancers, startups, and enterprises
-						to create, sign, manage, and automate documents and admin
-						forms—powered by AI.
+						to create, sign, manage, collaborate on, store documents and admin
+						forms, and collect payments, powered by AI.
 					</p>
 					<div className={styles.btns__container}>
 						<button className={styles.btns}>
@@ -235,15 +243,33 @@ const Home = ({ onEarlyAccessClick }) => {
 				<section className={styles.ecosystem}>
 					<h2 className={styles.eco_title}>our ecosystem</h2>
 					<section className={styles.ecosystem_container}>
-						<div><img src={stripe} alt="" /></div>
-						<div><img src={grok} alt="" /></div>
-						<div><img src={gpt} alt="" /></div>
-						<div><img src={claude} alt="" /></div>
-						<div><img src={base} alt="" /></div>
-						<div><img src={binance} alt="" /></div>
-						<div><img src={cloudflare} alt="" /></div>
-						<div><img src={favicon} alt="" /></div>
-						<div><img src={paystack} alt="" /></div>
+						<div>
+							<img src={stripe} alt="" />
+						</div>
+						<div>
+							<img src={grok} alt="" />
+						</div>
+						<div>
+							<img src={gpt} alt="" />
+						</div>
+						<div>
+							<img src={claude} alt="" />
+						</div>
+						<div>
+							<img src={base} alt="" />
+						</div>
+						<div>
+							<img src={binance} alt="" />
+						</div>
+						<div>
+							<img src={cloudflare} alt="" />
+						</div>
+						<div>
+							<img src={favicon} alt="" />
+						</div>
+						<div>
+							<img src={paystack} alt="" />
+						</div>
 					</section>
 				</section>
 
@@ -253,8 +279,8 @@ const Home = ({ onEarlyAccessClick }) => {
 							One Platform for All Your Document Workflows.
 						</h2>
 						<p className={styles.text}>
-							Ritease streamlines your workflow, so you can focus on what truly
-							matters
+							Document creation, editing, e-signing, form building, payments,
+							and AI, all in one platform.
 						</p>
 					</div>
 					<section className={styles.cards__container}>
@@ -352,7 +378,9 @@ const Home = ({ onEarlyAccessClick }) => {
 								teams.
 							</p>
 							<div className={styles.btn__con}>
-								<button className={styles.btn}>learn more</button>
+								<button className={styles.btn}>
+									<Link to="/features">learn more</Link>
+								</button>
 								<button
 									className={styles.btn}
 									onClick={() => onEarlyAccessClick()}>
@@ -368,7 +396,9 @@ const Home = ({ onEarlyAccessClick }) => {
 
 				<section className={styles.main3}>
 					<div className={styles.main3__heading}>
-						<h2 className={styles.l__txt}>Key Features We Have For You</h2>
+						<h2 className={styles.l__txt}>
+							Powerful Tools to Help You Do Your Best Work
+						</h2>
 						<p className={styles.m__txt}>
 							What’s included in the Ritease platform
 						</p>
@@ -387,7 +417,8 @@ const Home = ({ onEarlyAccessClick }) => {
 												? styles.main3__container__list__item__active
 												: ''
 										}`}
-										onClick={() => handleFeaturesClick(index)}>
+										onClick={() => handleFeaturesClick(index)}
+										onMouseEnter={() => handleFeaturesHover(index)}>
 										<div className={styles.indicator}></div>
 										<div className={styles.indicator__container}>
 											<span className={styles.list__item__l__txt}>
@@ -486,7 +517,7 @@ const Home = ({ onEarlyAccessClick }) => {
 				</section>
 			</main>
 		</>
- );
+	);
 };
 
 export default Home;

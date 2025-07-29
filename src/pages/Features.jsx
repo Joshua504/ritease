@@ -262,7 +262,7 @@ const Features = ({ onEarlyAccessClick }) => {
 					</section>
 				</div>
 
-				<div className={styles.main2__container1}>
+				{/* <div className={styles.main2__container1}>
 					<div className={styles.h2__container}>
 						<h2>Boards: Write. Publish. Earn. Simple as That.</h2>
 					</div>
@@ -333,7 +333,7 @@ const Features = ({ onEarlyAccessClick }) => {
 							</section>
 						</div>
 					</section>
-				</div>
+				</div> */}
 
 				<div className={styles.main2__container1}>
 					<div className={styles.h2__container}>
@@ -422,14 +422,14 @@ const Features = ({ onEarlyAccessClick }) => {
 							<p>
 								With Riteforms, create administrative and compliance-grade
 								forms—not just surveys. From onboarding to legal
-								acknowledgments, Riteforms supports signatures, uploads, and
-								secure record-keeping. With built-in auto-vetting, you can
-								instantly screen responses against preset requirements and save
-								hours of manual review. Whether it's collecting parental
-								consents at a school, receiving job applications to evaluate
-								against a set criteria, or gathering employee surveys at a
-								corporate HQ, Riteforms delivers with seamlessness and top-tier
-								security.
+								acknowledgments, Riteforms supports signatures, uploads,
+								payments collection and secure record-keeping. With built-in
+								auto-vetting, you can instantly screen responses against preset
+								requirements and save hours of manual review. Whether it's
+								collecting parental consents at a school, receiving job
+								applications to evaluate against a set criteria, or gathering
+								employee surveys at a corporate HQ, Riteforms delivers with
+								seamlessness and top-tier security.
 							</p>
 							<Button
 								fontSize="1.5rem"
@@ -608,11 +608,11 @@ const Features = ({ onEarlyAccessClick }) => {
 						<h2>Document Hosting: Store All Your Docs in One Secure Hub</h2>
 						<p>
 							Using Ritease for your document workflows means that you keep
-							everything—notes, docs, forms, contracts—in one secure and
-							collaborative hub, with audit trails backed by blockchain-grade
-							security. A writer can store manuscripts; a Miami agency can share
-							client assets; a global firm can store and manage thousands of
-							files with zero risk.
+							everything—notes, docs, forms—in one secure and collaborative hub,
+							with seamless access control, and audit trails backed by
+							blockchain-grade security. A writer can store manuscripts; a Miami
+							agency can share client assets; a global firm can store and manage
+							thousands of files with seamless access control features.
 						</p>
 						<Button
 							fontSize="1.5rem"
@@ -673,7 +673,7 @@ const Features = ({ onEarlyAccessClick }) => {
 						<Button
 							fontSize="1.5rem"
 							borderRadius="10px"
-							btnText={'Explore SDK/API'}
+							btnText={'Coming Soon'}
 							padding="20px 32px"
 							onClick={() => onEarlyAccessClick()}
 						/>
