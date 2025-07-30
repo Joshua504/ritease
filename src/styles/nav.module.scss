@@ -30,6 +30,10 @@
 		padding: 0 17rem ;
 	}
 
+	@include scaled-range{
+		padding: 0 10rem ;
+	}
+
 	@include tablet{
 		padding: 0 1.5rem;
 		margin: 30px 0;

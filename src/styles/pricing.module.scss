@@ -17,6 +17,9 @@
 	@include Uhd {
 		padding: 15.75rem 82rem 3rem;
 	}
+	@include scaled-range{
+		padding: 15.75rem 10rem 3rem;
+	}
 	@include tablet {
 		padding: 8.75rem 1.5rem 3rem;
 	}
@@ -67,6 +70,9 @@ main {
 	}
 	@include macbookpro {
 		padding: 0 58px;
+	}
+	@include scaled-range{
+		padding: 0 30px;
 	}
 	@include Qhd {
 		padding: 0 420px;
@@ -137,6 +143,9 @@ main {
 				padding: 30px 10px;
 				width: 300px;
 				height: 1020px;
+			}
+			@include scaled-range{
+				width: 350px;
 			}
 			@include tablet {
 				padding: 10px;

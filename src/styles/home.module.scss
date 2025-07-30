@@ -13,6 +13,9 @@
 	@include macbookpro {
 		padding: 15.75rem 17rem 3rem;
 	}
+	@include scaled-range{
+		padding: 15.75rem 10rem 3rem;
+	}
 	@include Fhd {
 		padding: 15.75rem $bodymargin 3rem;
 	}
@@ -206,6 +209,10 @@
 
 	@include macbookpro {
 		padding: 0 17rem;
+	}
+
+	@include scaled-range{
+		padding: 0 10rem;
 	}
 
 	@include Qhd {

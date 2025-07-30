@@ -17,6 +17,9 @@
 	@include macbookpro {
 		padding: 15.75rem 17rem 0rem;
 	}
+	@include scaled-range{
+		padding: 15.75rem 10rem 0rem;
+	}
 	@include tablet{
 		padding: 8.75rem 1.5rem 3rem;
 	}
@@ -109,6 +112,9 @@
 	}
 	@include macbookpro {
 		padding: 0 17rem;
+	}
+	@include scaled-range{
+		padding: 0 10rem;
 	}
 	@include Qhd {
 		padding: 0 42rem;
@@ -373,6 +379,9 @@
 	@include macbookpro {
 		padding: 256px 17rem 0;
 	}
+	@include scaled-range{
+		padding: 0 10rem;
+	}
 	@include Qhd {
 		padding: 256px 42rem 0;
 	}
@@ -588,6 +597,9 @@
 	}
 	@include macbookpro {
 		padding: 148px 17rem;
+	}
+	@include scaled-range{
+		padding: 0 10rem;
 	}
 	@include Qhd {
 		padding: 148px 42rem 124px;

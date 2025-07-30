@@ -30,6 +30,12 @@
 	}
 }
 
+@mixin scaled-range {
+  @media (1530px <= width <= 1540px) {
+    @content;
+  }
+}
+
 @mixin Hd {
 	@media (1024px <= width <= 1366px) {
 		@content;

@@ -11,6 +11,9 @@ footer {
 	@include macbookpro {
 		padding: 3rem 192px 0;
 	}
+	@include scaled-range{
+		padding: 3rem 100px 0;
+	}
 	@include Qhd {
 		padding: 3rem 300px 0;
 	}
