@@ -51,7 +51,11 @@
 	}
 
 	.main1 {
+		
 		margin-bottom: 61px;
+		@include macbookpro {	
+			margin-left: 2rem;
+		}
 
 		.searchContainer {
 			position: relative;
@@ -88,6 +92,10 @@
 		@include sub-title;
 		text-align: start;
 		margin-bottom: 56px;
+		
+		@include macbookpro {	
+			margin-left: 2rem;
+		}
 	}
 
 	.blogs {
