@@ -7,34 +7,44 @@ import SVG34 from '../assets/SVG(34).svg';
 import SVG35 from '../assets/SVG(35).svg';
 import SVG38 from '../assets/SVG(38).svg';
 
-const BlogCard = () => {
+const BlogCard = ({ 
+	id, 
+	title, 
+	author, 
+	publishDate, 
+	category, 
+	featuredImage, 
+	excerpt, 
+	readTime, 
+	views, 
+	likes, 
+	comments, 
+	tags 
+}) => {
 	return (
 		<>
 			<section className={styles.blog}>
 				<div className={styles.blog__image}>
-					<img src={SVG34} alt="" />
+					<img src={featuredImage || SVG34} alt={title} />
 				</div>
 				<div className={styles.blog__textarea}>
-					<p className={styles.pills}>Category</p>
-					<Link to="/blog" className={styles.blog__title} href="#">
-						<h2>learning AI/ML as an Engineer in 2025</h2>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy
-						</p>
+					<p className={styles.pills}>{category}</p>
+					<Link to={`/blog/${id}`} className={styles.blog__title}>
+						<h2>{title}</h2>
+						<p>{excerpt}</p>
 					</Link>
 					<section className={styles.blog__author}>
 						<div className={styles.author}>
-							<h3>Daniel Darlington</h3>
-							<p>5mins read</p>
+							<h3>{author}</h3>
+							<p>{readTime}</p>
 						</div>
 						<div className={styles.blog__activities}>
 							<p>
-								<img src={SVG38} alt="" />
-								<span>107</span>
+								<img src={SVG38} alt="views" />
+								<span>{views}</span>
 							</p>
 							<a href="">
-								<img src={SVG35} alt="" />
+								<img src={SVG35} alt="bookmark" />
 							</a>
 						</div>
 					</section>

@@ -16,10 +16,10 @@ const Nav = ({ Logo, onEarlyAccessClick }) => {
    name: 'features',
    link: '/features',
   },
-  {
-   name: 'pricing',
-   link: '/pricing',
-  },
+  // {
+  //  name: 'pricing',
+  //  link: '/pricing',
+  // },
   {
    name: 'blog',
    link: '/blogs',

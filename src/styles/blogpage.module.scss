@@ -9,20 +9,38 @@
 	@include macbook {
 		padding: 15.75rem 5rem 47px;
 	}
+	@include Qhd {
+		padding: 15.75rem 42rem 47px;
+	}
+	@include Uhd {
+		padding: 15.75rem 82rem 47px;
+	}
+	@include tablet {
+		padding: 15.75rem 1.5rem 47px;
+	}
 	@include mobile {
 		padding: 8rem 16px 16px;
 	}
 
 	.banner {
-		height: 440px;
+		height: 640px;
 		width: 1180px;
-		background-image: url('../assets/SVG\(31\).svg');
-		background-position: center;
-		background-repeat: no-repeat;
 		border-radius: 16px;
 
+		@include tablet {
+			width: 100%;
+			height: 450px;
+		}
 		@include mobile {
 			width: 100%;
+			height: 200px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 16px;
 		}
 	}
 }
@@ -36,15 +54,23 @@
 		margin-bottom: 36px;
 	}
 }
-
 .main {
 	padding: 0 35rem;
 
+	@include macbook {
+		padding: 0 5rem;
+	}
 	@include macbookpro {
 		padding: 0 17rem;
 	}
-	@include macbook {
-		padding: 0 5rem;
+	@include Qhd {
+		padding: 0 48rem;
+	}
+	@include Uhd {
+		padding: 0 88rem;
+	}
+	@include tablet {
+		padding: 0 1.5rem;
 	}
 	@include mobile {
 		padding: 0 16px;
@@ -58,6 +84,10 @@
 			@include mobile {
 				font-size: 25px;
 				line-height: 26px;
+			}
+			@include sm {
+				font-size: 20px;
+				line-height: 22px;
 			}
 		}
 
@@ -92,16 +122,36 @@
 	}
 
 	.blog__content {
-		padding-bottom: 24px;
-		margin-bottom: 36px;
+		margin-bottom: 24px;
 
 		h3 {
 			@include sub-title;
 			margin-bottom: 24px;
+			font-size: 2.2rem;
+			@include sm {
+				font-size: 20px;
+				line-height: 22px;
+			}
 		}
 		p {
 			@include sub-text;
 			margin-bottom: 24px;
+
+			:global(.bold) {
+				color: white !important;
+			}
+			:global(.dot) {
+				list-style-type: disc;
+				margin-left: 20px;
+			}
+			a {
+				color: rgba(255, 255, 255, 0.6);
+				text-decoration: underline;
+			}
+
+			@include sm{
+				font-size: 14px;
+			}
 		}
 	}
 
@@ -116,17 +166,26 @@
 
 .blog__activity {
 	padding: 0 560px;
-	margin-bottom: 243px;
+	margin-bottom: 200px;
 	display: flex;
 	justify-content: start;
 	align-items: center;
 	gap: 8px;
 
+	@include macbook {
+		padding: 0 5rem;
+	}
 	@include macbookpro {
 		padding: 0 17rem;
 	}
-	@include macbook {
-		padding: 0 5rem;
+	@include Qhd {
+		padding: 0 48rem;
+	}
+	@include Uhd {
+		padding: 0 88rem;
+	}
+	@include tablet {
+		padding: 0 1.5rem;
 	}
 	@include mobile {
 		padding: 0 16px;
@@ -147,7 +206,21 @@
 	@include macbook {
 		padding: 0 5rem;
 	}
-
+	@include macbookpro {
+		padding: 0 10rem;
+	}
+	@include scaled-range {
+		padding: 0 10rem;
+	}
+	@include Qhd {
+		padding: 0 35rem;
+	}
+	@include Uhd {
+		padding: 0 75rem;
+	}
+	@include tablet {
+		padding: 0 0.5rem;
+	}
 	@include mobile {
 		padding: 0 16px;
 		display: none;
@@ -162,6 +235,10 @@
 		display: flex;
 		justify-content: space-between;
 		gap: 56px;
+
+		@include tablet {
+			flex-wrap: wrap;
+		}
 	}
 }
 

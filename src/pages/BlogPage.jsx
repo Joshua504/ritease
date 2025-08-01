@@ -1,4 +1,5 @@
 import styles from '../styles/blogpage.module.scss';
+import { useParams } from 'react-router-dom';
 
 import SVG35 from '../assets/SVG(35).svg';
 import SVG36 from '../assets/SVG(36).svg';
@@ -8,266 +9,106 @@ import SVG39 from '../assets/SVG(39).svg';
 import SVG40 from '../assets/SVG(40).svg';
 import BlogCard from '../components/BlogCard';
 import WaitList from '../components/WaitList';
+import blogs from '../data/blogData';
 
 const BlogPage = () => {
+	const { id } = useParams();
+	const blog = blogs.find(blog => blog.id === parseInt(id));
+
+	if (!blog) {
+		return <div>Blog not found</div>;
+	}
+
 	return (
 		<>
 			<section className={styles.blog__banner}>
-				<div className={styles.banner}></div>
+				<div className={styles.banner}>
+					<img src={blog.featuredImage} alt={blog.title} />
+				</div>
 			</section>
 			<>
 				<section className={styles.main}>
 					<section className={styles.blog__titlecontainer}>
-						<h2>Personal Sovereignty: Be a Global Citizen</h2>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handle...
-						</p>
+						<h2>{blog.title}</h2>
+						<p>{blog.excerpt}</p>
 						<div className={styles.author__container}>
-							<h3>Daniel Darlington</h3>
-							<h4>13 March, 2025</h4>
+							<h3>{blog.author}</h3>
+							<h4>{blog.publishDate}</h4>
 						</div>
 						<section className={styles.blog__titlelinks}>
 							<div>
 								<a href="#">
-									<img src={SVG36} alt="" />
+									<img src={SVG36} alt="share" />
 								</a>
 							</div>
 							<div>
 								<a href="#">
-									<img src={SVG37} alt="" />
+									<img src={SVG37} alt="like" />
 								</a>
 							</div>
 							<div>
 								<a href="#">
-									<img src={SVG35} alt="" />
+									<img src={SVG35} alt="bookmark" />
 								</a>
 							</div>
 						</section>
 					</section>
 
-					<section className={styles.blog__content}>
-						<h3>Sub-Heading</h3>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-					</section>
+					{blog.content.map((section, index) => (
+						<section key={index} className={styles.blog__content}>
+							<h3>{section.heading}</h3>
+							{Array.isArray(section.text) ? (
+								section.text.map((paragraph, pIndex) => (
+									<p key={pIndex} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
+								))
+							) : (
+								<p dangerouslySetInnerHTML={{ __html: section.text }}></p>
+							)}
+						</section>
+					))}
 				</section>
 
-				<section
-					className={`${styles.blog__banner} ${styles.blog__banner__mod}`}>
-					<div className={styles.banner}></div>
-				</section>
 
-				<section className={`${styles.main} ${styles.main__mod}`}>
-					<section
-						className={`${styles.blog__content} ${styles.blog__content__mod}`}>
-						<h3>Sub-Heading</h3>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-					</section>
-
-					<section
-						className={`${styles.blog__content} ${styles.blog__content__mod}`}>
-						<h3>Sub-Heading</h3>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-					</section>
-
-					<section
-						className={`${styles.blog__content} ${styles.blog__content__mod}`}>
-						<h3>Sub-Heading</h3>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-					</section>
-
-					<section
-						className={`${styles.blog__content} ${styles.blog__content__mod}`}>
-						<h3>Sub-Heading</h3>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-						<p>
-							Ritease is committed to protecting your privacy and ensuring your
-							personal information is handled securely. This Privacy Policy
-							applies to all users worldwide who interact with our platform. Our
-							goal is to explain clearly how we collect, use, and share your
-							information, and the steps we take to protect it.
-						</p>
-						<p>
-							This policy covers all services provided by Ritease and any
-							related data we may collect from you while you engage with our
-							platform. If you have any concerns or questions, feel free to
-							contact us directly.
-						</p>
-					</section>
-				</section>
 
 				<section className={styles.blog__activity}>
 					<p>
-						<img src={SVG38} alt="" />
-						<span>107</span>
+						<img src={SVG38} alt="views" />
+						<span>{blog.views}</span>
 					</p>
 					<p>
-						<img src={SVG39} alt="" />
-						<span>0</span>
+						<img src={SVG39} alt="likes" />
+						<span>{blog.likes}</span>
 					</p>
 					<p>
-						<img src={SVG40} alt="" />
-						<span>2037</span>
+						<img src={SVG40} alt="comments" />
+						<span>{blog.comments}</span>
 					</p>
 				</section>
 			</>
 			<section className={styles.blog__by}>
-				<h2>View Articles Written by same Author</h2>
+				<h2>View Articles Written by {blog.author}</h2>
 				<div className={styles.blog__by__cards}>
-					<BlogCard />
-					<BlogCard />
-					<BlogCard />
+					{blogs
+						.filter(b => b.author === blog.author && b.id !== blog.id)
+						.slice(0, 3)
+						.map(relatedBlog => (
+							<BlogCard 
+								key={relatedBlog.id}
+								id={relatedBlog.id}
+								title={relatedBlog.title}
+								author={relatedBlog.author}
+								publishDate={relatedBlog.publishDate}
+								category={relatedBlog.category}
+								featuredImage={relatedBlog.featuredImage}
+								excerpt={relatedBlog.excerpt}
+								readTime={relatedBlog.readTime}
+								views={relatedBlog.views}
+								likes={relatedBlog.likes}
+								comments={relatedBlog.comments}
+								tags={relatedBlog.tags}
+							/>
+						))
+					}
 				</div>
 			</section>
 

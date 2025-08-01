@@ -16,7 +16,7 @@ import banner from '../assets/Banner.svg';
 import banner2 from '../assets/Banner2.svg';
 import banner3 from '../assets/Banner3.png';
 import banner4 from '../assets/Banner4.svg';
-import banner5 from '../assets/Banner5.png';
+import banner5 from '../assets/Banner5.svg';
 import banner6 from '../assets/Banner6.png';
 import Riteaseai from '../assets/Riteaseai.svg';
 import Riteasesign from '../assets/Signature.svg';
@@ -290,7 +290,7 @@ const Home = ({ onEarlyAccessClick }) => {
 								<img className={styles.img} src={SVG41} alt="" />
 							</div>
 							<div className={styles.cards__text}>
-								<h3>Seamless Design</h3>
+								<h3>Seamless Setup</h3>
 							</div>
 						</div>
 						<div className={styles.cards}>
@@ -308,7 +308,7 @@ const Home = ({ onEarlyAccessClick }) => {
 								<img className={styles.img} src={SVG43} alt="" />
 							</div>
 							<div className={styles.cards__text}>
-								<h3>Monetise with Ease</h3>
+								<h3>Built for Teams</h3>
 							</div>
 						</div>
 					</section>

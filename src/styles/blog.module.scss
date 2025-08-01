@@ -17,7 +17,7 @@
 	@include Uhd {
 		padding: 15.75rem 82rem 3rem;
 	}
-	@include tablet{
+	@include tablet {
 		padding: 8.75rem 1.5rem 3rem;
 	}
 	@include mobile {
@@ -34,14 +34,14 @@
 	@include macbookpro {
 		padding: 0 12rem;
 	}
-	@include scaled-range{
+	@include scaled-range {
 		padding: 0 80px;
 	}
 	@include Qhd {
-		padding: 0 42rem;
+		padding: 0 35rem;
 	}
 	@include Uhd {
-		padding: 0 82rem;
+		padding: 0 75rem;
 	}
 	@include tablet {
 		padding: 0 1.5rem;
@@ -84,16 +84,21 @@
 		}
 	}
 
+	.blog_title {
+		@include sub-title;
+		text-align: start;
+		margin-bottom: 56px;
+	}
+
 	.blogs {
-		.blog_title {
-			@include sub-title;
-			text-align: start;
-			margin-bottom: 56px;
-		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 
 		.blog_container {
 			display: flex;
-			justify-content: space-between;
+			gap: 3.5rem;
 			flex-wrap: wrap;
 			width: 1372px;
 			max-width: 1372px;
@@ -101,7 +106,7 @@
 			@include Hd {
 				width: 100%;
 			}
-			@include tablet{
+			@include tablet {
 				width: fit-content;
 			}
 			@include mobile {
@@ -129,12 +134,66 @@
 			@include Hd {
 				width: 100%;
 			}
-			@include tablet{
+			@include tablet {
 				width: 100%;
 			}
 			@include mobile {
 				width: 100%;
-				font-size: 90px
+				font-size: 90px;
+			}
+		}
+	}
+
+	.noResults {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 3rem 0;
+		color: #f8f8f8;
+		font-family: 'interRegular';
+		font-size: 2.5rem;
+	}
+
+	.pagination {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 8px;
+		margin: 3rem 0;
+
+		.paginationBtn {
+			padding: 10px 16px;
+			border: 1px solid #404040;
+			background: transparent;
+			color: $primary;
+			border-radius: 6px;
+			cursor: pointer;
+			font-family: 'interRegular';
+			font-size: 14px;
+			transition: all 0.2s ease;
+
+			&:hover:not(:disabled) {
+				background: #ffc107;
+				color: $secondary;
+			}
+
+			&:disabled {
+				opacity: 0.5;
+				cursor: not-allowed;
+			}
+
+			&.active {
+				background: $primary;
+				color: $secondary;
+			}
+		}
+
+		@include mobile {
+			gap: 4px;
+
+			.paginationBtn {
+				padding: 8px 12px;
+				font-size: 12px;
 			}
 		}
 	}
