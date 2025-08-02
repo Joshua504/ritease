@@ -1,13 +1,14 @@
-import img1 from '../assets/blog1.jpg';
-import img3 from '../assets/blog3.jpg';
-import img4 from '../assets/blog4.jpg';
-import img5 from '../assets/blog5.jpg';
-import img6 from '../assets/blog6.jpg';
-import img7 from '../assets/blog7.jpg';
-import img8 from '../assets/blog8.jpg';
-import img9 from '../assets/blog9.jpg';
-import img10 from '../assets/blog10.jpg';
-import img11 from '../assets/blog11.jpg';
+import img1 from '../assets/blog1.png';
+import img2 from '../assets/blog2.png';
+import img3 from '../assets/blog3.png';
+import img4 from '../assets/blog4.png';
+import img5 from '../assets/blog5.png';
+import img6 from '../assets/blog6.png';
+import img7 from '../assets/blog7.png';
+import img8 from '../assets/blog8.png';
+import img9 from '../assets/blog9.png';
+import img10 from '../assets/blog10.png';
+import img11 from '../assets/blog11.png';
 
 const blogs = [
 	{
@@ -19,7 +20,7 @@ const blogs = [
 		category: 'Technology',
 		featuredImage: img1,
 		excerpt:
-			"Most people see forms as simple data collection tools. But for freelancers, small businesses, and entrepreneurs, forms are much more—they're essential business infrastructure that drives growth and operations.",
+			'Most people think of forms as just a way to collect information—signups, feedback, a few checkboxes here....',
 		content: [
 			{
 				type: 'section',
@@ -65,9 +66,9 @@ const blogs = [
 		author: 'Ritease team',
 		publishDate: '13 March, 2025',
 		category: 'Technology',
-		featuredImage: img1,
+		featuredImage: img2,
 		excerpt:
-			"Most people see forms as simple data collection tools. But for freelancers, small businesses, and entrepreneurs, forms are much more—they're essential business infrastructure that drives growth and operations.",
+			'Hiring—even for just one role—can quickly become messy and overwhelming. Between scattered emails....',
 		content: [
 			{
 				type: 'section',
@@ -120,7 +121,7 @@ const blogs = [
 		category: 'Technology',
 		featuredImage: img3,
 		excerpt:
-			"Most people see forms as simple data collection tools. But for freelancers, small businesses, and entrepreneurs, forms are much more—they're essential business infrastructure that drives growth and operations.",
+			'Productivity isn’t just about doing more—it’s about doing the right things faster, with fewer distractions and better....',
 		content: [
 			{
 				type: 'section',
@@ -166,7 +167,7 @@ const blogs = [
 		category: 'Technology',
 		featuredImage: img4,
 		excerpt:
-			"Most people see forms as simple data collection tools. But for freelancers, small businesses, and entrepreneurs, forms are much more—they're essential business infrastructure that drives growth and operations.",
+			'One of the most time-consuming parts of working with forms isn’t creating them—it’s reviewing what comes in....',
 		content: [
 			{
 				type: 'section',
@@ -215,7 +216,7 @@ const blogs = [
 		category: 'Technology',
 		featuredImage: img5,
 		excerpt:
-			"Most people see forms as simple data collection tools. But for freelancers, small businesses, and entrepreneurs, forms are much more—they're essential business infrastructure that drives growth and operations.",
+			'Starting a company is exciting, but managing your documents shouldn’t slow you down. If you’re a startup....',
 		content: [
 			{
 				type: 'section',
@@ -283,7 +284,7 @@ const blogs = [
 		category: 'Technology',
 		featuredImage: img6,
 		excerpt:
-			"Most people see forms as simple data collection tools. But for freelancers, small businesses, and entrepreneurs, forms are much more—they're essential business infrastructure that drives growth and operations.",
+			"If you've ever worked in a legal team, you know the drill: endless contract versions flying around....",
 		content: [
 			{
 				type: 'section',
@@ -343,7 +344,7 @@ const blogs = [
 		category: 'Technology',
 		featuredImage: img7,
 		excerpt:
-			"Most people see forms as simple data collection tools. But for freelancers, small businesses, and entrepreneurs, forms are much more—they're essential business infrastructure that drives growth and operations.",
+			'Let’s be honest: the way we work has changed forever. We’re no longer in an age where productivity means....',
 		content: [
 			{
 				type: 'section',
@@ -373,7 +374,7 @@ const blogs = [
 		category: 'Technology',
 		featuredImage: img8,
 		excerpt:
-			"Most people see forms as simple data collection tools. But for freelancers, small businesses, and entrepreneurs, forms are much more—they're essential business infrastructure that drives growth and operations.",
+			'Let’s face it: most form tools today were made for simple tasks—quick polls, feedback forms, or event signups....',
 		content: [
 			{
 				type: 'section',
@@ -421,7 +422,7 @@ const blogs = [
 		category: 'Technology',
 		featuredImage: img9,
 		excerpt:
-			"Most people see forms as simple data collection tools. But for freelancers, small businesses, and entrepreneurs, forms are much more—they're essential business infrastructure that drives growth and operations.",
+			'Teaching has changed. Today’s educators are not just standing in front of classrooms—they’re creating content....',
 		content: [
 			{
 				type: 'section',
@@ -468,7 +469,7 @@ const blogs = [
 		category: 'Technology',
 		featuredImage: img10,
 		excerpt:
-			"Most people see forms as simple data collection tools. But for freelancers, small businesses, and entrepreneurs, forms are much more—they're essential business infrastructure that drives growth and operations.",
+			'Let’s be honest, most of us spend way too much time buried in documents. Reading them, writing them, digging....',
 		content: [
 			{
 				type: 'section',
@@ -526,7 +527,7 @@ const blogs = [
 		category: 'Technology',
 		featuredImage: img11,
 		excerpt:
-			"Most people see forms as simple data collection tools. But for freelancers, small businesses, and entrepreneurs, forms are much more—they're essential business infrastructure that drives growth and operations.",
+			'We’ve all been there—kicking off a new client relationship and immediately drowning in forms, emails....',
 		content: [
 			{
 				type: 'section',

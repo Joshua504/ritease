@@ -21,37 +21,26 @@ const BlogPage = () => {
 
 	return (
 		<>
-			<section className={styles.blog__banner}>
-				<div className={styles.banner}>
-					<img src={blog.featuredImage} alt={blog.title} />
-				</div>
-			</section>
 			<>
 				<section className={styles.main}>
 					<section className={styles.blog__titlecontainer}>
 						<h2>{blog.title}</h2>
-						<p>{blog.excerpt}</p>
+						{/* <p>{blog.excerpt}</p> */}
 						<div className={styles.author__container}>
 							<h3>{blog.author}</h3>
-							<h4>{blog.publishDate}</h4>
-						</div>
-						<section className={styles.blog__titlelinks}>
-							<div>
-								<a href="#">
-									<img src={SVG36} alt="share" />
-								</a>
-							</div>
-							<div>
-								<a href="#">
-									<img src={SVG37} alt="like" />
-								</a>
-							</div>
-							<div>
+							<h4>
+								{blog.publishDate}
 								<a href="#">
 									<img src={SVG35} alt="bookmark" />
 								</a>
-							</div>
-						</section>
+							</h4>
+						</div>
+					</section>
+
+					<section className={styles.blog__banner}>
+						<div className={styles.banner}>
+							<img src={blog.featuredImage} alt={blog.title} />
+						</div>
 					</section>
 
 					{blog.content.map((section, index) => (
@@ -59,7 +48,9 @@ const BlogPage = () => {
 							<h3>{section.heading}</h3>
 							{Array.isArray(section.text) ? (
 								section.text.map((paragraph, pIndex) => (
-									<p key={pIndex} dangerouslySetInnerHTML={{ __html: paragraph }}></p>
+									<p
+										key={pIndex}
+										dangerouslySetInnerHTML={{ __html: paragraph }}></p>
 								))
 							) : (
 								<p dangerouslySetInnerHTML={{ __html: section.text }}></p>
@@ -67,8 +58,6 @@ const BlogPage = () => {
 						</section>
 					))}
 				</section>
-
-
 
 				<section className={styles.blog__activity}>
 					<p>
@@ -89,10 +78,10 @@ const BlogPage = () => {
 				<h2>View Articles Written by {blog.author}</h2>
 				<div className={styles.blog__by__cards}>
 					{blogs
-						.filter(b => b.author === blog.author && b.id !== blog.id)
+						.filter((b) => b.author === blog.author && b.id !== blog.id)
 						.slice(0, 3)
-						.map(relatedBlog => (
-							<BlogCard 
+						.map((relatedBlog) => (
+							<BlogCard
 								key={relatedBlog.id}
 								id={relatedBlog.id}
 								title={relatedBlog.title}
@@ -107,12 +96,11 @@ const BlogPage = () => {
 								comments={relatedBlog.comments}
 								tags={relatedBlog.tags}
 							/>
-						))
-					}
+						))}
 				</div>
 			</section>
 
-			<div className={styles.waitlist}> 
+			<div className={styles.waitlist}>
 				<WaitList />
 			</div>
 		</>

@@ -23,7 +23,7 @@ const BlogCard = ({
 }) => {
 	return (
 		<>
-			<section className={styles.blog}>
+			<Link to={`/blog/${id}`} className={styles.blog}>
 				<div className={styles.blog__image}>
 					<img src={featuredImage || SVG34} alt={title} />
 				</div>
@@ -49,7 +49,7 @@ const BlogCard = ({
 						</div>
 					</section>
 				</div>
-			</section>
+			</Link>
 		</>
 	);
 };

@@ -116,6 +116,7 @@
 			}
 			@include tablet {
 				width: fit-content;
+				gap: 2rem;
 			}
 			@include mobile {
 				width: 100%;

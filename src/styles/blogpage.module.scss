@@ -2,29 +2,13 @@
 @use '/src/styles/mixins' as *;
 
 .blog__banner {
-	padding: 15.75rem 240px 47px;
 	display: flex;
 	justify-content: center;
 
-	@include macbook {
-		padding: 15.75rem 5rem 47px;
-	}
-	@include Qhd {
-		padding: 15.75rem 42rem 47px;
-	}
-	@include Uhd {
-		padding: 15.75rem 82rem 47px;
-	}
-	@include tablet {
-		padding: 15.75rem 1.5rem 47px;
-	}
-	@include mobile {
-		padding: 8rem 16px 16px;
-	}
 
 	.banner {
-		height: 640px;
-		width: 1180px;
+		height: 440px;
+		width: 100%;
 		border-radius: 16px;
 
 		@include tablet {
@@ -55,7 +39,7 @@
 	}
 }
 .main {
-	padding: 0 35rem;
+	padding: 15.75rem 35rem 0;
 
 	@include macbook {
 		padding: 0 5rem;
@@ -70,16 +54,18 @@
 		padding: 0 88rem;
 	}
 	@include tablet {
-		padding: 0 1.5rem;
+		padding: 8rem 1.5rem 0;
 	}
 	@include mobile {
-		padding: 0 16px;
+		padding: 6rem 16px 0;
 	}
 
 	.blog__titlecontainer {
 		h2 {
 			@include sub-title;
 			margin-bottom: 8px;
+			font-size: 2.6rem;
+			line-height: 40px;
 
 			@include mobile {
 				font-size: 25px;
@@ -105,19 +91,16 @@
 			h3 {
 				@include sub-text;
 				font-family: interSemiBold;
+				text-transform: capitalize;
 			}
 
 			h4 {
 				@include sub-text;
+				display: flex;
+				justify-content: end;
+				align-items: center;
+				gap: 14px;
 			}
-		}
-
-		.blog__titlelinks {
-			display: flex;
-			justify-content: end;
-			align-items: center;
-			gap: 24px;
-			margin-bottom: 41px;
 		}
 	}
 
@@ -127,9 +110,9 @@
 		h3 {
 			@include sub-title;
 			margin-bottom: 24px;
-			font-size: 2.2rem;
+			font-size: 2rem;
 			@include sm {
-				font-size: 20px;
+				font-size: 18px;
 				line-height: 22px;
 			}
 		}
@@ -149,7 +132,7 @@
 				text-decoration: underline;
 			}
 
-			@include sm{
+			@include sm {
 				font-size: 14px;
 			}
 		}
