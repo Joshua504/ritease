@@ -3,6 +3,7 @@
 
 .anime__title {
 	@include anime-text;
+	transition: all 0.3s ease;
 
 	&:hover {
 		background: linear-gradient(

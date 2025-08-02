@@ -1,8 +1,8 @@
 @use '/src/styles/variables' as *;
 
-@mixin sm{
+@mixin sm {
 	@media (max-width: 375px) {
-		@content
+		@content;
 	}
 }
 
@@ -31,9 +31,9 @@
 }
 
 @mixin scaled-range {
-  @media (1530px <= width <= 1540px) {
-    @content;
-  }
+	@media (1530px <= width <= 1540px) {
+		@content;
+	}
 }
 
 @mixin Hd {
@@ -56,6 +56,12 @@
 
 @mixin Uhd {
 	@media (3840px <= width) {
+		@content;
+	}
+}
+
+@mixin desktop-ultrawide {
+	@media (3200px <= width <= 3500px) {
 		@content;
 	}
 }
