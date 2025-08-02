@@ -26,6 +26,10 @@
 		padding: 0 82rem;
 	}
 
+	@include desktop-ultrawide {
+		padding: 0 70rem;
+	}
+
 	@include macbookpro {
 		padding: 0 17rem ;
 	}

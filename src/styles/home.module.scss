@@ -25,6 +25,9 @@
 	@include Uhd {
 		padding: 15.75rem 82rem 3rem;
 	}
+	@include desktop-ultrawide {
+		padding: 15.75rem 70rem 3rem;
+	}
 	@include tablet {
 		padding: 8.75rem 1.5rem 3rem;
 	}
@@ -233,6 +236,10 @@
 
 	@include Uhd {
 		padding: 0 82rem;
+	}
+
+	@include desktop-ultrawide {
+		padding: 0 70rem;
 	}
 
 	@include tablet {

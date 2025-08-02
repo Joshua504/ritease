@@ -10,14 +10,14 @@
 		width: 100%;
 		border-radius: 16px;
 
-		@include Qhd {
+		@include scaled-range {
 			height: 600px;
 		}
 		@include Uhd {
 			height: 600px;
 		}
 		@include desktop-ultrawide {
-			height: 1200px;
+			height: 650px;
 		}
 		@include tablet {
 			width: 100%;
@@ -55,11 +55,14 @@
 	@include macbookpro {
 		padding: 15.75rem 17rem 0;
 	}
-	@include Qhd {
-		padding: 15.75rem 48rem 0;
+	@include scaled-range {
+		padding: 15.75rem  17rem  0;
 	}
 	@include Uhd {
 		padding: 15.75rem 88rem 0;
+	}
+	@include desktop-ultrawide {
+		padding: 15.75rem 69.5rem 0;
 	}
 	@include tablet {
 		padding: 8rem 1.5rem 0;

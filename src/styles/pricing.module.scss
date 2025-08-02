@@ -80,6 +80,9 @@ main {
 	@include Uhd {
 		padding: 0 966px;
 	}
+	@include desktop-ultrawide {
+		padding: 0 900px;
+	}
 	@include tablet {
 		margin-top: 20px;
 		padding: 0 1.5rem;
