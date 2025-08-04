@@ -70,6 +70,7 @@ const Blog = () => {
 									<BlogCard 
 										key={blog.id}
 										id={blog.id}
+										slug={blog.slug}
 										title={blog.title}
 										author={blog.author}
 										publishDate={blog.publishDate}

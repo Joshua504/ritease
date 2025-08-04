@@ -12,8 +12,8 @@ import WaitList from '../components/WaitList';
 import blogs from '../data/blogData';
 
 const BlogPage = () => {
-	const { id } = useParams();
-	const blog = blogs.find(blog => blog.id === parseInt(id));
+	const { slug } = useParams();
+	const blog = blogs.find(blog => blog.slug === slug);
 
 	if (!blog) {
 		return <div>Blog not found</div>;
@@ -84,6 +84,7 @@ const BlogPage = () => {
 							<BlogCard
 								key={relatedBlog.id}
 								id={relatedBlog.id}
+								slug={relatedBlog.slug}
 								title={relatedBlog.title}
 								author={relatedBlog.author}
 								publishDate={relatedBlog.publishDate}

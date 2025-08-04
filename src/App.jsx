@@ -69,7 +69,7 @@ function App() {
 				<Route path="/privacy" element={<Privacy />} />
 				<Route path="/terms" element={<Terms />} />
 				<Route path="/reads" element={<Reads />} />
-				<Route path="/blog/:id" element={<BlogPage />} />
+				<Route path="/blog/:slug" element={<BlogPage />} />
 				<Route path="/blogs" element={<Blog />} />
 				<Route path="/paid" element={<PaidBlog />} />
 			</Routes>

@@ -9,6 +9,7 @@ import SVG38 from '../assets/SVG(38).svg';
 
 const BlogCard = ({ 
 	id, 
+	slug,
 	title, 
 	author, 
 	publishDate, 
@@ -23,13 +24,13 @@ const BlogCard = ({
 }) => {
 	return (
 		<>
-			<Link to={`/blog/${id}`} className={styles.blog}>
+			<Link to={`/blog/${slug}`} className={styles.blog}>
 				<div className={styles.blog__image}>
 					<img src={featuredImage || SVG34} alt={title} />
 				</div>
 				<div className={styles.blog__textarea}>
 					<p className={styles.pills}>{category}</p>
-					<Link to={`/blog/${id}`} className={styles.blog__title}>
+					<Link to={`/blog/${slug}`} className={styles.blog__title}>
 						<h2>{title}</h2>
 						<p>{excerpt}</p>
 					</Link>
