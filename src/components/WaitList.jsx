@@ -20,7 +20,9 @@ const WaitList = ({ onEarlyAccessClick }) => {
 
 	return (
 		<section className={styles.main4__form}>
-			<h2>Everything you need to write, sign, publish, and win</h2>
+			<h2>
+				Everything you need to write, sign, publish, and collect payments
+			</h2>
 			<form onSubmit={handleSubmit}>
 				<section>
 					<div className={styles.inputWrapper}>
@@ -35,17 +37,17 @@ const WaitList = ({ onEarlyAccessClick }) => {
 							Join waitlist
 						</button>
 					</div>
-				{error && (
-					<div
-						style={{
-							color: '#FFD12D',
-							marginBottom: '0.5rem',
-							textAlign: 'center',
-							fontFamily: 'interRegular',
-						}}>
-						{error}
-					</div>
-				)}
+					{error && (
+						<div
+							style={{
+								color: '#FFD12D',
+								marginBottom: '0.5rem',
+								textAlign: 'center',
+								fontFamily: 'interRegular',
+							}}>
+							{error}
+						</div>
+					)}
 					<p>
 						By joining the waitlist, you agree to our
 						<a href="/privacy">Privacy Policy</a>

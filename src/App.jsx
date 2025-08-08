@@ -21,6 +21,7 @@ import Blog from './pages/Blog';
 import PaidBlog from './pages/PaidBlog';
 import Modal from './components/Modal';
 import EarlyAccessForm from './components/EarlyAccessForm';
+import CookieTerms from './pages/CookieTerms';
 import { useState, useEffect } from 'react';
 
 function ScrollToTop() {
@@ -68,6 +69,7 @@ function App() {
 				<Route path="/riteboards" element={<Riteboards />} />
 				<Route path="/privacy" element={<Privacy />} />
 				<Route path="/terms" element={<Terms />} />
+				<Route path="/cookie" element={<CookieTerms />} />
 				<Route path="/reads" element={<Reads />} />
 				<Route path="/blog/:slug" element={<BlogPage />} />
 				<Route path="/blogs" element={<Blog />} />

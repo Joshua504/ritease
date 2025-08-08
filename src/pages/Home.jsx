@@ -8,6 +8,7 @@ import styles from '../styles/home.module.scss';
 import AnimatedText from '../components/AnimatedText';
 import WaitList from '../components/WaitList';
 import Faq from '../components/Faq';
+import CookiePopup from '../components/CookiePopup';
 /* -------------------------------------------------------------------------- */
 /*                                   images                                   */
 /* -------------------------------------------------------------------------- */
@@ -17,7 +18,7 @@ import banner2 from '../assets/Banner2.svg';
 import banner3 from '../assets/Banner3.png';
 import banner4 from '../assets/Banner4.svg';
 import banner5 from '../assets/Banner5.svg';
-import banner6 from '../assets/Banner6.png';
+import banner6 from '../assets/Banner6.svg';
 import Riteaseai from '../assets/Riteaseai.svg';
 import Riteasesign from '../assets/Signature.svg';
 import Riteaseform from '../assets/Form.svg';
@@ -54,13 +55,14 @@ import claude from '../assets/Claude.svg';
 import base from '../assets/Base.svg';
 import binance from '../assets/Binance logo.svg';
 import cloudflare from '../assets/CloudFlare.svg';
-import favicon from '../assets/favicon 1.svg';
+import favicon from '../assets/Gemini.svg';
 import paystack from '../assets/Paystack.svg';
 
 const Home = ({ onEarlyAccessClick }) => {
 	const [activeListItem, setActiveListItem] = useState(0);
 	const [activeNextGenItem, setActiveNextGenItem] = useState(0);
 	const [activeFeatures, setActiveFeatures] = useState(0);
+	const [showCookiePopup, setShowCookiePopup] = useState(false);
 
 	const faqData = [
 		{
@@ -198,6 +200,11 @@ const Home = ({ onEarlyAccessClick }) => {
 		return () => clearInterval(interval);
 	}, []);
 
+	useEffect(() => {
+		// Show cookie popup on page load
+		setShowCookiePopup(true);
+	}, []);
+
 	return (
 		<>
 			<header className={styles.header}>
@@ -265,10 +272,10 @@ const Home = ({ onEarlyAccessClick }) => {
 							<img src={cloudflare} alt="" />
 						</div>
 						<div>
-							<img src={favicon} alt="" />
+							<img src={paystack} alt="" />
 						</div>
 						<div>
-							<img src={paystack} alt="" />
+							<img src={favicon} alt="" />
 						</div>
 					</section>
 				</section>
@@ -516,6 +523,7 @@ const Home = ({ onEarlyAccessClick }) => {
 					</section>
 				</section>
 			</main>
+			{showCookiePopup && <CookiePopup onClose={() => setShowCookiePopup(false)} />}
 		</>
 	);
 };
