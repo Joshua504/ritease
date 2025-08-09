@@ -41,8 +41,8 @@ import SVG10 from '../assets/SVG(10).svg';
 import SVG11 from '../assets/SVG(11).svg';
 import SVG12 from '../assets/SVG(12).svg';
 import SVG13 from '../assets/SVG(13).svg';
-import SVG14 from '../assets/SVG(14).svg';
-import SVG15 from '../assets/SVG(15).svg';
+import svg13 from '../assets/svg13.svg';
+import SVG14 from '../assets/svg14.svg';
 import SVG16 from '../assets/SVG(16).svg';
 import SVG41 from '../assets/SVG(41).svg';
 import SVG42 from '../assets/SVG(42).svg';
@@ -449,11 +449,32 @@ const Home = ({ onEarlyAccessClick }) => {
 										<div>
 											<img src={SVG12} alt="" />
 										</div>
-										<span>Edit suggestions</span>
+										<span>Generate content</span>
 									</li>
 									<p>
-										AI analyzes your docs and suggests enhancements for clarity
-										and completeness
+										Prompt AI to generate content within your document without
+										switching apps
+									</p>
+								</div>
+								<div className={styles.main3__elevate__list}>
+									<li className={styles.main3__elevate__list__item}>
+										<div>
+											<img src={svg13} alt="" />
+										</div>
+										<span>Interact with docs</span>
+									</li>
+									<p>Ask questions about your docs and let AI respond to you</p>
+								</div>
+								<div className={styles.main3__elevate__list}>
+									<li className={styles.main3__elevate__list__item}>
+										<div>
+											<img src={SVG14} alt="" />
+										</div>
+										<span>Writing assist</span>
+									</li>
+									<p>
+										With single clicks, improve your writing, fix spelling, and
+										more
 									</p>
 								</div>
 								<div className={styles.main3__elevate__list}>
@@ -461,35 +482,9 @@ const Home = ({ onEarlyAccessClick }) => {
 										<div>
 											<img src={SVG13} alt="" />
 										</div>
-										<span>Automatic translations</span>
+										<span>Translate content</span>
 									</li>
-									<p>
-										Expand global reach with one- click multi-language support
-									</p>
-								</div>
-								<div className={styles.main3__elevate__list}>
-									<li className={styles.main3__elevate__list__item}>
-										<div>
-											<img src={SVG14} alt="" />
-										</div>
-										<span>Writing assistance</span>
-									</li>
-									<p>
-										Craft clearer, more engaging documentation with real-time
-										suggestions
-									</p>
-								</div>
-								<div className={styles.main3__elevate__list}>
-									<li className={styles.main3__elevate__list__item}>
-										<div>
-											<img src={SVG15} alt="" />
-										</div>
-										<span>Integrations</span>
-									</li>
-									<p>
-										Connect your favorite tools and workflows to streamline
-										documentation
-									</p>
+									<p>Click to translate content into various languages</p>
 								</div>
 							</ul>
 						</div>
@@ -523,7 +518,9 @@ const Home = ({ onEarlyAccessClick }) => {
 					</section>
 				</section>
 			</main>
-			{showCookiePopup && <CookiePopup onClose={() => setShowCookiePopup(false)} />}
+			{showCookiePopup && (
+				<CookiePopup onClose={() => setShowCookiePopup(false)} />
+			)}
 		</>
 	);
 };

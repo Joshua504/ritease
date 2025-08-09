@@ -5,7 +5,7 @@
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	width: 900px;
+	width: 920px;
 	background-color: rgba(0, 0, 0, 0.8);
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -68,6 +68,7 @@
 				font-size: 1rem;
 				cursor: pointer;
 				transition: 0.5s ease-in-out;
+				width: 330px;
 
         @include mobile{
           width: 370px;

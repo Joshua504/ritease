@@ -5,6 +5,7 @@ import WaitList from '../components/WaitList';
 import AnimatedText from '../components/AnimatedText';
 import BlogCard from '../components/BlogCard';
 import blogs from '../data/blogData';
+import ads from '../assets/Twitter Banner.svg'
 
 const Blog = () => {
 	const [currentPage, setCurrentPage] = useState(1);
@@ -85,7 +86,7 @@ const Blog = () => {
 									/>
 									{(index + 1) % 6 === 0 && index < currentBlogs.length - 1 && (
 										<div key={`ad-${index}`} className={styles.ads}>
-											ADS
+											<img src={ads} alt="" />
 										</div>
 									)}
 								</>

@@ -18,6 +18,126 @@
 	}
 }
 
-.wrapper{
-  @include terms ;
+.wrapper {
+	@include terms;
+	padding: 0 $bodymargin 23.5rem;
+
+	@include Qhd {
+		padding: 0 42rem 23.5rem;
+	}
+	@include Uhd {
+		padding: 0 82rem 23.5rem;
+	}
+
+	@include mobile {
+		padding: 0 16px 16px;
+
+		.sidebar {
+			display: none;
+		}
+
+		.main {
+			width: 100%;
+
+			.term__details {
+				margin-bottom: 16px;
+
+				.number {
+					width: 38px;
+					height: 34px;
+					border-radius: 10px;
+					margin-bottom: 10px;
+
+					p {
+						font-size: 20px;
+					}
+				}
+
+				h2 {
+					font-size: 18px;
+					line-height: 20px;
+					margin-bottom: 10px;
+				}
+
+				p {
+					font-size: 10px;
+					line-height: 12px;
+				}
+
+				li {
+					font-size: 10px;
+					line-height: 12px;
+				}
+			}
+		}
+	}
+
+	@include macbookpro {
+		padding: 0 17rem 23.5rem;
+	}
+
+	@include macbook {
+		padding: 0 5rem 23.5rem;
+
+		.head {
+			p {
+				margin: 0;
+			}
+		}
+	}
+
+	.term__mod {
+		padding-bottom: 24px;
+		border-bottom: 1px solid transparent;
+		border-image: linear-gradient(
+				to right,
+				rgba(255, 255, 255, 0) 0%,
+				rgba(255, 255, 255, 0.1) 50%,
+				rgba(255, 255, 255, 0) 100%
+			)
+			1;
+
+		@include mobile {
+			border: none;
+		}
+
+		ul {
+			margin-bottom: 15px;
+		}
+
+		p {
+			padding: 0;
+			border: none;
+
+			@include mobile {
+				border: none;
+			}
+		}
+	}
+
+	.last {
+		border: none;
+
+		@include mobile {
+			border: none;
+		}
+
+		h3,
+		h4 {
+			@include sub-text;
+
+			@include mobile {
+				font-size: 12px;
+				line-height: 14px;
+			}
+		}
+
+		h4 {
+			margin-bottom: 16px;
+		}
+
+		.last1 {
+			padding: 0;
+		}
+	}
 }

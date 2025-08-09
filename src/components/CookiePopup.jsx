@@ -25,26 +25,32 @@ const Cookie = ({ onClose }) => {
 
 	return (
 		<>
-			<section className={`${styles.cookie} ${isAnimated && !isClosing ? styles['slide-in'] : ''} ${isClosing ? styles['slide-out'] : ''}`}>
+			<section
+				className={`${styles.cookie} ${
+					isAnimated && !isClosing ? styles['slide-in'] : ''
+				} ${isClosing ? styles['slide-out'] : ''}`}>
 				<div className={styles.cookie__text}>
 					<h3>
 						Our website uses essential cookies. They help to keep you safe and
-						make sure our site is working properly. We’d like to use optional
-						cookies to understand how you use our site so we can create a better
-						experience for everyone. You can find out more in our 
+						make sure our site is working properly. We use them to understand
+						how you use our site so we can create a better experience for
+						everyone. By proceeding to use our website, you agree to our use of
+						these cookies. You can find out more in our
 						<Link to="/cookie">Cookies Policy</Link>
 					</h3>
 				</div>
 				<section className={styles.cookie__buttons}>
 					<div>
-						<button className={styles.accept} onClick={handleClose}>Accept optional cookies</button>
+						<button className={styles.accept} onClick={handleClose}>
+							I agree
+						</button>
 					</div>
-					<div>
+					{/* <div>
 						<button onClick={handleClose}>Reject optional cookies</button>
 					</div>
 					<div>
 						<button onClick={handleClose}>Manage my cookies</button>
-					</div>
+					</div> */}
 				</section>
 			</section>
 		</>
